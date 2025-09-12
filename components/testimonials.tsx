@@ -10,35 +10,84 @@ export function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const testimonials = [
+     {
+      name: "Ferdiansyah",
+      company: "Electical Engineer",
+      content:
+        "He is a diligent and hardworking person, and willing learn new things. Initially, i was only his client in creating a website and social media for my institutio, but now he is my partner in setting up a business together and establishing an institution.",
+      rating: 5,
+    },
     {
-      name: "Sarah Johnson",
+      name: "Ferdiansyah",
+      company: "Electical Engineer",
+      content:
+        "",
+      rating: 5,
+    },
+    {
+      name: "Seina Umar",
+      company: "Proefessional Teacher and Tutor",
+      content:
+        "Good work, and good website. Thank You",
+      rating: 5,
+    },
+    {
+      name: "Afifah Khoirunnisa",
+      company: "Student",
+      content:
+        "The service is friendly and responsible in completing the tasks until they are finished.",
+      rating: 5,
+    },
+    {
+      name: "Adam from Canada",
+      company: "Owner",
+      content:
+        "The design is cool, and the research paper project is also completed well. Thank you",
+      rating: 5,
+    },
+    {
+      name: "Nertile Dika",
+      company: "North Macedonia",
+      content:
+        "The service is friendly and responsible in completing the tasks until they are finished.",
+      rating: 5,
+    },
+    {
+      name: "Steve Taylor",
+      company: "Minneapolis (USA)",
+      content:
+        "Our website is now faster and more user-friendly. Thank you for your hard work!",
+      rating: 5,
+    },
+    {
+      name: "Sarah",
       company: "Tech Startup",
       content:
         "Heroic Web transformed our online presence completely. The website they built is not only beautiful but also performs exceptionally well.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
+      name: "Michael",
       company: "E-commerce Business",
       content:
         "Their SEO expertise helped us increase our organic traffic by 250% in just 6 months. Highly recommended!",
       rating: 5,
     },
     {
-      name: "Lisa Rodriguez",
+      name: "Lisa Ro",
       company: "Design Agency",
       content:
         "Professional, creative, and reliable. They delivered exactly what we needed and more. Great communication throughout the project.",
       rating: 5,
     },
     {
-      name: "David Kim",
+      name: "David",
       company: "Restaurant Chain",
       content: "Amazing work on our mobile app design. The user experience is seamless and our customers love it!",
       rating: 5,
     },
     {
-      name: "Emma Wilson",
+      name: "Emma Williams",
       company: "Healthcare Startup",
       content: "Fast delivery, excellent communication, and outstanding results. Will definitely work with them again.",
       rating: 5,
