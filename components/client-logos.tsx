@@ -16,7 +16,6 @@ export function ClientLogos() {
     { name: "Blare", logo: "/Blare-Media.png" },
     { name: "Lampung", logo: "/lampung.png" },
     { name: "TechCorp", logo: "/techcorp-logo.png" },
-    { name: "StartupHub", logo: "/startuphub-logo.jpg" },
     { name: "DigitalFlow", logo: "/digitalflow-logo.jpg" },
     { name: "InnovateLab", logo: "/innovatelab-logo.png" },
     { name: "CloudTech", logo: "/cloudtech-logo.jpg" },
