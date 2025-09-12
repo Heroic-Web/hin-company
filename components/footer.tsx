@@ -71,7 +71,6 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <div className="border-t border-border mt-8 pt-8 text-center">
             <ul className="flex justify-center gap-6 mb-4">
               <li>
                 <Link
