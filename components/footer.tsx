@@ -65,7 +65,13 @@ export function Footer() {
                   {t("nav.contact")}
                 </Link>
               </li>
-              <li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-8 pt-8 text-center">
+          <li>
                 <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
@@ -80,11 +86,6 @@ export function Footer() {
                   Disclaimer
                 </Link>
               </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">© 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.</p>
         </div>
       </div>
