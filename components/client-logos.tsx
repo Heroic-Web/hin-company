@@ -18,9 +18,7 @@ export function ClientLogos() {
     { name: "Darmajaya", logo: "/darmajaya.png" },
     { name: "LPKSkaya", logo: "/LPK_Skaya_Logo.png" },
     { name: "TechCorp", logo: "/techcorp-logo.png" },
-    { name: "DigitalFlow", logo: "/digitalflow-logo.jpg" },
     { name: "InnovateLab", logo: "/innovatelab-logo.png" },
-    { name: "CloudTech", logo: "/cloudtech-logo.jpg" },
     { name: "DataSync", logo: "/datasync-logo.jpg" },
     { name: "AppMaster", logo: "/appmaster-logo.jpg" },
   ]
