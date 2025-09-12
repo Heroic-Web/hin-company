@@ -38,16 +38,16 @@ export function CareerHero() {
 
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">{t("career.stats.employees") || "Team Members"}</div>
+                <div className="text-2xl font-bold text-primary">150+</div>
+                <div className="text-sm text-muted-foreground">{t("career.stats.employees") || "Happy Client"}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15+</div>
-                <div className="text-sm text-muted-foreground">{t("career.stats.countries") || "Countries"}</div>
+                <div className="text-2xl font-bold text-primary">24/7</div>
+                <div className="text-sm text-muted-foreground">{t("career.stats.countries") || "Services"}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">5+</div>
-                <div className="text-sm text-muted-foreground">{t("career.stats.years") || "Years Growing"}</div>
+                <div className="text-sm text-muted-foreground">{t("career.stats.years") || "Growing"}</div>
               </div>
             </div>
           </div>
