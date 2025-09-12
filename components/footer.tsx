@@ -50,44 +50,45 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  {t("nav.about")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  {t("nav.blog")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  {t("nav.contact")}
-                </Link>
-              </li>
+              
               
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <li>
-                <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors">
-                  Disclaimer
-                </Link>
-              </li>
-          <p className="text-muted-foreground">© 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.</p>
+          <ul className="flex justify-center gap-6 mb-4">
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms-conditions"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/disclaimer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Disclaimer
+              </Link>
+            </li>
+          </ul>
+
+          <p className="text-muted-foreground text-sm">
+            © 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.
+          </p>
         </div>
+
       </div>
     </footer>
   )
