@@ -64,7 +64,7 @@ export function CareerPositions() {
       location: "Remote / Bali",
       type: "Full-time",
       salary: "$55,000 - $75,000",
-      description: "Coordinate cross-functional teams to deliver high-quality projects on time and within budget.",
+      description: "Coordinate cross-functional teams to deliver high quality projects on time and within budget.",
       requirements: ["4+ years PM experience", "Agile methodology", "Team leadership skills"],
     },
   ]

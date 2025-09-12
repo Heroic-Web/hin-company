@@ -32,7 +32,7 @@ export function SEOArticleProcess() {
       title: t.language === "en" ? "SEO Writing" : "Penulisan SEO",
       description:
         t.language === "en"
-          ? "Our expert writers create engaging, high-quality content that's optimized for both search engines and human readers."
+          ? "Our expert writers create engaging, high quality content that's optimized for both search engines and human readers."
           : "Penulis ahli kami membuat konten berkualitas tinggi yang menarik dan dioptimalkan untuk mesin pencari dan pembaca manusia.",
     },
     {

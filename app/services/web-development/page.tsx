@@ -26,6 +26,10 @@ export default function WebDevelopmentPage() {
     "Web Applications",
     "Landing Pages",
     "Portfolio Websites",
+    "PPDB Websites",
+    "Travel Agency Websites",
+    "Blog Websites",
+    "Custom Coding Solutions",
     "Custom CMS Solutions",
   ]
 
@@ -89,9 +93,12 @@ export default function WebDevelopmentPage() {
                     ))}
                   </ul>
                   <div className="mt-8">
-                    <Link href="/contact">
+                    <Link 
+                      href="https://wa.me/6282144137914?text=Halo%20saya%20tertarik%20dengan%20layanan%20...." 
+                      target="_blank"
+                    >
                       <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                        Get Started Today
+                        Order
                       </Button>
                     </Link>
                   </div>

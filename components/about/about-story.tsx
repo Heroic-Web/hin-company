@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Target, Heart, Lightbulb } from "lucide-react"
+import { Lightbulb, Heart, Clock, DollarSign, Briefcase } from "lucide-react";
 
 export function AboutStory() {
   return (
@@ -11,7 +11,7 @@ export function AboutStory() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">Our Story</h2>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-              Heroic is an information technology company that offers high-quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development.
+              Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
               Founded in 2023, Heroic Web began as a small team of passionate developers and designers who believed
@@ -46,16 +46,15 @@ export function AboutStory() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="text-center border-border/50">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="h-8 w-8 text-primary" />
+                <Clock className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Our Mission</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">24/7 Service</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To empower businesses with exceptional digital solutions that drive growth, enhance user experience, and
-                create lasting impact in the digital landscape.
+                We provide round-the-clock support to ensure your needs are always met without delay.
               </p>
             </CardContent>
           </Card>
@@ -63,12 +62,11 @@ export function AboutStory() {
           <Card className="text-center border-border/50">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Lightbulb className="h-8 w-8 text-primary" />
+                <DollarSign className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Our Vision</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Affordable</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the leading digital agency that transforms ideas into powerful online experiences, setting new
-                standards for innovation and excellence.
+                Our solutions are designed to be budget-friendly while maintaining top quality.
               </p>
             </CardContent>
           </Card>
@@ -76,16 +74,17 @@ export function AboutStory() {
           <Card className="text-center border-border/50">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="h-8 w-8 text-primary" />
+                <Briefcase className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Our Values</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Professional</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Quality, integrity, and client success drive everything we do. We believe in building long-term
-                partnerships based on trust and exceptional results.
+                We deliver professional services with attention to detail and a focus on client success.
               </p>
             </CardContent>
           </Card>
         </div>
+
+        
       </div>
     </section>
   )

@@ -14,7 +14,9 @@ export function DesignPricing() {
       price: t.language === "en" ? "$299" : "Rp 4.500.000",
       period: t.language === "en" ? "/project" : "/proyek",
       description:
-        t.language === "en" ? "Perfect for small businesses and startups" : "Sempurna untuk bisnis kecil dan startup",
+        t.language === "en"
+          ? "Perfect for small businesses and startups"
+          : "Sempurna untuk bisnis kecil dan startup",
       features: [
         t.language === "en" ? "Logo Design" : "Desain Logo",
         t.language === "en" ? "Business Card Design" : "Desain Kartu Nama",
@@ -58,7 +60,9 @@ export function DesignPricing() {
         t.language === "en" ? "Marketing Materials" : "Materi Pemasaran",
         t.language === "en" ? "Unlimited Concepts" : "Konsep Tak Terbatas",
         t.language === "en" ? "Priority Support" : "Dukungan Prioritas",
-        t.language === "en" ? "Brand Strategy Consultation" : "Konsultasi Strategi Brand",
+        t.language === "en"
+          ? "Brand Strategy Consultation"
+          : "Konsultasi Strategi Brand",
         t.language === "en" ? "3-day Delivery" : "Pengiriman 3 hari",
       ],
       popular: false,
@@ -68,9 +72,12 @@ export function DesignPricing() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
+        {/* Title & Description */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t.language === "en" ? "Design Pricing Plans" : "Paket Harga Desain"}
+            {t.language === "en"
+              ? "Design Pricing Plans"
+              : "Paket Harga Desain"}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             {t.language === "en"
@@ -79,12 +86,16 @@ export function DesignPricing() {
           </p>
         </div>
 
+        {/* Pricing Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative ${plan.popular ? "ring-2 ring-emerald-500 scale-105" : ""} hover:shadow-lg transition-all duration-300`}
+              className={`relative ${
+                plan.popular ? "ring-2 ring-emerald-500 scale-105" : ""
+              } hover:shadow-lg transition-all duration-300`}
             >
+              {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-emerald-600 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1">
@@ -94,27 +105,46 @@ export function DesignPricing() {
                 </div>
               )}
 
+              {/* Card Header */}
               <CardHeader className="text-center pb-8 pt-8">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  {plan.name}
+                </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-emerald-600">{plan.price}</span>
-                  <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
+                  <span className="text-4xl font-bold text-emerald-600">
+                    {plan.price}
+                  </span>
+                  <span className="text-gray-600 dark:text-gray-300">
+                    {plan.period}
+                  </span>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300">{plan.description}</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {plan.description}
+                </p>
               </CardHeader>
 
+              {/* Card Content */}
               <CardContent className="pt-0">
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center gap-3"
+                    >
                       <Check className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  className={`w-full ${plan.popular ? "bg-emerald-600 hover:bg-emerald-700 text-white" : ""}`}
+                  className={`w-full ${
+                    plan.popular
+                      ? "bg-emerald-600 hover:bg-emerald-700 text-white"
+                      : ""
+                  }`}
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
                 >

@@ -45,7 +45,7 @@ export default function SEOArticlesPage() {
                   Artikel SEO Services
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-pretty">
-                  Boost your website ranking with high-quality, SEO-optimized articles that drive organic traffic and
+                  Boost your website ranking with high quality, SEO optimized articles that drive organic traffic and
                   engage your audience.
                 </p>
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

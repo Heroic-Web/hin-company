@@ -18,7 +18,7 @@ export function Services() {
     {
       icon: Search,
       title: t("services.seo"),
-      description: "High-quality SEO content that ranks and converts",
+      description: "High quality SEO content that ranks and converts",
       features: ["Keyword Research", "Content Strategy", "Technical SEO", "Analytics"],
     },
     {
