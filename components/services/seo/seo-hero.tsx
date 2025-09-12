@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useLanguage } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Search, TrendingUp } from "lucide-react"
@@ -13,7 +14,7 @@ export function SEOHero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Search className="w-4 h-4" />
-            {t.services?.seo || "SEO Services"}
+            {t("services.seo") || "SEO Services"}
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 text-balance">
@@ -27,9 +28,19 @@ export function SEOHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-              {t.common?.getStarted || "Get Started"}
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Link
+                href={t("common.getStarted.link")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("common.getStarted")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button
               size="lg"
@@ -37,7 +48,7 @@ export function SEOHero() {
               className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 bg-transparent"
             >
               <TrendingUp className="mr-2 w-5 h-5" />
-              {t.common?.viewResults || "View Results"}
+              {t("common.viewResults") || "View Results"}
             </Button>
           </div>
         </div>

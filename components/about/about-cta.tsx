@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
@@ -15,9 +16,19 @@ export function AboutCTA() {
           Let's discuss how we can help bring your vision to life and achieve your business goals.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            {t("common.getStarted")}
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+          >
+            <Link
+              href={t("common.getStarted.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("common.getStarted")}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="px-8 py-3 bg-transparent">
             {t("nav.contact")}

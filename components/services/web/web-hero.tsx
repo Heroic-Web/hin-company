@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Smartphone, Zap } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
@@ -36,9 +37,18 @@ export function WebDevelopmentHero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                {t("common.getStarted")}
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button
+                asChild
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+                size="lg"
+              >
+                <Link
+                  href={t("common.getStarted.link")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("common.getStarted")}
+                </Link>
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent">
                 View Portfolio

@@ -5,42 +5,42 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Search, Lightbulb, Palette, Rocket } from "lucide-react"
 
 export function DesignProcess() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const steps = [
     {
       icon: Search,
       step: "01",
-      title: t.language === "en" ? "Research & Discovery" : "Riset & Penemuan",
+      title: language === "en" ? "Brief & Planning" : "Brief & Planning",
       description:
-        t.language === "en"
+        language === "en"
           ? "We analyze your brand, target audience, and competitors to understand your unique positioning."
           : "Kami menganalisis brand, target audiens, dan kompetitor Anda untuk memahami positioning unik Anda.",
     },
     {
       icon: Lightbulb,
       step: "02",
-      title: t.language === "en" ? "Concept Development" : "Pengembangan Konsep",
+      title: language === "en" ? "Concept Development" : "Pengembangan Konsep",
       description:
-        t.language === "en"
+        language === "en"
           ? "Based on research insights, we develop creative concepts and design strategies."
           : "Berdasarkan wawasan riset, kami mengembangkan konsep kreatif dan strategi desain.",
     },
     {
       icon: Palette,
       step: "03",
-      title: t.language === "en" ? "Design Creation" : "Pembuatan Desain",
+      title: language === "en" ? "Execution Design" : "Eksekusi Desain",
       description:
-        t.language === "en"
+        language === "en"
           ? "Our designers create stunning visuals that align with your brand and objectives."
           : "Desainer kami menciptakan visual yang menakjubkan yang selaras dengan brand dan tujuan Anda.",
     },
     {
       icon: Rocket,
       step: "04",
-      title: t.language === "en" ? "Refinement & Delivery" : "Penyempurnaan & Pengiriman",
+      title: language === "en" ? "Finalization & Delivery" : "Penyempurnaan & Pengiriman",
       description:
-        t.language === "en"
+        language === "en"
           ? "We refine the designs based on feedback and deliver final files ready for implementation."
           : "Kami menyempurnakan desain berdasarkan feedback dan mengirimkan file final siap implementasi.",
     },
@@ -51,10 +51,10 @@ export function DesignProcess() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t.language === "en" ? "Our Design Process" : "Proses Desain Kami"}
+            {language === "en" ? "Our Design Process" : "Design Process"}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t.language === "en"
+            {language === "en"
               ? "A systematic approach to creating designs that deliver results and exceed expectations."
               : "Pendekatan sistematis untuk menciptakan desain yang memberikan hasil dan melampaui ekspektasi."}
           </p>

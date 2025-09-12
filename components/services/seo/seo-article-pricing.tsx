@@ -6,17 +6,17 @@ import { Button } from "@/components/ui/button"
 import { FileText, Package, ShoppingBag } from "lucide-react"
 
 export function SEOArticlePricing() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   // ==================== DATA ====================
   const paketSatuan = [
     // ---------- SATUAN A ----------
     {
-      name: t.language === "en" ? "Single A" : "Satuan A",
+      name: language === "en" ? "Single A" : "Satuan A",
       price: "Rp5K",
-      period: t.language === "en" ? "/article" : "/artikel",
+      period: language === "en" ? "/article" : "/artikel",
       description:
-        t.language === "en"
+        language === "en"
           ? "Best for short, one-time articles up to 1200 words."
           : "Cocok untuk kebutuhan artikel pendek hingga 1200 kata. Pas untuk blog, website kecil, atau konten cepat.",
       icon: FileText,
@@ -40,11 +40,11 @@ export function SEOArticlePricing() {
     },
     // ---------- SATUAN B ----------
     {
-      name: t.language === "en" ? "Single B" : "Satuan B",
+      name: language === "en" ? "Single B" : "Satuan B",
       price: "Rp45K",
-      period: t.language === "en" ? "/article" : "/artikel",
+      period: language === "en" ? "/article" : "/artikel",
       description:
-        t.language === "en"
+        language === "en"
           ? "Best for medium-length articles (1300–3000 words)."
           : "Cocok untuk artikel menengah, lebih detail dan komprehensif, antara 1300 hingga 3000 kata.",
       icon: FileText,
@@ -63,11 +63,11 @@ export function SEOArticlePricing() {
     },
     // ---------- SATUAN C ----------
     {
-      name: t.language === "en" ? "Single C" : "Satuan C",
+      name: language === "en" ? "Single C" : "Satuan C",
       price: "Rp150K",
-      period: t.language === "en" ? "/article" : "/artikel",
+      period: language === "en" ? "/article" : "/artikel",
       description:
-        t.language === "en"
+        language === "en"
           ? "Best for long, detailed articles (3500–6000 words)."
           : "Cocok untuk artikel panjang, mendalam, dan detail, antara 3500 hingga 6000 kata.",
       icon: FileText,
@@ -85,11 +85,11 @@ export function SEOArticlePricing() {
   const paketLainnya = [
   // ---------- HEMAT ----------
   {
-    name: t.language === "en" ? "Economy" : "Hemat",
+    name: language === "en" ? "Economy" : "Hemat",
     price: "Rp60K – Rp390K",
-    period: t.language === "en" ? "/10 articles" : "/10 artikel",
+    period: language === "en" ? "/10 articles" : "/10 artikel",
     description:
-      t.language === "en"
+      language === "en"
         ? "Affordable bundles of 10 articles in Indonesian or English with flexible word counts."
         : "Paket hemat 10 artikel dengan pilihan jumlah kata dan bahasa Indonesia atau Inggris.",
     icon: Package,
@@ -109,11 +109,11 @@ export function SEOArticlePricing() {
 
   // ---------- BORONGAN ----------
   {
-    name: t.language === "en" ? "Bulk" : "Borongan",
+    name: language === "en" ? "Bulk" : "Borongan",
     price: "Rp120K – Rp710K",
-    period: t.language === "en" ? "/14–30 days" : "/14–30 hari",
+    period: language === "en" ? "/14–30 days" : "/14–30 hari",
     description:
-      t.language === "en"
+      language === "en"
         ? "Perfect for agencies & long-term SEO projects. More articles in a fixed schedule."
         : "Cocok untuk kebutuhan skala besar seperti perusahaan, portal berita, atau proyek SEO jangka panjang.",
     icon: ShoppingBag,
@@ -135,10 +135,10 @@ export function SEOArticlePricing() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t.language === "en" ? "Article Pricing Packages" : "Paket Harga Artikel"}
+            {language === "en" ? "Article Pricing Packages" : "Paket Harga Artikel"}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.language === "en"
+            {language === "en"
               ? "Choose the perfect plan for your SEO content needs"
               : "Pilih paket yang sempurna untuk kebutuhan konten SEO Anda"}
           </p>
@@ -146,36 +146,36 @@ export function SEOArticlePricing() {
 
         {/* Paket Satuan */}
         <h3 className="text-2xl font-bold text-center mb-8">
-          {t.language === "en" ? "Single Packages" : "Paket Artikel Satuan"}
+          {language === "en" ? "Single Packages" : "Paket Artikel Satuan"}
         </h3>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {paketSatuan.map((plan, i) => (
-            <PricingCard key={i} plan={plan} t={t} />
+            <PricingCard key={i} plan={plan} t={t} language={language} />
           ))}
         </div>
 
         {/* Paket Hemat & Borongan */}
         <h3 className="text-2xl font-bold text-center mb-8">
-          {t.language === "en" ? "Bundles" : "Paket Hemat & Borongan"}
+          {language === "en" ? "Bundles" : "Paket Hemat & Borongan"}
         </h3>
         <div className="grid md:grid-cols-2 gap-8">
           {paketLainnya.map((plan, i) => (
-            <PricingCard key={i} plan={plan} t={t} />
+            <PricingCard key={i} plan={plan} t={t} language={language} />
           ))}
         </div>
         {/* Custom Package Section */}  
         <div className="mt-16 text-center">  
           <div className="bg-primary/5 rounded-2xl p-8 max-w-4xl mx-auto">  
             <h3 className="text-2xl font-bold text-foreground mb-4">  
-              {t.language === "en" ? "Need a Custom Package?" : "Butuh Paket Kustom?"}  
+              {language === "en" ? "Need a Custom Package?" : "Butuh Paket Kustom?"}  
             </h3>  
             <p className="text-muted-foreground text-lg mb-6">  
-              {t.language === "en"  
+              {language === "en"  
                 ? "We offer flexible pricing for bulk orders and long-term content partnerships. Contact us for a personalized quote."  
                 : "Kami menawarkan harga fleksibel untuk pesanan dalam jumlah besar dan kemitraan konten jangka panjang. Hubungi kami untuk penawaran personal."}  
             </p>  
             <Button variant="outline" size="lg">  
-              {t.language === "en" ? "Contact for Custom Quote" : "Hubungi untuk Penawaran Kustom"}  
+              {language === "en" ? "Contact for Custom Quote" : "Hubungi untuk Penawaran Kustom"}  
             </Button>  
           </div>  
         </div>  
@@ -186,7 +186,31 @@ export function SEOArticlePricing() {
 }
 
 // ==================== KOMPONEN CARD ====================
-function PricingCard({ plan, t }) {
+type Feature = {
+  article: string
+  id: string
+  en: string
+}
+
+type Plan = {
+  name: string
+  price: string
+  period: string
+  description: string
+  icon: React.ComponentType<{ className?: string }>
+  features: Feature[]
+  popular?: boolean
+}
+
+function PricingCard({
+  plan,
+  t,
+  language,
+}: {
+  plan: Plan
+  t: any
+  language: string
+}) {
   return (
     <Card
       className={`relative overflow-hidden ${
@@ -196,7 +220,7 @@ function PricingCard({ plan, t }) {
       {/* Label Populer */}
       {plan.popular && (
         <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
-          {t.language === "en" ? "Most Popular" : "Paling Populer"}
+          {language === "en" ? "Most Popular" : "Paling Populer"}
         </div>
       )}
 
@@ -220,7 +244,7 @@ function PricingCard({ plan, t }) {
             <thead className="bg-muted/50">
               <tr>
                 <th className="px-4 py-2 border">
-                  {t.language === "en" ? "Article & Word Count" : "Keterangan"}
+                  {language === "en" ? "Description" : "Keterangan"}
                 </th>
                 <th className="px-4 py-2 border">Bahasa Indonesia</th>
                 <th className="px-4 py-2 border">English</th>
@@ -247,7 +271,7 @@ function PricingCard({ plan, t }) {
           }`}
           size="lg"
         >
-          {t.language === "en" ? "Choose Plan" : "Pilih Paket"}
+          {language === "en" ? "Choose Plan" : "Pilih Paket"}
         </Button>
         
       </CardContent>

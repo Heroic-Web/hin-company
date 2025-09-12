@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Search, Palette, ChevronLeft, ChevronRight } from "lucide-react"
@@ -83,14 +84,35 @@ export function Hero() {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-                {t("common.getStarted")}
-                <ArrowRight className="ml-2 h-5 w-5" />
+              {/* Tombol Consult Now (WhatsApp) */}
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+              >
+                <Link
+                  href={t("common.getStarted.link")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("common.getStarted")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">
-                {t("common.learnMore")}
+
+              {/* Tombol Learn More (About) */}
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 bg-transparent"
+              >
+                <Link href={t("common.learnMore.link")}>
+                  {t("common.learnMore")}
+                </Link>
               </Button>
             </div>
+
           </div>
 
           {/* Right side - Image carousel */}

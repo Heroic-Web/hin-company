@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { CheckCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
@@ -29,8 +30,11 @@ export function About() {
                 </li>
               ))}
             </ul>
-
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">{t("common.learnMore")}</Button>
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link href={t("common.learnMore.link")}>
+                {t("common.learnMore")}
+              </Link>
+            </Button>
           </div>
 
           <div className="relative">

@@ -30,8 +30,14 @@ const translations = {
 
     // Common
     "common.learnMore": "Learn More",
+    "common.learnMore.link": "/about",
+
     "common.getStarted": "Consult Now",
+    "common.getStarted.link": "https://wa.me/6282144137914?text=Hello%2C%20I%27m%20interested%20in%20your%20services",
+
     "common.readMore": "Read More",
+    "common.readMore.link": "/blog",
+
 
     // Hero
     "hero.title": "Welcome To",
@@ -122,8 +128,11 @@ const translations = {
 
     // Common
     "common.learnMore": "Pelajari Lebih Lanjut",
+    "common.learnMore.link": "/about",
     "common.getStarted": "Mulai Sekarang",
+    "common.getStarted.link": "https://wa.me/6282144137914?text=Hello%2C%20Saya%20tertarik%20dengan%20layanan%20Anda",
     "common.readMore": "Baca Selengkapnya",
+    "common.readMore.link": "/blog",
 
     // Hero
     "hero.title": "Solusi Web Profesional",

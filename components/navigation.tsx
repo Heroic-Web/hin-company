@@ -165,8 +165,17 @@ export function Navigation() {
                 </DropdownMenuContent>
               </DropdownMenu>
               <ThemeToggle />
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                {t("common.getStarted")}
+              <Button
+                asChild
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                <Link
+                  href={t("common.getStarted.link")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("common.getStarted")}
+                </Link>
               </Button>
             </div>
 

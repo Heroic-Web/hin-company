@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Code, Search, Palette, ArrowRight } from "lucide-react"
@@ -59,11 +60,14 @@ export function Services() {
                   ))}
                 </ul>
                 <Button
-                  variant="outline"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                >
+                asChild
+                variant="outline"
+                className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+              >
+                <Link href={t("common.learnMore.link")}>
                   {t("common.learnMore")}
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
                 </Button>
               </CardContent>
             </Card>

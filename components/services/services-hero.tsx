@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
@@ -17,9 +18,19 @@ export function ServicesHero() {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty leading-relaxed">
             Comprehensive digital solutions designed to elevate your business and drive measurable results
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            {t("common.getStarted")}
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
+            <Link
+              href={t("common.getStarted.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("common.getStarted")}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -7,90 +7,90 @@ import { ExternalLink, TrendingUp, Users, Clock } from "lucide-react"
 import Image from "next/image"
 
 export function SEOArticlePortfolio() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const portfolioItems = [
     {
-      title: t.language === "en" ? "E-commerce Blog Series" : "Seri Blog E-commerce",
-      category: t.language === "en" ? "Retail & E-commerce" : "Retail & E-commerce",
+      title: language === "en" ? "E-commerce Blog Series" : "Seri Blog E-commerce",
+      category: language === "en" ? "Retail & E-commerce" : "Retail & E-commerce",
       description:
-        t.language === "en"
+        language === "en"
           ? "50+ SEO articles for online fashion retailer, increased organic traffic by 300%"
           : "50+ artikel SEO untuk retailer fashion online, meningkatkan traffic organik 300%",
       metrics: {
         traffic: "300%",
         keywords: "150+",
-        timeframe: t.language === "en" ? "6 months" : "6 bulan",
+        timeframe: language === "en" ? "6 months" : "6 bulan",
       },
       image: "/ecommerce-blog-articles.jpg",
     },
     {
-      title: t.language === "en" ? "Tech Startup Content" : "Konten Tech Startup",
-      category: t.language === "en" ? "Technology" : "Teknologi",
+      title: language === "en" ? "Tech Startup Content" : "Konten Tech Startup",
+      category: language === "en" ? "Technology" : "Teknologi",
       description:
-        t.language === "en"
+        language === "en"
           ? "Technical blog posts and product descriptions that boosted SaaS conversions by 150%"
           : "Blog post teknis dan deskripsi produk yang meningkatkan konversi SaaS 150%",
       metrics: {
         traffic: "250%",
         keywords: "200+",
-        timeframe: t.language === "en" ? "4 months" : "4 bulan",
+        timeframe: language === "en" ? "4 months" : "4 bulan",
       },
       image: "/tech-startup-blog.jpg",
     },
     {
-      title: t.language === "en" ? "Healthcare Articles" : "Artikel Kesehatan",
-      category: t.language === "en" ? "Healthcare" : "Kesehatan",
+      title: language === "en" ? "Healthcare Articles" : "Artikel Kesehatan",
+      category: language === "en" ? "Healthcare" : "Kesehatan",
       description:
-        t.language === "en"
+        language === "en"
           ? "Medical and wellness content that improved clinic's online visibility by 400%"
           : "Konten medis dan wellness yang meningkatkan visibilitas online klinik 400%",
       metrics: {
         traffic: "400%",
         keywords: "100+",
-        timeframe: t.language === "en" ? "8 months" : "8 bulan",
+        timeframe: language === "en" ? "8 months" : "8 bulan",
       },
       image: "/healthcare-medical-articles.jpg",
     },
     {
-      title: t.language === "en" ? "Travel Blog Content" : "Konten Blog Travel",
-      category: t.language === "en" ? "Travel & Tourism" : "Travel & Pariwisata",
+      title: language === "en" ? "Travel Blog Content" : "Konten Blog Travel",
+      category: language === "en" ? "Travel & Tourism" : "Travel & Pariwisata",
       description:
-        t.language === "en"
+        language === "en"
           ? "Destination guides and travel tips that generated 500K+ monthly page views"
           : "Panduan destinasi dan tips travel yang menghasilkan 500K+ page views bulanan",
       metrics: {
         traffic: "600%",
         keywords: "300+",
-        timeframe: t.language === "en" ? "12 months" : "12 bulan",
+        timeframe: language === "en" ? "12 months" : "12 bulan",
       },
       image: "/travel-blog-destination-guides.jpg",
     },
     {
-      title: t.language === "en" ? "Financial Services Content" : "Konten Layanan Keuangan",
-      category: t.language === "en" ? "Finance" : "Keuangan",
+      title: language === "en" ? "Financial Services Content" : "Konten Layanan Keuangan",
+      category: language === "en" ? "Finance" : "Keuangan",
       description:
-        t.language === "en"
+        language === "en"
           ? "Investment and financial planning articles that increased lead generation by 200%"
           : "Artikel investasi dan perencanaan keuangan yang meningkatkan lead generation 200%",
       metrics: {
         traffic: "200%",
         keywords: "120+",
-        timeframe: t.language === "en" ? "5 months" : "5 bulan",
+        timeframe: language === "en" ? "5 months" : "5 bulan",
       },
       image: "/financial-planning-articles.jpg",
     },
     {
-      title: t.language === "en" ? "Food & Recipe Blog" : "Blog Food & Resep",
-      category: t.language === "en" ? "Food & Beverage" : "Food & Minuman",
+      title: language === "en" ? "Food & Recipe Blog" : "Blog Food & Resep",
+      category: language === "en" ? "Food & Beverage" : "Food & Minuman",
       description:
-        t.language === "en"
+        language === "en"
           ? "Recipe articles and food guides that built a community of 100K+ followers"
           : "Artikel resep dan panduan makanan yang membangun komunitas 100K+ followers",
       metrics: {
         traffic: "450%",
         keywords: "250+",
-        timeframe: t.language === "en" ? "10 months" : "10 bulan",
+        timeframe: language === "en" ? "10 months" : "10 bulan",
       },
       image: "/food-recipe-blog-articles.jpg",
     },
@@ -101,10 +101,10 @@ export function SEOArticlePortfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t.language === "en" ? "Our Article Portfolio" : "Portfolio Artikel Kami"}
+            {language === "en" ? "Our Article Portfolio" : "Portfolio Artikel Kami"}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.language === "en"
+            {language === "en"
               ? "Real results from our SEO article campaigns across various industries"
               : "Hasil nyata dari kampanye artikel SEO kami di berbagai industri"}
           </p>
@@ -138,26 +138,26 @@ export function SEOArticlePortfolio() {
                       <TrendingUp className="h-4 w-4 text-primary mr-1" />
                     </div>
                     <div className="text-lg font-bold text-primary">+{item.metrics.traffic}</div>
-                    <div className="text-xs text-muted-foreground">{t.language === "en" ? "Traffic" : "Traffic"}</div>
+                    <div className="text-xs text-muted-foreground">{language === "en" ? "Traffic" : "Traffic"}</div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-1">
                       <Users className="h-4 w-4 text-primary mr-1" />
                     </div>
                     <div className="text-lg font-bold text-primary">{item.metrics.keywords}</div>
-                    <div className="text-xs text-muted-foreground">{t.language === "en" ? "Keywords" : "Keywords"}</div>
+                    <div className="text-xs text-muted-foreground">{language === "en" ? "Keywords" : "Keywords"}</div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-1">
                       <Clock className="h-4 w-4 text-primary mr-1" />
                     </div>
                     <div className="text-lg font-bold text-primary">{item.metrics.timeframe}</div>
-                    <div className="text-xs text-muted-foreground">{t.language === "en" ? "Duration" : "Durasi"}</div>
+                    <div className="text-xs text-muted-foreground">{language === "en" ? "Duration" : "Durasi"}</div>
                   </div>
                 </div>
 
                 <Button variant="outline" className="w-full group bg-transparent">
-                  {t.language === "en" ? "View Case Study" : "Lihat Studi Kasus"}
+                  {language === "en" ? "View Case Study" : "Lihat Studi Kasus"}
                   <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
@@ -167,7 +167,7 @@ export function SEOArticlePortfolio() {
 
         <div className="mt-16 text-center">
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            {t.language === "en" ? "Start Your SEO Content Project" : "Mulai Proyek Konten SEO Anda"}
+            {language === "en" ? "Start Your SEO Content Project" : "Mulai Proyek Konten SEO Anda"}
           </Button>
         </div>
       </div>

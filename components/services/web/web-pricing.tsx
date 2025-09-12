@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
@@ -150,16 +151,23 @@ export function WebPricing() {
                   ))}
                 </ul>
 
-                <Button
-                  size="sm"
-                  className={`w-full text-xs sm:text-sm ${
-                    plan.popular
-                      ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-                      : "bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  } transition-colors duration-300`}
+               <Button
+                asChild
+                size="sm"
+                className={`w-full text-xs sm:text-sm ${
+                  plan.popular
+                    ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                    : "bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                } transition-colors duration-300`}
+              >
+                <Link
+                  href={t("common.getStarted.link")}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {t("common.getStarted")}
-                </Button>
+                </Link>
+              </Button>
               </CardContent>
             </Card>
           ))}

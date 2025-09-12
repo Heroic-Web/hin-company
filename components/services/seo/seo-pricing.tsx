@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useLanguage } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -107,6 +108,7 @@ export function SEOPricing() {
                 </ul>
 
                 <Button
+                  asChild
                   className={`w-full ${
                     plan.popular
                       ? "bg-emerald-600 hover:bg-emerald-700 text-white"
@@ -114,7 +116,13 @@ export function SEOPricing() {
                   }`}
                   size="lg"
                 >
-                  {t.common?.getStarted || "Get Started"}
+                  <Link
+                    href={t("common.getStarted.link")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("common.getStarted")}
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -130,7 +138,7 @@ export function SEOPricing() {
             size="lg"
             className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 bg-transparent"
           >
-            {t.common?.contactUs || "Contact Us"}
+            {t("common.contactUs") || "Contact Us"}
           </Button>
         </div>
       </div>

@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Suspense } from "react"
 import { LanguageProvider } from "@/components/language-provider"
 import { Navigation } from "@/components/navigation"  
-import { Footer } from "@/components/footer"           
 import "./globals.css"
 
 export const metadata: Metadata = {
