@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">5. Contact Us</h2>
                 <p className="mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at privacy@webcraft-studio.com
+                  If you have any questions about this Privacy Policy, please contact us at cs.heroicweb@gmail.com
                 </p>
               </section>
             </div>
