@@ -18,10 +18,10 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      name: "Ferdiansyah",
-      company: "Electical Engineer",
+      name: "Siti Khomsiyah",
+      company: "Entepreneur",
       content:
-        "",
+        "The service is friendly and responsible in completing the tasks until they are finished.",
       rating: 5,
     },
     {

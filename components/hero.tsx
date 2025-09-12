@@ -10,10 +10,12 @@ export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const heroImages = [
-    "/modern-web-development-workspace-with-multiple-mon.jpg",
-    "/creative-design-studio-with-graphics-and-mockups.jpg",
-    "/seo-analytics-dashboard.png",
-    "/modern-office-collaboration.png",
+    "/rekomendasi.jpeg",
+    "/cepat.jpeg",
+    "/leading-company.jpeg",
+    "/24jam.jpeg",
+    "/mobile-friendly.jpeg",
+    "/opennow.jpeg",
   ]
 
   useEffect(() => {
