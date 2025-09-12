@@ -58,9 +58,9 @@ const translations = {
       "Join a dynamic team of creative professionals and help us shape the future of digital experiences. We're always looking for talented individuals who share our passion for innovation.",
     "career.hero.viewPositions": "View Open Positions",
     "career.hero.learnMore": "Learn About Our Culture",
-    "career.stats.employees": "Team Members",
-    "career.stats.countries": "Countries",
-    "career.stats.years": "Years Growing",
+    "career.stats.employees": "Happy Clients",
+    "career.stats.countries": "Services",
+    "career.stats.years": "Growing",
     "career.positions.title": "Open Positions",
     "career.positions.description":
       "Discover exciting opportunities to grow your career with us. We offer competitive salaries, flexible work arrangements, and a collaborative environment.",
