@@ -11,10 +11,16 @@ export function AboutTeam() {
       bio: "Full-stack developer with 4+ years of experience in building scalable web applications, and articles seo.",
     },
     {
-      name: "Sarah Chen",
+      name: "Ilham Muhammad Jayadi Gunawan",
       role: "Lead Designer",
-      image: "/placeholder.svg?height=300&width=300&text=Sarah",
+      image: "/placeholder.svg?height=300&width=300&text=Ilham",
       bio: "Creative designer specializing in user experience and brand identity with a passion for innovation.",
+    },
+    {
+      name: "Seina Umar",
+      role: "Chief Finansial Officer",
+      image: "/placeholder.svg?height=300&width=300&text=Seina",
+      bio: "Digital marketing expert with proven track record of improving search rankings and organic traffic.",
     },
     {
       name: "Michael Rodriguez",

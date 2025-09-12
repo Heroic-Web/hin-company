@@ -8,13 +8,20 @@ export function ClientLogos() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const clients = [
+    { name: "TunasHonda", logo: "/tunashonda.png" },
+    { name: "Muana", logo: "/muana.png" },
+    { name: "Media Dakwahi", logo: "/Media Dakwahi Logo.png" },
+    { namme: "Almufid", logo: "/Almufid-Official.png" },
+    { name: "HIN Global News", logo: "/HIN Global News.png" },
+    { name: "Blare", logo: "/Blare-Media.png" },
+    { name: "Lampung", logo: "/lampung.png" },
     { name: "TechCorp", logo: "/techcorp-logo.png" },
     { name: "StartupHub", logo: "/startuphub-logo.jpg" },
     { name: "DigitalFlow", logo: "/digitalflow-logo.jpg" },
     { name: "InnovateLab", logo: "/innovatelab-logo.png" },
     { name: "CloudTech", logo: "/cloudtech-logo.jpg" },
     { name: "DataSync", logo: "/datasync-logo.jpg" },
-    { name: "WebFlow", logo: "/webflow-logo.jpg" },
+    { name: "LPKSkaya", logo: "/LPK_Skaya_Logo.png" },
     { name: "AppMaster", logo: "/appmaster-logo.jpg" },
   ]
 
