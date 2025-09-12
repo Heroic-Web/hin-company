@@ -65,26 +65,27 @@ export function Footer() {
                   {t("nav.contact")}
                 </Link>
               </li>
-              <li>
-                <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors">
-                  Disclaimer
-                </Link>
-              </li>
+              
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
+          <li>
+            <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
+            </Link>
+            </li>
+            <li>
+              <Link href="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms
+              </Link>
+            </li>
+            <li>
+              <Link href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors">
+                Disclaimer
+              </Link>
+            </li>
           <p className="text-muted-foreground">© 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.</p>
         </div>
       </div>
