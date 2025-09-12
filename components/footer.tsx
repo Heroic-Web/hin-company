@@ -103,8 +103,6 @@ export function Footer() {
               © 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.
             </p>
           </div>
-
-          <p className="text-muted-foreground">© 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.</p>
         </div>
       </div>
     </footer>
