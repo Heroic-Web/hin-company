@@ -60,9 +60,9 @@ export function Navigation() {
       label: t("nav.services"),
       icon: Briefcase,
       submenu: [
-        { href: "/services/web-development", label: "Web Development" },
-        { href: "/services/seo-articles", label: "Artikel SEO" },
-        { href: "/services/design", label: "Design" },
+        { href: "/services/web-development", label: t("services.web") },
+        { href: "/services/seo-articles", label: t("services.seo") },
+        { href: "/services/design", label: t("services.design") },
       ],
     },
     { href: "/blog", label: t("nav.blog"), icon: BookOpen },

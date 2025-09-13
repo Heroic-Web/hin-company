@@ -13,6 +13,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
+// --- Dictionary Lengkap ---
 const translations = {
   en: {
     // Navigation
@@ -37,7 +38,6 @@ const translations = {
 
     "common.readMore": "Read More",
     "common.readMore.link": "/blog",
-
 
     // Hero
     "hero.title": "Welcome To",
@@ -118,7 +118,7 @@ const translations = {
     "nav.about": "Tentang",
     "nav.services": "Layanan",
     "nav.blog": "Blog",
-    "nav.career": "Karir", 
+    "nav.career": "Karir",
     "nav.contact": "Kontak",
 
     // Services
@@ -209,6 +209,7 @@ const translations = {
   },
 }
 
+// --- Provider ---
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("en")
 
@@ -235,11 +236,40 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-
+// --- Hook ---
 export function useLanguage() {
   const context = useContext(LanguageContext)
-  if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
-  }
+  if (!context) throw new Error("useLanguage must be used within a LanguageProvider")
   return context
+}
+
+// --- Tombol Toggle Bahasa ---
+export function LanguageToggle() {
+  const { language, setLanguage } = useLanguage()
+
+  const toggle = () => {
+    setLanguage(language === "en" ? "id" : "en")
+  }
+
+  return (
+    <button
+      onClick={toggle}
+      className="px-4 py-2 rounded-lg border bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+    >
+      {language === "en" ? "🇬🇧 English" : "🇮🇩 Indonesia"}
+    </button>
+  )
+}
+
+// --- Contoh Navbar ---
+export function Navbar() {
+  const { t } = useLanguage()
+
+  return (
+    <nav className="flex gap-4 items-center">
+      <span>{t("nav.home")}</span>
+      <span>{t("nav.about")}</span>
+      <LanguageToggle />
+    </nav>
+  )
 }
