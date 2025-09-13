@@ -15,7 +15,7 @@ export function DesignHero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Palette className="w-4 h-4" />
-            {t("professional_design_services")}
+            {t("Profesional Design Services")}
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 text-balance">
