@@ -9,7 +9,7 @@ import { PricingSection } from "@/components/services/pricing-section"
 export const metadata = {
   title: "Our Services - Heroic Web",
   description:
-    "Professional web development, SEO optimization, and design services to help your business succeed online.",
+    "Professional web development, Article SEO, and design services to help your business succeed online.",
 }
 
 export default function ServicesPage() {

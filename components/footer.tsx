@@ -22,7 +22,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground mb-4 text-pretty">
-              Professional web development, SEO optimization, and design services to help your business succeed online.
+              Professional web development, Article SEO, and design services to help your business succeed online.
             </p>
           </div>
 
