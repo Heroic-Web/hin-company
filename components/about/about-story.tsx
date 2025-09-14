@@ -37,13 +37,17 @@ export function AboutStory() {
           </div>
 
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-primary mb-4">100+</div>
-                <div className="text-xl text-foreground">Happy Clients</div>
-              </div>
+          <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+            <div className="relative">
+              <img
+                src="/about_hero.png" 
+                alt="Happy Clients"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+        </div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

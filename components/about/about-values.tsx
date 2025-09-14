@@ -40,56 +40,52 @@ export function AboutValues() {
   return (
     <>
       <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">Our Vision</h2>
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center mb-6">
-                    <Eye className="h-12 w-12 text-primary" />
-                  </div>
-                  <p className="text-lg text-foreground leading-relaxed text-center">
-                    To become a trusted digital partner and a symbol of modern heroism that provides creative and innovative solutions, 
-                    accelerating the global digital revolution and driving clients’ success with determination and heroic spirit.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-2 gap-12">
+      {/* Vision */}
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Vision</h2>
+        <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10 h-full">
+          <CardContent className="p-8 flex flex-col items-center justify-center">
+            <Eye className="h-12 w-12 text-primary mb-6" />
+            <p className="text-lg text-foreground leading-relaxed text-center">
+              To become a trusted digital partner and a symbol of modern heroism that provides creative and 
+              innovative solutions, accelerating the global digital revolution and driving clients’ success 
+              with determination and heroic spirit.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
 
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">Our Mision</h2>
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center mb-6">
-                    <Target className="h-12 w-12 text-primary" />
-                  </div>
-                  <div className="space-y-4 text-left">
-                    <p className="text-lg text-foreground leading-relaxed">
-                      1. To overcome every challenge in projects with strong determination and proactive solutions, just like a hero.
-                    </p>
-                    <p className="text-lg text-foreground leading-relaxed">
-                      2. To apply the latest technologies to enhance services and become a primary source of information for businesses.
-                    </p>
-                    <p className="text-lg text-foreground leading-relaxed">
-                      3. To provide professional services with a focus on customer satisfaction.
-                    </p>
-                    <p className="text-lg text-foreground leading-relaxed">
-                      4. To deliver sustainable benefits and profits for stakeholders while creating a positive impact that strengthens mutually beneficial relationships.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+      {/* Mission */}
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+        <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10 h-full">
+          <CardContent className="p-8">
+            <div className="flex items-center justify-center mb-6">
+              <Target className="h-12 w-12 text-primary" />
             </div>
-          </div>
-        </div>
-      </section>
+            <div className="space-y-4 text-left">
+              <p className="text-lg text-foreground leading-relaxed">
+                1. To overcome every challenge in projects with strong determination and proactive solutions, just like a hero.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                2. To apply the latest technologies to enhance services and become a primary source of information for businesses.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                3. To provide professional services with a focus on customer satisfaction.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                4. To deliver sustainable benefits and profits for stakeholders while creating a positive impact that strengthens mutually beneficial relationships.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

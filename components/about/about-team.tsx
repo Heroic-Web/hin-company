@@ -11,28 +11,22 @@ export function AboutTeam() {
       bio: "Full-stack developer with 4+ years of experience in building scalable web applications, and articles seo.",
     },
     {
-      name: "Ilham Muhammad Jayadi Gunawan",
-      role: "Lead Designer",
-      image: "/placeholder.svg?height=300&width=300&text=Ilham",
-      bio: "Creative designer specializing in user experience and brand identity with a passion for innovation.",
+      name: "Afifah Khoirunnisa",
+      role: "Chief Operating Officer",
+      image: "/placeholder.svg?height=300&width=300&text=Siti",
+      bio: "Operations expert with a strong background in process optimization, team leadership, and project management.",
     },
     {
       name: "Seina Umar",
       role: "Chief Finansial Officer",
       image: "/placeholder.svg?height=300&width=300&text=Seina",
-      bio: "Digital marketing expert with proven track record of improving search rankings and organic traffic.",
+      bio: "Financial strategist with expertise in budgeting, forecasting, and financial planning to drive business growth.",
     },
     {
-      name: "Michael Rodriguez",
-      role: "SEO Specialist",
-      image: "/placeholder.svg?height=300&width=300&text=Michael",
-      bio: "Digital marketing expert with proven track record of improving search rankings and organic traffic.",
-    },
-    {
-      name: "Emily Davis",
-      role: "Project Manager",
-      image: "/placeholder.svg?height=300&width=300&text=Emily",
-      bio: "Experienced project manager ensuring smooth delivery and client satisfaction on every project.",
+      name: "Ilham Muhammad Jayadi Gunawan",
+      role: "Lead Designer",
+      image: "/placeholder.svg?height=300&width=300&text=Ilham",
+      bio: "Creative designer specializing in user experience and brand identity with a passion for innovation.",
     },
   ]
 

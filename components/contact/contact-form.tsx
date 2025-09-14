@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -28,7 +27,25 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+
+    const subject = `New Project Inquiry from ${formData.name}`
+    const budgetValue = formData.customBudget || formData.budget || "Not specified"
+
+    const body = `
+Full Name: ${formData.name}
+Email Address: ${formData.email}
+Company Name: ${formData.company || "Not provided"}
+Service Needed: ${formData.service || "Not selected"}
+Project Budget: ${budgetValue}
+Project Details:
+${formData.message}
+    `
+
+    const mailtoLink = `mailto:cs.heroicweb@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`
+
+    window.location.href = mailtoLink
   }
 
   const handleChange = (field: string, value: string) => {
