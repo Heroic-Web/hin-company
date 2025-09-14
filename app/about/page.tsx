@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { AboutHero } from "@/components/about/about-hero"
 import { AboutStory } from "@/components/about/about-story"
@@ -27,7 +26,6 @@ export default function AboutPage() {
           <AboutTimeline />
           <AboutCTA />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

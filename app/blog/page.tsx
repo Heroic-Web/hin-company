@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { BlogHero } from "@/components/blog/blog-hero"
 import { BlogFeatured } from "@/components/blog/blog-featured"
@@ -30,7 +29,6 @@ export default function BlogPage() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

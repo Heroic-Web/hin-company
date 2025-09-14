@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { ContactHero } from "@/components/contact/contact-hero"
 import { ContactForm } from "@/components/contact/contact-form"
@@ -25,7 +24,6 @@ export default function ContactPage() {
           </div>
           <ContactFAQ />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

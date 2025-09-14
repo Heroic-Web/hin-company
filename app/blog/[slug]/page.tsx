@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { BlogPost } from "@/components/blog/blog-post"
 import { BlogRelated } from "@/components/blog/blog-related"
@@ -27,7 +26,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <BlogPost slug={params.slug} />
           <BlogRelated />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

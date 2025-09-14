@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 
 export default function TermsConditionsPage() {
@@ -63,7 +62,6 @@ export default function TermsConditionsPage() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { ServicesHero } from "@/components/services/services-hero"
 import { ServicesGrid } from "@/components/services/services-grid"
@@ -23,7 +22,6 @@ export default function ServicesPage() {
           <ProcessSection />
           <PricingSection />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

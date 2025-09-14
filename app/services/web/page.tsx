@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { WebDevelopmentHero } from "@/components/services/web/web-hero"
 import { WebFeatures } from "@/components/services/web/web-features"
@@ -26,7 +25,6 @@ export default function WebDevelopmentPage() {
           <WebPortfolio />
           <WebPricing />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )
