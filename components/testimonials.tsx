@@ -56,7 +56,7 @@ export function Testimonials() {
       name: "Steve Taylor",
       company: "Minneapolis (USA)",
       content:
-        "Our website is now faster and more user-friendly. Thank you for your hard work!",
+        "Our website is now faster and more user friendly. Thank you for your hard work!",
       rating: 5,
     },
     {

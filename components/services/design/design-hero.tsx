@@ -24,7 +24,7 @@ export function DesignHero() {
 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 text-pretty max-w-3xl mx-auto">
             {language === "en"
-              ? "From brand identity to UI/UX design, we create visually stunning and user-friendly designs that help your business stand out and connect with your audience."
+              ? "From brand identity to UI/UX design, we create visually stunning and user friendly designs that help your business stand out and connect with your audience."
               : "Dari identitas brand hingga desain UI/UX, kami menciptakan desain yang menakjubkan secara visual dan ramah pengguna yang membantu bisnis Anda menonjol dan terhubung dengan audiens."}
           </p>
 

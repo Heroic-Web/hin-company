@@ -159,7 +159,7 @@ export function WebPricing() {
                 Paket Web Tanpa Stres
               </CardTitle>
               <CardDescription className="text-sm text-muted-foreground">
-                Jasa Pembuatan Web All in One
+                Jasa Pembuatan Web All in One termasuk pembuatan company profile website, artikel seo, serta bonus copywriting dan desain. Buhan hanya itu, kami juga bantu setting dan optimasi website Anda di Google Search Console, Google Analytic, dan Google My Business.
               </CardDescription>
             </CardHeader>
             <CardContent>

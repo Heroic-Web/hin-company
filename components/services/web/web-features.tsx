@@ -27,7 +27,7 @@ export function WebFeatures() {
     },
     {
       icon: Users,
-      title: "User-Friendly",
+      title: "User Friendly",
       description: "Intuitive navigation and user experience designed to convert visitors into customers.",
     },
     {
