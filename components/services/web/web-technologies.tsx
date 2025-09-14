@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export function WebTechnologies() {
   const technologies = [
-    { name: "React", description: "Modern UI library for building interactive interfaces" },
-    { name: "Next.js", description: "Full-stack React framework for production applications" },
+    { name: "React/Vue", description: "Modern UI library for building interactive interfaces" },
+    { name: "Next.js/Nuxt.js", description: "Full-stack React framework for production applications" },
     { name: "TypeScript", description: "Type-safe JavaScript for better code quality" },
     { name: "Tailwind CSS", description: "Utility-first CSS framework for rapid styling" },
     { name: "Node.js", description: "Server-side JavaScript runtime for backend development" },
-    { name: "MongoDB", description: "NoSQL database for flexible data storage" },
+    { name: "WordPress", description: "WordPress for building website (Fast and clean)" },
   ]
 
   return (

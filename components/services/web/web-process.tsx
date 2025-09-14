@@ -7,8 +7,8 @@ export function WebProcess() {
   const processSteps = [
     {
       icon: MessageSquare,
-      title: "Konsultasi & Analisis",
-      titleEn: "Consultation & Analysis",
+      title: "Consultation & Analysis",
+      titleEn: "Konsultasi & Analisis",
       description:
         "Kami memahami kebutuhan bisnis Anda dan menganalisis target audiens untuk menciptakan strategi yang tepat.",
       descriptionEn: "We understand your business needs and analyze your target audience to create the right strategy.",
@@ -16,7 +16,7 @@ export function WebProcess() {
     },
     {
       icon: Palette,
-      title: "Desain & Wireframe",
+      title: "Product Design",
       titleEn: "Design & Wireframe",
       description:
         "Tim desainer kami membuat mockup dan wireframe yang sesuai dengan brand identity dan user experience terbaik.",
@@ -26,7 +26,7 @@ export function WebProcess() {
     },
     {
       icon: Code,
-      title: "Development & Coding",
+      title: "Development",
       titleEn: "Development & Coding",
       description:
         "Pengembangan website menggunakan teknologi terkini dengan kode yang bersih, aman, dan mudah dimaintenance.",

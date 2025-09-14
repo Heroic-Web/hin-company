@@ -103,6 +103,8 @@ export function WebPricing() {
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Judul utama */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
             Paket Harga Website
@@ -112,77 +114,196 @@ export function WebPricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
-          {plans.map((plan, index) => (
-            <Card
-              key={index}
-              className={`relative h-full flex flex-col ${
-                plan.popular
-                  ? "border-primary shadow-lg ring-2 ring-primary/20"
-                  : "border-border/50 hover:border-primary/30"
-              } transition-all duration-300 hover:shadow-lg`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
-                    Terpopuler
-                  </span>
-                </div>
-              )}
-
-              <CardHeader className="text-center pb-4 sm:pb-6 flex-shrink-0">
-                <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">{plan.name}</CardTitle>
-                <div className="mb-3">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">{plan.price}</span>
-                  {plan.price !== "Custom" && (
-                    <span className="text-xs sm:text-sm text-muted-foreground block mt-1">/proyek</span>
-                  )}
-                </div>
-                <CardDescription className="text-xs sm:text-sm leading-relaxed">{plan.description}</CardDescription>
-              </CardHeader>
-
-              <CardContent className="flex-grow flex flex-col">
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-               <Button
+        {/* Bagian 1: Paket Landing Page & Web Tanpa Stres */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {/* Paket Landing Page */}
+          <Card className="relative h-full flex flex-col border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="text-center pb-4 sm:pb-6">
+              <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">
+                Paket Landing Page
+              </CardTitle>
+              <CardDescription className="text-sm text-muted-foreground">
+                Solusi cepat 1 hari pengerjaan
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 sm:space-y-3 mb-6">
+                <li className="flex justify-between">
+                  <span>Super Sale</span>
+                  <span className="font-bold text-primary">Rp 500.000</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Reguler</span>
+                  <span className="font-bold line-through text-muted-foreground">Rp 650.000</span>
+                </li>
+              </ul>
+              <Button
                 asChild
-                size="sm"
-                className={`w-full text-xs sm:text-sm ${
-                  plan.popular
-                    ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-                    : "bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                } transition-colors duration-300`}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <Link
-                  href={t("common.getStarted.link")}
+                <a
+                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Landing%20Page"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t("common.getStarted")}
-                </Link>
+                  Pilih Paket
+                </a>
               </Button>
-              </CardContent>
-            </Card>
-          ))}
+            </CardContent>
+          </Card>
+
+          {/* Paket Web Tanpa Stres */}
+          <Card className="relative h-full flex flex-col border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+            <CardHeader className="text-center pb-4 sm:pb-6">
+              <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">
+                Paket Web Tanpa Stres
+              </CardTitle>
+              <CardDescription className="text-sm text-muted-foreground">
+                Jasa Pembuatan Web All in One
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 sm:space-y-3 mb-6">
+                <li className="flex justify-between">
+                  <span>Promo</span>
+                  <span className="font-bold text-primary">Rp 5.500.000</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Reguler</span>
+                  <span className="font-bold line-through text-muted-foreground">Rp 11.000.000</span>
+                </li>
+              </ul>
+              <Button
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                <a
+                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Web%20Tanpa%20Stres%20(All%20in%20One)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pilih Paket
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
+        {/* Bagian 2: Paket Website (Tabel Perbandingan) */}
+        <div className="mb-16">
+          <h3 className="text-center text-xl sm:text-2xl font-bold text-foreground mb-8">
+            Paket Website
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border border-border rounded-lg overflow-hidden text-sm sm:text-base">
+              <thead className="bg-muted">
+                <tr>
+                  <th className="px-4 py-3 border border-border text-left">Fitur</th>
+                  <th className="px-4 py-3 border border-border text-center">
+                    Ekonomis<br/>
+                    <span className="text-primary font-bold">Rp 750.000</span>
+                  </th>
+                  <th className="px-4 py-3 border border-border text-center">
+                    Premium<br/>
+                    <span className="text-primary font-bold">Rp 1.500.000</span>
+                  </th>
+                  <th className="px-4 py-3 border border-border text-center">
+                    Business<br/>
+                    <span className="text-primary font-bold">Rp 2.250.000</span>
+                  </th>
+                  <th className="px-4 py-3 border border-border text-center">
+                    Profesional<br/>
+                    <span className="text-primary font-bold">Rp 3.100.000</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Durasi", "1 Tahun", "1 Tahun", "1 Tahun", "1 Tahun"],
+                  ["Jumlah Halaman", "3", "5", "10", "20"],
+                  ["Hosting Gratis", "✅", "✅", "✅", "✅"],
+                  ["Domain Gratis", ".com", ".com", "Custom", "Custom"],
+                  ["Copywriting Gratis", "✅", "✅", "✅", "✅"],
+                  ["Artikel Gratis", "❌", "1", "3", "5"],
+                  ["Email Bisnis", "❌", "❌", "✅", "✅"],
+                  ["Revisi", "3x", "5x", "7x", "8x"],
+                  ["Waktu Pengerjaan", "2 Hari", "3 Hari", "7 Hari", "13 Hari"],
+                  ["Maintenance", "❌", "✅", "✅", "✅"],
+                ].map((row, i) => (
+                  <tr key={i} className="even:bg-muted/30">
+                    {row.map((cell, j) => (
+                      <td
+                        key={j}
+                        className={`px-4 py-3 border border-border ${
+                          j === 0 ? "font-medium text-foreground text-left" : "text-center"
+                        }`}
+                      >
+                        {cell === "✅" ? <span className="text-green-600">✅</span> 
+                        : cell === "❌" ? <span className="text-red-500">❌</span> 
+                        : cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+                {/* Baris tombol WA */}
+                <tr className="bg-muted/40">
+                  <td className="px-4 py-3 border border-border font-medium text-foreground text-left">
+                    Pesan Paket
+                  </td>
+                  {[
+                    "Ekonomis",
+                    "Premium",
+                    "Business",
+                    "Profesional",
+                  ].map((pkg, i) => (
+                    <td key={i} className="px-4 py-3 border border-border text-center">
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                      >
+                        <a
+                          href={`https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Website%20${pkg}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Pilih Paket
+                        </a>
+                      </Button>
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* CTA */}
         <div className="mt-12 sm:mt-16 text-center">
           <div className="bg-muted/50 rounded-lg p-6 sm:p-8">
-            <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">Butuh Konsultasi Gratis?</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
+              Butuh Konsultasi Gratis?
+            </h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-4">
               Tim ahli kami siap membantu menentukan paket yang tepat untuk bisnis Anda
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Konsultasi Sekarang</Button>
+            <Button
+              asChild
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <a
+                href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20terkait%20paket%20website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Konsultasi Sekarang
+              </a>
+            </Button>
           </div>
         </div>
+
       </div>
     </section>
+
   )
 }
