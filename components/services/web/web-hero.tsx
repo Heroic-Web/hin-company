@@ -50,9 +50,6 @@ export function WebDevelopmentHero() {
                   {t("common.getStarted")}
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="bg-transparent">
-                View Portfolio
-              </Button>
             </div>
           </div>
 
