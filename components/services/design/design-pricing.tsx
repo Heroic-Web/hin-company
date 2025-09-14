@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useLanguage } from "@/components/language-provider";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,9 @@ type DesignService = {
 
 export function DesignPricing() {
   const { t } = useLanguage();
+
+  // Nomor WA Anda dalam format internasional (tanpa + / tanpa 0 awal)
+  const whatsappNumber = "6282144137914";
 
   const services: DesignService[] = [
     {
@@ -126,6 +130,13 @@ export function DesignPricing() {
     },
   ];
 
+  // helper: buat url WA dengan pesan ter-encode
+  const waLinkFor = (serviceName: string, servicePrice: string) => {
+    const raw = `Halo, saya ingin memesan *${serviceName}* - ${servicePrice}. Mohon info detail, estimasi waktu, dan cara pembayaran. Terima kasih.`;
+    const encoded = encodeURIComponent(raw);
+    return `https://wa.me/${whatsappNumber}?text=${encoded}`;
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -176,13 +187,30 @@ export function DesignPricing() {
               )}
 
               <CardContent>
+                {/* Tombol mengarah ke WhatsApp dengan pesan otomatis */}
                 <Button
                   className="w-full"
                   variant="outline"
                   size="sm"
+                  onClick={() => {
+                    // buka WA di tab baru
+                    const url = waLinkFor(service.name, service.price);
+                    window.open(url, "_blank", "noopener,noreferrer");
+                  }}
                 >
                   Pesan Sekarang
                 </Button>
+
+                {/* Alternatif: jika ingin menggunakan anchor tag yang dapat di-crawl */}
+                {/* <a
+                  href={waLinkFor(service.name, service.price)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="w-full" variant="outline" size="sm">
+                    Pesan Sekarang
+                  </Button>
+                </a> */}
               </CardContent>
             </Card>
           ))}
