@@ -164,12 +164,23 @@ export function SEOArticlePortfolio() {
             </Card>
           ))}
         </div>
-
         <div className="mt-16 text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            {language === "en" ? "Start Your SEO Content Project" : "Mulai Proyek Konten SEO Anda"}
-          </Button>
+          <a
+            href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20mulai%20proyek%20SEO%20konten"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              {language === "en"
+                ? "Start Your SEO Content Project"
+                : "Mulai Proyek Konten SEO Anda"}
+            </Button>
+          </a>
         </div>
+
       </div>
     </section>
   )

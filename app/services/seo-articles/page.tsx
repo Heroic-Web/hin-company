@@ -48,9 +48,16 @@ export default function SEOArticlesPage() {
                   Boost your website ranking with high quality, SEO optimized articles that drive organic traffic and
                   engage your audience.
                 </p>
+               <a
+                href="https://wa.me/6282144137914?text=Halo%20saya%20ingin%20order%20artikel%20SEO"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   Order SEO Articles
                 </Button>
+              </a>
+
               </div>
             </div>
           </section>
