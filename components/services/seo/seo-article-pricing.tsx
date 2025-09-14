@@ -8,9 +8,10 @@ import { FileText, Package, ShoppingBag } from "lucide-react"
 export function SEOArticlePricing() {
   const { t, language } = useLanguage()
 
+  const whatsappNumber = "6282144137914" // gunakan format internasional tanpa 0
+
   // ==================== DATA ====================
   const paketSatuan = [
-    // ---------- SATUAN A ----------
     {
       name: language === "en" ? "Single A" : "Satuan A",
       price: "Rp5K",
@@ -38,7 +39,6 @@ export function SEOArticlePricing() {
         { article: "1200 Kata", id: "Rp40.000", en: "Rp50.000" },
       ],
     },
-    // ---------- SATUAN B ----------
     {
       name: language === "en" ? "Single B" : "Satuan B",
       price: "Rp45K",
@@ -61,7 +61,6 @@ export function SEOArticlePricing() {
         { article: "3000 Kata", id: "Rp125.000", en: "Rp135.000" },
       ],
     },
-    // ---------- SATUAN C ----------
     {
       name: language === "en" ? "Single C" : "Satuan C",
       price: "Rp150K",
@@ -83,50 +82,47 @@ export function SEOArticlePricing() {
   ]
 
   const paketLainnya = [
-  // ---------- HEMAT ----------
-  {
-    name: language === "en" ? "Economy" : "Hemat",
-    price: "Rp60K – Rp390K",
-    period: language === "en" ? "/10 articles" : "/10 artikel",
-    description:
-      language === "en"
-        ? "Affordable bundles of 10 articles in Indonesian or English with flexible word counts."
-        : "Paket hemat 10 artikel dengan pilihan jumlah kata dan bahasa Indonesia atau Inggris.",
-    icon: Package,
-    features: [
-      { article: "10 Artikel 300 Kata", id: "IDR 60.000 (ID)", en: "IDR 100.000 (EN)" },
-      { article: "10 Artikel 400 Kata", id: "IDR 90.000 (ID)", en: "IDR 120.000 (EN)" },
-      { article: "10 Artikel 500 Kata", id: "IDR 130.000 (ID)", en: "IDR 150.000 (EN)" },
-      { article: "10 Artikel 600 Kata", id: "IDR 160.000 (ID)", en: "IDR 180.000 (EN)" },
-      { article: "10 Artikel 700 Kata", id: "IDR 170.000 (ID)", en: "IDR 190.000 (EN)" },
-      { article: "10 Artikel 800 Kata", id: "IDR 190.000 (ID)", en: "IDR 220.000 (EN)" },
-      { article: "10 Artikel 900 Kata", id: "IDR 220.000 (ID)", en: "IDR 280.000 (EN)" },
-      { article: "10 Artikel 1000 Kata", id: "IDR 300.000 (ID)", en: "IDR 350.000 (EN)" },
-      { article: "10 Artikel 1500 Kata", id: "IDR 350.000 (ID)", en: "IDR 390.000 (EN)" },
-    ],
-    popular: true,
-  },
-
-  // ---------- BORONGAN ----------
-  {
-    name: language === "en" ? "Bulk" : "Borongan",
-    price: "Rp120K – Rp710K",
-    period: language === "en" ? "/14–30 days" : "/14–30 hari",
-    description:
-      language === "en"
-        ? "Perfect for agencies & long-term SEO projects. More articles in a fixed schedule."
-        : "Cocok untuk kebutuhan skala besar seperti perusahaan, portal berita, atau proyek SEO jangka panjang.",
-    icon: ShoppingBag,
-    features: [
-      { article: "14 Hari 400 Kata", id: "IDR 120.000 (ID)", en: "IDR 150.000 (EN)" },
-      { article: "30 Hari 400 Kata", id: "IDR 250.000 (ID)", en: "IDR 280.000 (EN)" },
-      { article: "14 Hari 500 Kata", id: "IDR 150.000 (ID)", en: "IDR 180.000 (EN)" },
-      { article: "30 Hari 500 Kata", id: "IDR 300.000 (ID)", en: "IDR 350.000 (EN)" },
-      { article: "14 Hari 1000 Kata", id: "IDR 350.000 (ID)", en: "IDR 390.000 (EN)" },
-      { article: "30 Hari 1000 Kata", id: "IDR 650.000 (ID)", en: "IDR 710.000 (EN)" },
-    ],
-  },
-]
+    {
+      name: language === "en" ? "Economy" : "Hemat",
+      price: "Rp60K – Rp390K",
+      period: language === "en" ? "/10 articles" : "/10 artikel",
+      description:
+        language === "en"
+          ? "Affordable bundles of 10 articles in Indonesian or English with flexible word counts."
+          : "Paket hemat 10 artikel dengan pilihan jumlah kata dan bahasa Indonesia atau Inggris.",
+      icon: Package,
+      features: [
+        { article: "10 Artikel 300 Kata", id: "IDR 60.000 (ID)", en: "IDR 100.000 (EN)" },
+        { article: "10 Artikel 400 Kata", id: "IDR 90.000 (ID)", en: "IDR 120.000 (EN)" },
+        { article: "10 Artikel 500 Kata", id: "IDR 130.000 (ID)", en: "IDR 150.000 (EN)" },
+        { article: "10 Artikel 600 Kata", id: "IDR 160.000 (ID)", en: "IDR 180.000 (EN)" },
+        { article: "10 Artikel 700 Kata", id: "IDR 170.000 (ID)", en: "IDR 190.000 (EN)" },
+        { article: "10 Artikel 800 Kata", id: "IDR 190.000 (ID)", en: "IDR 220.000 (EN)" },
+        { article: "10 Artikel 900 Kata", id: "IDR 220.000 (ID)", en: "IDR 280.000 (EN)" },
+        { article: "10 Artikel 1000 Kata", id: "IDR 300.000 (ID)", en: "IDR 350.000 (EN)" },
+        { article: "10 Artikel 1500 Kata", id: "IDR 350.000 (ID)", en: "IDR 390.000 (EN)" },
+      ],
+      popular: true,
+    },
+    {
+      name: language === "en" ? "Bulk" : "Borongan",
+      price: "Rp120K – Rp710K",
+      period: language === "en" ? "/14–30 days" : "/14–30 hari",
+      description:
+        language === "en"
+          ? "Perfect for agencies & long-term SEO projects. More articles in a fixed schedule."
+          : "Cocok untuk kebutuhan skala besar seperti perusahaan, portal berita, atau proyek SEO jangka panjang.",
+      icon: ShoppingBag,
+      features: [
+        { article: "14 Hari 400 Kata", id: "IDR 120.000 (ID)", en: "IDR 150.000 (EN)" },
+        { article: "30 Hari 400 Kata", id: "IDR 250.000 (ID)", en: "IDR 280.000 (EN)" },
+        { article: "14 Hari 500 Kata", id: "IDR 150.000 (ID)", en: "IDR 180.000 (EN)" },
+        { article: "30 Hari 500 Kata", id: "IDR 300.000 (ID)", en: "IDR 350.000 (EN)" },
+        { article: "14 Hari 1000 Kata", id: "IDR 350.000 (ID)", en: "IDR 390.000 (EN)" },
+        { article: "30 Hari 1000 Kata", id: "IDR 650.000 (ID)", en: "IDR 710.000 (EN)" },
+      ],
+    },
+  ]
 
   // ==================== UI ====================
   return (
@@ -150,7 +146,13 @@ export function SEOArticlePricing() {
         </h3>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {paketSatuan.map((plan, i) => (
-            <PricingCard key={i} plan={plan} t={t} language={language} />
+            <PricingCard
+              key={i}
+              plan={plan}
+              t={t}
+              language={language}
+              whatsappNumber={whatsappNumber}
+            />
           ))}
         </div>
 
@@ -160,26 +162,43 @@ export function SEOArticlePricing() {
         </h3>
         <div className="grid md:grid-cols-2 gap-8">
           {paketLainnya.map((plan, i) => (
-            <PricingCard key={i} plan={plan} t={t} language={language} />
+            <PricingCard
+              key={i}
+              plan={plan}
+              t={t}
+              language={language}
+              whatsappNumber={whatsappNumber}
+            />
           ))}
         </div>
-        {/* Custom Package Section */}  
-        <div className="mt-16 text-center">  
-          <div className="bg-primary/5 rounded-2xl p-8 max-w-4xl mx-auto">  
-            <h3 className="text-2xl font-bold text-foreground mb-4">  
-              {language === "en" ? "Need a Custom Package?" : "Butuh Paket Kustom?"}  
-            </h3>  
-            <p className="text-muted-foreground text-lg mb-6">  
-              {language === "en"  
-                ? "We offer flexible pricing for bulk orders and long-term content partnerships. Contact us for a personalized quote."  
-                : "Kami menawarkan harga fleksibel untuk pesanan dalam jumlah besar dan kemitraan konten jangka panjang. Hubungi kami untuk penawaran personal."}  
-            </p>  
-            <Button variant="outline" size="lg">  
-              {language === "en" ? "Contact for Custom Quote" : "Hubungi untuk Penawaran Kustom"}  
-            </Button>  
-          </div>  
-        </div>  
- 
+
+        {/* Custom Package Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-primary/5 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              {language === "en" ? "Need a Custom Package?" : "Butuh Paket Kustom?"}
+            </h3>
+            <p className="text-muted-foreground text-lg mb-6">
+              {language === "en"
+                ? "We offer flexible pricing for bulk orders and long-term content partnerships. Contact us for a personalized quote."
+                : "Kami menawarkan harga fleksibel untuk pesanan dalam jumlah besar dan kemitraan konten jangka panjang. Hubungi kami untuk penawaran personal."}
+            </p>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/${whatsappNumber}?text=Halo%20saya%20ingin%20membuat%20paket%20kustom%20artikel%20SEO.`,
+                  "_blank"
+                )
+              }
+            >
+              {language === "en"
+                ? "Contact for Custom Quote"
+                : "Hubungi untuk Penawaran Kustom"}
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -206,10 +225,12 @@ function PricingCard({
   plan,
   t,
   language,
+  whatsappNumber,
 }: {
   plan: Plan
   t: any
   language: string
+  whatsappNumber: string
 }) {
   return (
     <Card
@@ -217,14 +238,12 @@ function PricingCard({
         plan.popular ? "ring-2 ring-primary shadow-xl scale-105" : ""
       }`}
     >
-      {/* Label Populer */}
       {plan.popular && (
         <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2 text-sm font-medium">
           {language === "en" ? "Most Popular" : "Paling Populer"}
         </div>
       )}
 
-      {/* Header Paket */}
       <CardHeader className={`text-center ${plan.popular ? "pt-12" : "pt-8"}`}>
         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <plan.icon className="h-8 w-8 text-primary" />
@@ -237,7 +256,6 @@ function PricingCard({
         <p className="text-muted-foreground mt-4">{plan.description}</p>
       </CardHeader>
 
-      {/* Tabel Fitur */}
       <CardContent className="px-8 pb-8">
         <div className="overflow-x-auto mb-8">
           <table className="w-full border border-border text-left text-sm">
@@ -262,7 +280,6 @@ function PricingCard({
           </table>
         </div>
 
-        {/* Tombol Pilih Paket */}
         <Button
           className={`w-full ${
             plan.popular
@@ -270,13 +287,16 @@ function PricingCard({
               : "bg-background hover:bg-muted text-foreground border border-border"
           }`}
           size="lg"
+          onClick={() =>
+            window.open(
+              `https://wa.me/${whatsappNumber}?text=Halo,%20saya%20ingin%20memesan%20${plan.name}%20(${plan.price} ${plan.period}).`,
+              "_blank"
+            )
+          }
         >
           {language === "en" ? "Choose Plan" : "Pilih Paket"}
         </Button>
-        
       </CardContent>
-      
     </Card>
-    
   )
 }
