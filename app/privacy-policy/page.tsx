@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 
 export default function PrivacyPolicyPage() {
@@ -56,7 +55,6 @@ export default function PrivacyPolicyPage() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -124,7 +123,7 @@ export default function SEOArticlesPage() {
           {/* SEO Article Pricing */}
           <SEOArticlePricing />
         </main>
-        <Footer />
+        
       </div>
     </LanguageProvider>
   )

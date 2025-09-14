@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { DesignHero } from "@/components/services/design/design-hero"
 import { DesignServices } from "@/components/services/design/design-services"
@@ -24,7 +23,6 @@ export default function DesignPage() {
           <DesignPortfolio />
           <DesignPricing />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )

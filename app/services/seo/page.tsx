@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/components/language-provider"
 import { SEOHero } from "@/components/services/seo/seo-hero"
 import { SEOFeatures } from "@/components/services/seo/seo-features"
@@ -24,7 +23,6 @@ export default function SEOPage() {
           <SEOResults />
           <SEOPricing />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   )
