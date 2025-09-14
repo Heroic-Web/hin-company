@@ -12,7 +12,7 @@ export function WebFeatures() {
     },
     {
       icon: Zap,
-      title: "Lightning Fast",
+      title: "Loading Fast",
       description: "Optimized for speed with modern technologies and best practices for performance.",
     },
     {
@@ -32,7 +32,7 @@ export function WebFeatures() {
     },
     {
       icon: Smartphone,
-      title: "Mobile-First",
+      title: "Mobile Friendly",
       description: "Designed with mobile users in mind, ensuring perfect functionality on all devices.",
     },
   ]

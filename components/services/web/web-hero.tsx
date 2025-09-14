@@ -28,11 +28,11 @@ export function WebDevelopmentHero() {
               </div>
               <div className="flex items-center gap-2">
                 <Smartphone className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Mobile First</span>
+                <span className="text-sm font-medium">Mobile Friendly</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Lightning Fast</span>
+                <span className="text-sm font-medium">Fast Work</span>
               </div>
             </div>
 
@@ -56,11 +56,16 @@ export function WebDevelopmentHero() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-              <Code className="h-32 w-32 text-primary/60" />
-            </div>
+         <div className="relative">
+          <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
+            <img 
+              src="/jasaweb_mufid.png" 
+              alt="Jasa Pembuatan Website" 
+              className="w-full h-full object-cover" 
+            />
           </div>
+        </div>
+
         </div>
       </div>
     </section>
