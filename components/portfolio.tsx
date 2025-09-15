@@ -7,16 +7,16 @@ import { ExternalLink } from "lucide-react"
 export function Portfolio() {
   const projects = [
     {
-      title: "E-commerce Platform",
-      category: "Web Development",
-      image: "/modern-ecommerce-website.png",
-      description: "Modern e-commerce solution with advanced features",
+      title: "Cyber Protection Tools",
+      category: "Dekstop Development",
+      image: "/cytools.jpeg",
+      description: "Advanced cyber protection tools for threat detection and prevention",
     },
     {
-      title: "Corporate Website",
-      category: "Design & Development",
-      image: "/corporate-business-website.png",
-      description: "Professional corporate website with CMS integration",
+      title: "Cyber Security App",
+      category: "Web Development",
+      image: "/drcyber.jpeg",
+      description: "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with some fitures like URL Detection, File Detection, and Text Detection",
     },
     {
       title: "SEO Campaign",
@@ -56,10 +56,7 @@ export function Portfolio() {
                 <div className="text-sm text-primary font-medium mb-2">{project.category}</div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{project.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary hover:text-primary/80">
-                  View Project
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+               
               </CardContent>
             </Card>
           ))}

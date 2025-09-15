@@ -13,7 +13,7 @@ export function DesignPortfolio() {
     {
       title: "TechCorp Brand Identity",
       category: language === "en" ? "Brand Identity" : "Identitas Brand",
-      image: "/client-logo-techcorp.jpg",
+      image: "/brand-identity-design.png",
       description:
         language === "en"
           ? "Complete brand identity for a technology startup"
@@ -104,11 +104,7 @@ export function DesignPortfolio() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button size="lg" variant="outline">
-            {language === "en" ? "View All Projects" : "Lihat Semua Proyek"}
-          </Button>
-        </div>
+        
       </div>
     </section>
   )

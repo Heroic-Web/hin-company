@@ -3,44 +3,76 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
+import { title } from "process"
 
 export function WebPortfolio() {
   const projects = [
+     {
+      title: "Cyber Security App",
+      description: "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with some fitures like URL Detection, File Detection, and Text Detection",
+      image: "/drcyber.jpeg",
+      technologies: ["Python", "Django", "JavaScript", "Machine Learning", "HTML", "CSS", "Electron" ],
+    },
+    {
+      title: "SlideShow Creator Tools",
+      description: "User-friendly slideshow creation tool with templates and export options",
+      image: "/slidetools.jpeg",
+      technologies: ["Python", "Fast API", "Docker"],
+    },
+    {
+      title: "Blog Platform",
+      description: "Feature-rich blog platform with user authentication and content management",
+      image: "/yaedu.png",
+      technologies: [],
+    },
+    
+    {
+      title: "Travel Agency Website",
+      description: "Engaging travel agency site with booking and itinerary management",
+      image: "/travel.jpeg",
+      technologies: ["Next.js", "Tailwind CSS", "Node.js"],
+    },
+    {
+      title: "Ultimate Cyber Protection Suite",
+      description: "Comprehensive cyber protection suite for online safety",
+      image: "/protectweb.jpeg",
+      technologies: ["Python", "Flask", "Vue.js"],
+    },
+    {
+      title: "Cyber Protection Tools",
+      description: "Advanced cyber protection tools for threat detection and prevention",
+      image: "/cytools.jpeg",
+      technologies: ["Python", "Flask", "Vue.js"],
+    },
+    {
+      title: "Seina's Boutique",
+      description: "Chic boutique website with product showcases and shopping cart",
+      image: "/butik.jpeg",
+      technologies: ["WordPress", "WooCommerce"],
+    },
+    {
+      title: "Book Store Website",
+      description: "Online bookstore with search and recommendation features",
+      image: "/bookstore.jpeg",
+      technologies: ["Shopify"],
+    },
     {
       title: "E-commerce Platform",
-      description: "Modern online store with payment integration and inventory management",
-      image: "/modern-ecommerce-website.png",
-      technologies: ["Next.js", "Stripe", "MongoDB"],
+      description: "Modern online shop with payment integration and inventory management",
+      image: "/shop.jpeg",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Corporate Website",
-      description: "Professional business website with CMS and blog functionality",
-      image: "/corporate-business-website.png",
-      technologies: ["React", "Headless CMS", "Tailwind"],
+      title: "AISEO Tools App",
+      description: "AI-powered SEO tools for website optimization",
+      image: "/aiseo.jpeg",
+      technologies: ["Shopify", "Liquid", "JavaScript"],
     },
     {
-      title: "SaaS Dashboard",
-      description: "Complex dashboard with real-time data and analytics",
-      image: "/modern-saas-dashboard.png",
-      technologies: ["React", "D3.js", "Node.js"],
-    },
-    {
-      title: "Restaurant Website",
-      description: "Beautiful restaurant site with online reservation system",
-      image: "/restaurant-website-design.png",
-      technologies: ["Next.js", "Booking API", "Tailwind"],
-    },
-    {
-      title: "Portfolio Website",
-      description: "Creative portfolio showcase for digital agency",
-      image: "/creative-portfolio-website.png",
-      technologies: ["React", "Framer Motion", "CSS"],
-    },
-    {
-      title: "Healthcare Portal",
-      description: "Medical practice website with appointment booking",
-      image: "/healthcare-website-portal.png",
-      technologies: ["Next.js", "Calendar API", "TypeScript"],
+      title: "Premiumn Corporate Fashion Solutions",
+      description: "Complete brand identity design for tech startup",
+      image: "/corporate-design.jpeg",
+      technologies: ["Figma"],
     },
   ]
 
@@ -52,7 +84,7 @@ export function WebPortfolio() {
             Portfolio Web Kami
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Lihat beberapa proyek website terbaru yang telah kami kerjakan dengan berbagai industri
+            Lihat  beberapa proyek website terbaru yang telah kami kerjakan dengan berbagai industri
           </p>
         </div>
 
@@ -84,20 +116,11 @@ export function WebPortfolio() {
                     </span>
                   ))}
                 </div>
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary hover:text-primary/80 self-start">
-                  Lihat Proyek
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 sm:mt-16 text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Lihat Semua Portfolio
-          </Button>
-        </div>
       </div>
     </section>
   )

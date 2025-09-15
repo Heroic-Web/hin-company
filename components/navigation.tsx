@@ -65,7 +65,6 @@ export function Navigation() {
       ],
     },
     { href: "/blog", label: t("nav.blog"), icon: BookOpen },
-    { href: "/career", label: t("nav.career"), icon: Users },
     { href: "/contact", label: t("nav.contact"), icon: Mail },
   ]
 
