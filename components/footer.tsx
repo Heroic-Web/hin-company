@@ -35,7 +35,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/seo" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/seo-articles" className="text-muted-foreground hover:text-primary transition-colors">
                   {t("services.seo")}
                 </Link>
               </li>
