@@ -25,8 +25,8 @@ const translations = {
     "nav.contact": "Contact",
 
     // Services
-    "services.web": "Web Development",
-    "services.seo": "SEO Articles",
+    "services.web": "Digital",
+    "services.seo": "Writing",
     "services.design": "Design",
 
     // Common

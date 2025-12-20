@@ -123,11 +123,11 @@ export function Testimonials() {
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-primary">4.7</div>
+                <div className="text-2xl font-bold text-primary">4.8</div>
                 <div className="text-sm text-muted-foreground">Kecepatan Respon</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary">4.8</div>
+                <div className="text-2xl font-bold text-primary">5.0</div>
                 <div className="text-sm text-muted-foreground">Layanan</div>
               </div>
               <div>
@@ -135,7 +135,7 @@ export function Testimonials() {
                 <div className="text-sm text-muted-foreground">Keterampilan</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary">4.8</div>
+                <div className="text-2xl font-bold text-primary">4.9</div>
                 <div className="text-sm text-muted-foreground">Sepadan Harga</div>
               </div>
               <div>
