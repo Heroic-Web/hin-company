@@ -5,6 +5,7 @@ import { DesignServices } from "@/components/services/design/design-services"
 import { DesignProcess } from "@/components/services/design/design-process"
 import { DesignPortfolio } from "@/components/services/design/design-portfolio"
 import { DesignPricing } from "@/components/services/design/design-pricing"
+import WebDesign from "@/components/services/web-design/web-design"
 
 export const metadata = {
   title: "Design Services - Heroic Web",
@@ -21,6 +22,7 @@ export default function DesignPage() {
           <DesignServices />
           <DesignProcess />
           <DesignPricing />
+          <WebDesign />
           <DesignPortfolio />
         </main>
       </div>
