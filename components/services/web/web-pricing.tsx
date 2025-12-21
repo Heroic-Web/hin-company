@@ -224,7 +224,7 @@ export function WebPricing() {
                   ["Hosting Gratis", "✅", "✅", "✅", "✅"],
                   ["Domain Gratis", ".com", ".com", "Custom", "Custom"],
                   ["Copywriting Gratis", "✅", "✅", "✅", "✅"],
-                  ["Artikel Gratis", "❌", "1", "3", "5"],
+                  ["Artikel Gratis", "❌", "3", "6", "10"],
                   ["Email Bisnis", "❌", "❌", "✅", "✅"],
                   ["Revisi", "3x", "5x", "7x", "8x"],
                   ["Waktu Pengerjaan", "2 Hari", "3 Hari", "7 Hari", "13 Hari"],

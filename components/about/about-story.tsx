@@ -11,7 +11,7 @@ export function AboutStory() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">Our Story</h2>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-              Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development.
+              Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
               Founded in 2023, Heroic Web began as a small team of passionate developers and designers who believed
@@ -19,7 +19,7 @@ export function AboutStory() {
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
               What started as a vision to bridge the gap between beautiful design and functional technology has grown
-              into a full-service digital agency that has helped over 100 businesses transform their online presence.
+              into a full service digital agency that has helped over 100 businesses transform their online presence.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
               Today, we continue to push the boundaries of what's possible in web development, SEO, and design, always

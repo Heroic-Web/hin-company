@@ -22,8 +22,8 @@ export default function AboutPage() {
           <AboutHero />
           <AboutStory />
           <AboutValues />
-          <AboutTeam />
           <AboutTimeline />
+          <AboutTeam />
           <AboutCTA />
         </main>
       </div>

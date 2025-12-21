@@ -14,21 +14,21 @@ export function Services() {
       icon: Code,
       title: t("services.web"),
       description: "Modern, responsive websites built with the latest technologies",
-      features: ["Coding / WordPress", "Mobile Friendly", "Performance Optimized", "SEO Ready"],
-      link: "/services/web", // halaman web development
+      features: ["Web Development", "Web App Development", "Web Design (UI/UX)", "CMS Development"],
+      link: "/services/web", // halaman web solutions
     },
     {
       icon: Search,
       title: t("services.seo"),
       description: "High quality SEO content that ranks and converts",
-      features: ["Keyword Research", "Content Strategy", "Technical SEO", "Analytics"],
+      features: ["Keyword Research", "Article Writing", "Product Descriptions", "Landing Pages Copy"],
       link: "/services/seo-articles", // halaman artikel seo
     },
     {
       icon: Palette,
       title: t("services.design"),
       description: "Beautiful, user-centered designs that tell your story",
-      features: ["Brand Identity", "UI/UX Design", "Graphic Design", "Prototyping"],
+      features: ["Brand Identity", "UI/UX Design", "Graphic Design", "Document Design", "Marketing & Promotion Design"],
       link: "/services/design", // halaman desain
     },
   ]

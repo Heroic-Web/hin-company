@@ -47,7 +47,7 @@ const translations = {
     // About
     "about.title": "About Heroic Web",
     "about.description":
-      "Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development.",
+      "Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.",
 
     // Contact
     "contact.title": "Get In Touch",

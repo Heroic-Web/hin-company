@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Heroic Web" }],
   openGraph: {
     title: "Heroic - Web Development, SEO & Design Services",
-    description: "Professional web development, SEO optimization, and design services.",
+    description: "b development, SEO optimization, and design services.",
     type: "website",
   },
 }

@@ -18,12 +18,12 @@ export function ContactInfo() {
     {
       icon: MapPin,
       title: "Office Address",
-      details: ["Jl. Trisnomaju III, Negerikaton, Pesawaran, Lampung, 35353"],
+      details: ["Jl. Trisnomaju III, 009, Negerikaton, Pesawaran, Lampung, 35353"],
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Monday - Friday: 9:00 AM - 5:00 PM", "Saturday: 10:00 AM - 01:00 PM"],
+      details: ["Monday - Friday: 9:00 AM - 5:00 PM", "Saturday: 09:00 AM - 12:00 PM"],
     },
   ]
 

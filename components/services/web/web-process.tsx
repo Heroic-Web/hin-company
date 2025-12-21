@@ -1,84 +1,99 @@
 "use client"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, MessageSquare, Palette, Code, TestTube, Rocket } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  MessageSquare,
+  ClipboardList,
+  LayoutGrid,
+  Code,
+  TestTube,
+  Rocket,
+  RefreshCcw,
+  CheckCircle,
+} from "lucide-react"
 
 export function WebProcess() {
   const processSteps = [
     {
-      icon: MessageSquare,
-      title: "Consultation & Analysis",
-      titleEn: "Konsultasi & Analisis",
-      description:
-        "Kami memahami kebutuhan bisnis Anda dan menganalisis target audiens untuk menciptakan strategi yang tepat.",
-      descriptionEn: "We understand your business needs and analyze your target audience to create the right strategy.",
       step: "01",
+      icon: MessageSquare,
+      title: "Idea Exploration & Goal Planning",
+      description:
+        "Tahap awal untuk menggali ide, memahami kebutuhan, serta menetapkan tujuan proyek secara jelas agar pengembangan berjalan terarah dan sesuai ekspektasi.",
     },
     {
-      icon: Palette,
-      title: "Product Design",
-      titleEn: "Design & Wireframe",
-      description:
-        "Tim desainer kami membuat mockup dan wireframe yang sesuai dengan brand identity dan user experience terbaik.",
-      descriptionEn:
-        "Our design team creates mockups and wireframes that align with your brand identity and best user experience.",
       step: "02",
+      icon: ClipboardList,
+      title: "System Analysis & Planning",
+      description:
+        "Melakukan analisis kebutuhan sistem, alur kerja, serta perencanaan teknis yang matang untuk memastikan solusi yang efisien dan tepat sasaran.",
     },
     {
-      icon: Code,
-      title: "Development",
-      titleEn: "Development & Coding",
-      description:
-        "Pengembangan website menggunakan teknologi terkini dengan kode yang bersih, aman, dan mudah dimaintenance.",
-      descriptionEn:
-        "Website development using the latest technology with clean, secure, and easily maintainable code.",
       step: "03",
+      icon: LayoutGrid,
+      title: "System Design & Architecture",
+      description:
+        "Merancang struktur sistem, arsitektur aplikasi, serta desain antarmuka yang optimal untuk performa, skalabilitas, dan pengalaman pengguna.",
     },
     {
-      icon: TestTube,
-      title: "Testing & Quality Assurance",
-      titleEn: "Testing & Quality Assurance",
-      description:
-        "Pengujian menyeluruh pada berbagai device dan browser untuk memastikan website berfungsi dengan sempurna.",
-      descriptionEn:
-        "Comprehensive testing across various devices and browsers to ensure the website functions perfectly.",
       step: "04",
+      icon: Code,
+      title: "Development & Execution",
+      description:
+        "Tahap pengembangan dan implementasi sistem menggunakan teknologi yang sesuai dengan standar kode yang bersih, aman, dan mudah dikembangkan.",
     },
     {
-      icon: Rocket,
-      title: "Launch & Deployment",
-      titleEn: "Launch & Deployment",
-      description:
-        "Peluncuran website ke server production dengan konfigurasi optimal dan monitoring performa real-time.",
-      descriptionEn:
-        "Website launch to production server with optimal configuration and real-time performance monitoring.",
       step: "05",
+      icon: TestTube,
+      title: "Testing & Quality Control (QC)",
+      description:
+        "Pengujian menyeluruh untuk memastikan sistem bebas dari bug, berjalan stabil, serta memenuhi standar kualitas sebelum dirilis.",
     },
     {
-      icon: CheckCircle,
-      title: "Maintenance & Support",
-      titleEn: "Maintenance & Support",
-      description:
-        "Dukungan berkelanjutan, update keamanan, dan maintenance rutin untuk menjaga performa website optimal.",
-      descriptionEn: "Ongoing support, security updates, and routine maintenance to keep website performance optimal.",
       step: "06",
+      icon: Rocket,
+      title: "Deployment & Launch",
+      description:
+        "Melakukan proses deployment ke server produksi dan peluncuran sistem agar dapat digunakan secara optimal oleh pengguna.",
+    },
+    {
+      step: "07",
+      icon: RefreshCcw,
+      title: "Maintenance & Evaluation",
+      description:
+        "Pemeliharaan berkelanjutan, evaluasi performa, serta peningkatan sistem untuk memastikan keberlangsungan dan kualitas jangka panjang.",
     },
   ]
 
   return (
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Proses Web Kami</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Metodologi pengembangan website yang terstruktur dan terbukti menghasilkan website berkualitas tinggi
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Web Solutions Process
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Tahapan pengembangan sistem yang terstruktur, sistematis, dan
+            berorientasi pada kualitas serta keberlanjutan.
           </p>
         </div>
 
+        {/* Process Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {processSteps.map((step, index) => (
-            <Card key={index} className="relative border-border/50 hover:shadow-lg transition-all duration-300 group">
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+          {processSteps.map((step) => (
+            <Card
+              key={step.step}
+              className="relative border-border/50 hover:shadow-lg transition-all duration-300 group"
+            >
+              {/* Step Number */}
+              <div className="absolute -top-4 -left-4 w-9 h-9 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
                 {step.step}
               </div>
 
@@ -86,20 +101,27 @@ export function WebProcess() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                   <step.icon className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-foreground">{step.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold">
+                  {step.title}
+                </CardTitle>
               </CardHeader>
 
               <CardContent>
-                <CardDescription className="text-muted-foreground leading-relaxed">{step.description}</CardDescription>
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {step.description}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}
         </div>
 
+        {/* Footer Highlight */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full">
             <CheckCircle className="h-5 w-5" />
-            <span className="font-medium">Garansi Kepuasan 100% atau Uang Kembali</span>
+            <span className="font-medium">
+              Proses Terstruktur untuk Hasil Maksimal
+            </span>
           </div>
         </div>
       </div>

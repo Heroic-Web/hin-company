@@ -7,6 +7,7 @@ import Link from "next/link"
 import { SEOArticleProcess } from "@/components/services/seo/seo-article-process"
 import { SEOArticlePortfolio } from "@/components/services/seo/seo-article-portfolio"
 import { SEOArticlePricing } from "@/components/services/seo/seo-article-pricing"
+import Image from "next/image"
 
 export const metadata = {
   title: "Artikel SEO Services - Heroic Web",
@@ -87,8 +88,13 @@ export default function SEOArticlesPage() {
           <section className="py-20 bg-muted/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
+                
+                {/* Text Content */}
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Article SEO Content Services</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    Our Article SEO Content Services
+                  </h2>
+
                   <ul className="space-y-4">
                     {services.map((service, index) => (
                       <li key={index} className="flex items-center">
@@ -97,6 +103,7 @@ export default function SEOArticlesPage() {
                       </li>
                     ))}
                   </ul>
+
                   <div className="mt-8">
                     <Link href="/contact">
                       <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -105,23 +112,29 @@ export default function SEOArticlesPage() {
                     </Link>
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-                    <Search className="h-32 w-32 text-primary/60" />
-                  </div>
+
+                {/* Image Content */}
+                <div className="relative w-full h-[420px] rounded-2xl overflow-hidden">
+                  <Image
+                    src="/jasa_seo.png" 
+                    alt="SEO Content Service"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
+
               </div>
             </div>
           </section>
 
-          {/* SEO Article Process */}
+
+          <SEOArticlePricing />
+
           <SEOArticleProcess />
 
-          {/* SEO Article Portfolio */}
           <SEOArticlePortfolio />
 
-          {/* SEO Article Pricing */}
-          <SEOArticlePricing />
         </main>
         
       </div>
