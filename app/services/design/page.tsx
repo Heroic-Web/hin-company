@@ -20,8 +20,8 @@ export default function DesignPage() {
           <DesignHero />
           <DesignServices />
           <DesignProcess />
-          <DesignPortfolio />
           <DesignPricing />
+          <DesignPortfolio />
         </main>
       </div>
     </LanguageProvider>

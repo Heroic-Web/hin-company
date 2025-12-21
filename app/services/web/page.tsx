@@ -20,10 +20,10 @@ export default function WebDevelopmentPage() {
         <main>
           <WebDevelopmentHero />
           <WebFeatures />
+          <WebPricing />
           <WebProcess />
           <WebTechnologies />
           <WebPortfolio />
-          <WebPricing />
         </main>
       </div>
     </LanguageProvider>
