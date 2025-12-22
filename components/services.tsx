@@ -14,7 +14,7 @@ export function Services() {
       icon: Code,
       title: t("services.web"),
       description: "Modern, responsive websites built with the latest technologies",
-      features: ["Web Development", "Web App Development", "Web Design (UI/UX)", "CMS Development"],
+      features: ["Web Development", "Web App Development", "No Code Development", "CMS Development"],
       link: "/services/web", // halaman web solutions
     },
     {

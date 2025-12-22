@@ -38,11 +38,12 @@ export function About() {
           </div>
 
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">Professional</div>
-                <div className="text-lg text-muted-foreground">Web Solutions</div>
-              </div>
+            <div className="aspect-square rounded-2xl overflow-hidden bg-green-500">
+              <img
+                src="/Jasa Digital by Heroic.png"
+                alt="Background"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

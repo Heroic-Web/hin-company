@@ -17,10 +17,7 @@ export function ClientLogos() {
     { name: "Lampung", logo: "/lampung.png" },
     { name: "Darmajaya", logo: "/darmajaya.png" },
     { name: "LPKSkaya", logo: "/LPK_Skaya_Logo.png" },
-    { name: "TechCorp", logo: "/techcorp-logo.png" },
-    { name: "InnovateLab", logo: "/innovatelab-logo.png" },
-    { name: "DataSync", logo: "/datasync-logo.jpg" },
-    { name: "AppMaster", logo: "/appmaster-logo.jpg" },
+    { name: "Yadika", logo: "/yadika.png" },
   ]
 
   useEffect(() => {
