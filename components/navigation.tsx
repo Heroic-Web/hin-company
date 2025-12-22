@@ -14,7 +14,7 @@ import {
   Briefcase,
   BookOpen,
   Mail,
-  Users,
+  DollarSign,
 } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -24,6 +24,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { FaMoneyBill, FaMoneyBillAlt, FaMoneyCheck } from "react-icons/fa"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -66,6 +67,7 @@ export function Navigation() {
     },
     { href: "/blog", label: t("nav.blog"), icon: BookOpen },
     { href: "/contact", label: t("nav.contact"), icon: Mail },
+    { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
   ]
 
   return (

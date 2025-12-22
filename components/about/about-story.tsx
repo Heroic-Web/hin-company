@@ -58,7 +58,7 @@ export function AboutStory() {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">24/7 Service</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We provide round-the-clock support to ensure your needs are always met without delay.
+                We provide round the clock support to ensure your needs are always met without delay.
               </p>
             </CardContent>
           </Card>

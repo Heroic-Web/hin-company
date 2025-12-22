@@ -116,6 +116,7 @@ ${formData.message}
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="reseller">Join Reseller Partner</SelectItem>
                       <SelectItem value="web">Web Development</SelectItem>
                       <SelectItem value="seo">SEO Services</SelectItem>
                       <SelectItem value="design">Design Services</SelectItem>

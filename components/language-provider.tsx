@@ -23,6 +23,7 @@ const translations = {
     "nav.blog": "Blog",
     "nav.career": "Career",
     "nav.contact": "Contact",
+    "nav.resellerPartner": "Join Reseller",
 
     // Services
     "services.web": "Web Solutions",
@@ -120,6 +121,7 @@ const translations = {
     "nav.blog": "Blog",
     "nav.career": "Karir",
     "nav.contact": "Kontak",
+    "nav.resellerPartner": "Reseller Partner",
 
     // Services
     "services.web": "Pengembangan Web",
