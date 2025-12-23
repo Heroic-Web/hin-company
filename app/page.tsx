@@ -9,14 +9,26 @@ import { Navigation } from "@/components/navigation"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { LanguageProvider, LegalitasSection } from "@/components/language-provider"
 
+import BirdsAndClouds from "@/components/animated-background/BirdsAndClouds"
+import Cinematic3DBackground from "@/components/animated-background/Cinematic3DBackground"
+
 export default function HomePage() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background">
+      {/* Root container */}
+      <div className="relative min-h-screen bg-background overflow-hidden">
+        
+        <Cinematic3DBackground />
+
         <Navigation />
-        <main>
+
+        <BirdsAndClouds />
+
+        {/* ===== MAIN CONTENT ===== */}
+        <main className="relative z-20">
           <Hero />
           <Services />
+          <BirdsAndClouds />
           <About />
           <LegalitasSection />
           <ClientLogos />
@@ -24,6 +36,8 @@ export default function HomePage() {
           <Testimonials />
           <CTA />
         </main>
+
+        {/* ===== FLOATING ACTION ===== */}
         <WhatsAppFloat />
       </div>
     </LanguageProvider>
