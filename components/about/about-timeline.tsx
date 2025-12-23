@@ -11,7 +11,7 @@ export function AboutTimeline() {
     },
     {
       year: "2024",
-      title: "50+ Projects Completed",
+      title: "1000+ Projects Completed",
       description: "Reached our first major milestone of 50 successful project deliveries.",
     },
     {
@@ -21,7 +21,7 @@ export function AboutTimeline() {
     },
     {
       year: "2025",
-      title: "100+ Happy Clients",
+      title: "998+ Happy Clients",
       description: "Celebrated serving over 100 satisfied clients across various industries.",
     },
   ]

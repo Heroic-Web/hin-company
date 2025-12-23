@@ -38,14 +38,14 @@ export default function ResellerPartner() {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             Reseller Website & Article SEO
             <span className="block text-primary">
-              Bersama PT Heroic Inovasi Nusantara
+              Didukung Resmi PT Heroic Inovasi Nusantara
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-            Program kemitraan fleksibel bagi siapa saja yang ingin mendapatkan
-            penghasilan tambahan dengan memasarkan layanan digital profesional
-            tanpa perlu membangun tim internal.
+            Program kemitraan modern dan fleksibel bagi siapa saja yang ingin mendapatkan 
+            penghasilan tambahan dengan memasarkan layanan digital profesional tanpa ribet 
+            mengelola tim, teknis, maupun produksi.
           </p>
 
           <div className="flex flex-wrap gap-4">

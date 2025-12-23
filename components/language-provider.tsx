@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
+import Image from "next/image"
 
 type Language = "en" | "id"
 
@@ -24,6 +25,16 @@ const translations = {
     "nav.career": "Career",
     "nav.contact": "Contact",
     "nav.resellerPartner": "Join Reseller",
+
+    // Legal Components
+    "legal.badge": "OFFICIAL LEGALITY",
+    "legal.title": "Officially Registered With The Government of Indonesia",
+    "legal.desc": "As a Digital Agency",
+    "legal.subdesc": "We have helped thousands of businesses grow through digital platforms",
+    "legal.client": "Project Clients",
+    "legal.review": "Positive Reviews",
+    "legal.satisfaction": "Customer Satisfaction",
+
 
     // Services
     "services.web": "Web Solutions",
@@ -122,6 +133,15 @@ const translations = {
     "nav.career": "Karir",
     "nav.contact": "Kontak",
     "nav.resellerPartner": "Reseller Partner",
+
+    // Legal Components
+        "legal.badge": "LEGALITAS TERJAMIN",
+    "legal.title": "Terdaftar Secara Resmi Di Pemerintah Indonesia",
+    "legal.desc": "Sebagai Digital Agency",
+    "legal.subdesc": "Kami telah membantu ribuan bisnis berkembang lewat platform digital",
+    "legal.client": "Project Client",
+    "legal.review": "Ulasan Positif",
+    "legal.satisfaction": "Kepuasan Pelanggan",
 
     // Services
     "services.web": "Pengembangan Web",
@@ -245,6 +265,7 @@ export function useLanguage() {
   return context
 }
 
+
 // --- Tombol Toggle Bahasa ---
 export function LanguageToggle() {
   const { language, setLanguage } = useLanguage()
@@ -263,7 +284,6 @@ export function LanguageToggle() {
   )
 }
 
-// --- Contoh Navbar ---
 export function Navbar() {
   const { t } = useLanguage()
 
@@ -273,5 +293,88 @@ export function Navbar() {
       <span>{t("nav.about")}</span>
       <LanguageToggle />
     </nav>
+  )
+}
+
+export function LegalitasSection() {
+  const { t } = useLanguage()
+
+  return (
+    <section className="relative w-full overflow-hidden rounded-[36px] bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 text-white">
+      <div className="px-6 py-12 sm:px-10 lg:px-16 lg:py-20">
+
+        {/* TOP */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block mb-6 rounded-xl bg-white/90 px-6 py-2 text-sm font-semibold text-emerald-700 shadow">
+              {t("legal.badge")}
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              {t("legal.title")}
+            </h2>
+          </div>
+
+          {/* AHU CARD */}
+          <div className="flex justify-center lg:justify-end">
+            <div
+              className="
+                group relative
+                flex items-center gap-5
+                rounded-3xl bg-white/90 px-6 py-6
+                shadow-2xl
+                transition-all duration-500 ease-out
+                hover:-translate-y-3 hover:rotate-[1deg] hover:shadow-emerald-500/40
+                active:scale-95
+              "
+            >
+              {/* Glow */}
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-400 to-green-400 opacity-0 blur-xl transition group-hover:opacity-60" />
+
+              {/* Content */}
+              <div className="relative flex items-center gap-5">
+                <Image
+                  src="/legal/ahu.png"
+                  alt="AHU"
+                  width={64}
+                  height={64}
+                  className="drop-shadow-lg transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110"
+                />
+
+                <div>
+                  <p className="text-xs font-semibold text-emerald-600 mb-1">
+                    NOMOR AHU RESMI
+                  </p>
+                  <p className="text-sm sm:text-base font-bold text-emerald-800 tracking-wide">
+                    AHU-059890.AH.01.30.Tahun 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DIVIDER */}
+        <div className="my-14 border-t border-white/30 border-dashed" />
+
+        {/* BOTTOM STATS */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+          <div className="transition hover:-translate-y-1">
+            <div className="text-5xl font-extrabold mb-2">1.000+</div>
+            <p className="text-white/80">{t("legal.client")}</p>
+          </div>
+
+          <div className="transition hover:-translate-y-1">
+            <div className="text-5xl font-extrabold mb-2">950+</div>
+            <p className="text-white/80">{t("legal.review")}</p>
+          </div>
+
+          <div className="transition hover:-translate-y-1">
+            <div className="text-5xl font-extrabold mb-2">99%</div>
+            <p className="text-white/80">{t("legal.satisfaction")}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

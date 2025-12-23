@@ -166,11 +166,11 @@ export function Hero() {
         {/* Stats section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold text-primary">159</div>
-            <div className="text-sm text-muted-foreground">Projects Completed</div>
+            <div className="text-3xl font-bold text-primary">99%</div>
+            <div className="text-sm text-muted-foreground">On Time Delivery</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary">150</div>
+            <div className="text-3xl font-bold text-primary">1000+</div>
             <div className="text-sm text-muted-foreground">Happy Clients</div>
           </div>
           <div>

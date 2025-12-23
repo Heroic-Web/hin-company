@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/testimonials"
 import { CTA } from "@/components/cta"
 import { Navigation } from "@/components/navigation"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
-import { LanguageProvider } from "@/components/language-provider"
+import { LanguageProvider, LegalitasSection } from "@/components/language-provider"
 
 export default function HomePage() {
   return (
@@ -18,6 +18,7 @@ export default function HomePage() {
           <Hero />
           <Services />
           <About />
+          <LegalitasSection />
           <ClientLogos />
           <Portfolio />
           <Testimonials />
