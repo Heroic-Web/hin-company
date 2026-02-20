@@ -37,7 +37,8 @@ const translations = {
 
 
     // Services
-    "services.web": "Web Solutions",
+    "services.landingpage": "Landing Page",
+    "services.web": "Web Development",
     "services.seo": "SEO Writing",
     "services.design": "Creative Design",
 
@@ -145,6 +146,7 @@ const translations = {
 
     // Services
     "services.web": "Pengembangan Web",
+    "services.landingpage": "Landing Page",
     "services.seo": "Artikel SEO",
     "services.design": "Desain",
 

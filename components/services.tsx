@@ -18,6 +18,13 @@ export function Services() {
       link: "/services/web", // halaman web solutions
     },
     {
+      icon: Code,
+      title: t("services.landingpage"),
+      description: "Beautiful, high-converting landing pages tailored to your brand",
+      features: ["Custom Design", "Conversion Focused", "Responsive Layouts", "A/B Testing"],
+      link: "/services/landing-page", // halaman landing page
+    },
+    {
       icon: Search,
       title: t("services.seo"),
       description: "High quality SEO content that ranks and converts",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Code, Search, Palette, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight, Code, Search, Palette, ChevronLeft, ChevronRight, Smartphone } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function Hero() {
@@ -67,6 +67,12 @@ export function Hero() {
                   <Code className="h-8 w-8 text-primary" />
                 </div>
                 <span className="text-sm font-medium text-foreground">{t("services.web")}</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Smartphone className="h-8 w-8 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-foreground">{t("services.landingpage")}</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">

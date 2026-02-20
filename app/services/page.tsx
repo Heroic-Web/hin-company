@@ -4,7 +4,6 @@ import { ServicesHero } from "@/components/services/services-hero"
 import { ServicesGrid } from "@/components/services/services-grid"
 import { ProcessSection } from "@/components/services/process-section"
 import { PricingSection } from "@/components/services/pricing-section"
-
 export const metadata = {
   title: "Our Services - Heroic Web",
   description:
@@ -18,6 +17,7 @@ export default function ServicesPage() {
         <Navigation />
         <main>
           <ServicesHero />
+          
           <ServicesGrid />
           <ProcessSection />
           <PricingSection />

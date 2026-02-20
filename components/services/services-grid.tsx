@@ -23,6 +23,18 @@ export function ServicesGrid() {
       ],
     },
     {
+      icon: Code,
+      title: t("services.landingpage"),
+      description: "Beautiful, high-converting landing pages tailored to your brand",
+      features: ["Custom Design", "Conversion Focused", "Responsive Layouts", "A/B Testing"],
+      link: "/services/landing-page",
+      highlights: [
+        { icon: Globe, text: "Brand Visibility" },
+        { icon: Smartphone, text: "Mobile Friendly" },
+        { icon: Zap, text: "Fast Loading" },
+      ],
+    },
+    {
       icon: Search,
       title: t("services.seo"),
       description: "Strategic SEO content and optimization that drives organic traffic",

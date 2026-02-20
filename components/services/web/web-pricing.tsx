@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link";
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
@@ -9,184 +9,193 @@ import { useLanguage } from "@/components/language-provider"
 export function WebPricing() {
   const { t } = useLanguage()
 
-  const plans = [
-    {
-      name: "Landing Page",
-      price: "$799",
-      description: "Perfect for simple business landing pages",
-      features: [
-        "1-page responsive design",
-        "Mobile-friendly layout",
-        "Contact form",
-        "Basic SEO setup",
-        "1 month support",
-        "SSL certificate",
-      ],
-    },
-    {
-      name: "Basic Website",
-      price: "$1,499",
-      description: "Great for small businesses and portfolios",
-      features: [
-        "5-page responsive website",
-        "Mobile-first design",
-        "Contact form integration",
-        "Basic SEO optimization",
-        "3 months support",
-        "SSL certificate included",
-        "Google Analytics setup",
-      ],
-    },
-    {
-      name: "Business Website",
-      price: "$2,999",
-      description: "Ideal for growing businesses",
-      features: [
-        "10-page responsive website",
-        "Content management system",
-        "Blog functionality",
-        "Advanced SEO optimization",
-        "Analytics & tracking",
-        "6 months support",
-        "Performance optimization",
-        "Social media integration",
-      ],
-      popular: true,
-    },
-    {
-      name: "E-commerce Store",
-      price: "$4,999",
-      description: "Complete online store solution",
-      features: [
-        "Unlimited product pages",
-        "Shopping cart & checkout",
-        "Payment gateway integration",
-        "Inventory management",
-        "Order tracking system",
-        "Customer accounts",
-        "Mobile commerce ready",
-        "12 months support",
-      ],
-    },
-    {
-      name: "Corporate Portal",
-      price: "$7,999",
-      description: "Advanced corporate websites",
-      features: [
-        "Multi-page corporate site",
-        "User authentication",
-        "Document management",
-        "Advanced integrations",
-        "Multi-language support",
-        "Custom functionality",
-        "Security features",
-        "18 months support",
-      ],
-    },
-    {
-      name: "Enterprise Solution",
-      price: "Custom",
-      description: "Large-scale custom solutions",
-      features: [
-        "Unlimited pages & features",
-        "Custom development",
-        "API integrations",
-        "Advanced security",
-        "Scalable architecture",
-        "Dedicated team",
-        "24/7 priority support",
-        "Lifetime maintenance",
-      ],
-    },
-  ]
-
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Judul utama */}
+        {/* ================= HEADER ================= */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Paket Harga Website
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Paket Harga Website Heroic Web
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Pilihan paket website yang fleksibel sesuai kebutuhan dan budget bisnis Anda
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Solusi digital lengkap untuk UMKM dan bisnis yang ingin berkembang secara profesional di era digital.
           </p>
         </div>
 
-        {/* Bagian 1: Paket Landing Page & Web Tanpa Stres */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {/* Paket Landing Page */}
-          <Card className="relative h-full flex flex-col border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-            <CardHeader className="text-center pb-4 sm:pb-6">
-              <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">
-                Paket Landing Page
+
+        {/* ================= BAGIAN 1 ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+          {/* ===== BUNDLING UMKM ===== */}
+          <Card className="relative h-full flex flex-col border-2 border-primary hover:shadow-2xl transition-all duration-300 bg-background">
+
+            <div className="absolute -top-3 left-6 bg-primary text-white px-4 py-1 rounded-full text-xs font-semibold shadow">
+              Paket Terpadu UMKM
+            </div>
+
+            <CardHeader>
+              <CardTitle className="text-xl font-bold">
+                Bundling UMKM
               </CardTitle>
-              <CardDescription className="text-sm text-muted-foreground">
-                Solusi cepat 1 hari pengerjaan
+
+              <CardDescription>
+                Solusi digital lengkap untuk UMKM yang ingin naik level dan tampil profesional di era digital.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 sm:space-y-3 mb-6">
-                <li className="flex justify-between">
-                  <span>Super Sale</span>
-                  <span className="font-bold text-primary">Rp 500.000</span>
+
+            <CardContent className="space-y-5 text-sm text-muted-foreground">
+
+              {/* Harga */}
+              <div>
+                <p className="text-3xl font-extrabold text-primary">
+                  Rp 5.500.000
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Investasi lengkap untuk transformasi digital bisnis Anda
+                </p>
+              </div>
+
+              <p>
+                Paket Bundling UMKM dari <span className="font-semibold text-foreground">Heroic Web</span> merupakan solusi terpadu
+                yang dirancang khusus untuk membantu pelaku UMKM melakukan digitalisasi secara menyeluruh.
+                Tidak hanya sekadar membuat website, tetapi membangun fondasi digital yang kuat
+                agar bisnis Anda lebih dipercaya, lebih mudah ditemukan, dan lebih cepat berkembang.
+              </p>
+
+              <p>
+                Dalam satu paket lengkap, Anda akan mendapatkan:
+              </p>
+
+              <ul className="space-y-2">
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Website Company Profile Profesional & Modern
                 </li>
-                <li className="flex justify-between">
-                  <span>Reguler</span>
-                  <span className="font-bold line-through text-muted-foreground">Rp 650.000</span>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Bonus Desain Logo (jika belum memiliki identitas brand)
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Artikel SEO untuk meningkatkan visibilitas di Google
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Layanan Manajemen Media Sosial untuk memperkuat branding online
                 </li>
               </ul>
-              <Button
-                asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                <a
-                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Landing%20Page"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Pilih Paket
-                </a>
-              </Button>
+
+              <p>
+                Kami juga membantu proses setup dan optimasi agar website Anda benar-benar maksimal,
+                termasuk integrasi dan konfigurasi:
+              </p>
+
+              <ul className="space-y-2">
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Google Search Console (agar mudah terindeks & terpantau performanya)
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Google Analytics (monitor pengunjung & perilaku user)
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-green-600"/>
+                  Google Business Profile (agar bisnis mudah ditemukan secara lokal)
+                </li>
+              </ul>
+
+              <p>
+                Semua dirancang secara <span className="font-medium text-foreground">strategis, efisien, dan terukur</span>,
+                sesuai kebutuhan UMKM yang ingin berkembang secara digital tanpa ribet dan tanpa pusing teknis.
+                Anda fokus mengembangkan bisnis, tim Heroic Web yang mengurus sistem digitalnya.
+              </p>
+
+              <div className="pt-4">
+                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                  <a
+                    href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20info%20Paket%20Bundling%20UMKM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Konsultasi Sekarang via WhatsApp
+                  </a>
+                </Button>
+              </div>
+
             </CardContent>
           </Card>
 
-          {/* Paket Web Tanpa Stres */}
-          <Card className="relative h-full flex flex-col border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-            <CardHeader className="text-center pb-4 sm:pb-6">
-              <CardTitle className="text-lg sm:text-xl font-bold text-foreground mb-2">
-                Paket Web Tanpa Stres
+          {/* ===== TOKO ONLINE PREMIUM ===== */}
+          <Card className="relative h-full flex flex-col border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
+
+            <CardHeader>
+              <CardTitle className="text-xl font-bold">
+                Toko Online Premium
               </CardTitle>
-              <CardDescription className="text-sm text-muted-foreground">
-                Jasa Pembuatan Web All in One termasuk pembuatan company profile website, artikel seo, serta bonus copywriting dan desain. Buhan hanya itu, kami juga bantu setting dan optimasi website Anda di Google Search Console, Google Analytic, dan Google My Business.
+              <CardDescription>
+                Solusi e-commerce lengkap dengan fitur profesional.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-2 sm:space-y-3 mb-6">
-                <li className="flex justify-between">
-                  <span>Promo</span>
-                  <span className="font-bold text-primary">Rp 5.500.000</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Reguler</span>
-                  <span className="font-bold line-through text-muted-foreground">Rp 11.000.000</span>
-                </li>
-              </ul>
-              <Button
-                asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
+
+            <CardContent className="space-y-6">
+
+              <div>
+                <p className="text-3xl font-bold text-primary">
+                  Rp 2.700.000
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Harga Renewal: Rp 1.700.000/tahun
+                </p>
+              </div>
+
+              {/* Spesifikasi */}
+              <div>
+                <h4 className="font-semibold mb-3">Spesifikasi :</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>6 Halaman Website</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Gratis Hosting & Domain</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Revisi 3 kali</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Pengerjaan 7 - 14 hari kerja</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Masa aktif 1 tahun</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Free Maintenance 4 jam/bulan</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Gratis SSL</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Email Perusahaan</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Akses Admin Website</li>
+                </ul>
+              </div>
+
+              {/* Fitur */}
+              <div>
+                <h4 className="font-semibold mb-3">Fitur :</h4>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Keranjang Belanja</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Payment Bank Transfer</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Ongkos Kirim</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Chat WhatsApp</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Tombol Order via WhatsApp</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Harga Coret / Diskon</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Kategori Produk</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Variasi Produk</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Laporan Stok</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Laporan Penjualan</li>
+                  <li className="flex gap-2"><Check className="w-4 h-4 text-green-600"/>Upsell + Cross Sell</li>
+                </ul>
+              </div>
+
+              <Button asChild className="w-full bg-primary hover:bg-primary/90">
                 <a
-                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Web%20Tanpa%20Stres%20(All%20in%20One)"
+                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Toko%20Online%20Premium"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  Pilih Paket
+                  Pesan Website Sekarang
                 </a>
               </Button>
+
             </CardContent>
           </Card>
+
         </div>
 
         {/* Bagian 2: Paket Website (Tabel Perbandingan) */}

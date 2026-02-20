@@ -34,6 +34,12 @@ export function Footer() {
                   {t("services.web")}
                 </Link>
               </li>
+              
+              <li>
+                <Link href="/services/landing-page" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t("services.landingpage")}
+                </Link>
+              </li>
               <li>
                 <Link href="/services/seo-articles" className="text-muted-foreground hover:text-primary transition-colors">
                   {t("services.seo")}
