@@ -15,6 +15,7 @@ import {
   BookOpen,
   Mail,
   DollarSign,
+  Wrench,
 } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -51,7 +52,6 @@ export function Navigation() {
     }
   }, [lastScrollY])
 
-  // ⬇️ navItems HARUS di dalam komponen
   const navItems = [
     { href: "/", label: t("nav.home"), icon: Home },
     { href: "/about", label: t("nav.about"), icon: User },
@@ -65,6 +65,13 @@ export function Navigation() {
         { href: "/services/design", label: t("services.design") },
       ],
     },
+
+    { 
+      href: "/free-tools", 
+      label: t("Free Tools"), 
+      icon: Wrench 
+    },
+
     { href: "/blog", label: t("nav.blog"), icon: BookOpen },
     { href: "/contact", label: t("nav.contact"), icon: Mail },
     { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
