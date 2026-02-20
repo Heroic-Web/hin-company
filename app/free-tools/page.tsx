@@ -207,27 +207,62 @@ export default function FreeToolsPage() {
           desain grafis profesional untuk kebutuhan branding Anda.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          <Link
-            href="/services/web"
-            className="bg-primary text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300"
-          >
-            Order Jasa Website
-          </Link>
+        {/* 3D BUTTON GROUP */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
 
-          <Link
-            href="/services/seo-articles"
-            className="bg-black text-white px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300"
-          >
-            Order Artikel SEO
-          </Link>
+            {/* BUTTON 1 */}
+            <Link
+                href="/services/web"
+                className="group relative w-full sm:w-auto"
+            >
+                <div className="absolute inset-0 bg-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
 
-          <Link
-            href="/services/design"
-            className="bg-white border px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300"
-          >
-            Order Desain
-          </Link>
+                <div className="relative bg-gradient-to-b from-primary to-primary/80 text-white font-semibold px-8 py-4 rounded-2xl
+                    shadow-[0_8px_0_rgb(0,0,0,0.25)]
+                    active:translate-y-2
+                    active:shadow-[0_2px_0_rgb(0,0,0,0.25)]
+                    hover:-translate-y-1
+                    transition-all duration-200
+                    text-center">
+                🚀 Order Jasa Website
+                </div>
+            </Link>
+
+            {/* BUTTON 2 */}
+            <Link
+                href="/services/seo-articles"
+                className="group relative w-full sm:w-auto"
+            >
+                <div className="absolute inset-0 bg-black rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+
+                <div className="relative bg-gradient-to-b from-black to-gray-800 text-white font-semibold px-8 py-4 rounded-2xl
+                    shadow-[0_8px_0_rgb(0,0,0,0.35)]
+                    active:translate-y-2
+                    active:shadow-[0_2px_0_rgb(0,0,0,0.35)]
+                    hover:-translate-y-1
+                    transition-all duration-200
+                    text-center">
+                📈 Order Artikel SEO
+                </div>
+            </Link>
+
+            {/* BUTTON 3 */}
+            <Link
+                href="/services/design"
+                className="group relative w-full sm:w-auto"
+            >
+                <div className="absolute inset-0 bg-gray-300 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+
+                <div className="relative bg-gradient-to-b from-white to-gray-100 border text-black font-semibold px-8 py-4 rounded-2xl
+                    shadow-[0_8px_0_rgb(0,0,0,0.2)]
+                    active:translate-y-2
+                    active:shadow-[0_2px_0_rgb(0,0,0,0.2)]
+                    hover:-translate-y-1
+                    transition-all duration-200
+                    text-center">
+                🎨 Order Desain
+                </div>
+            </Link>
         </div>
       </div>
 
