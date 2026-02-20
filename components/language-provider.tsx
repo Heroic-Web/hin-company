@@ -39,8 +39,8 @@ const translations = {
     // Services
     "services.landingpage": "Landing Page",
     "services.web": "Web Development",
-    "services.seo": "SEO Writing",
-    "services.design": "Creative Design",
+    "services.seo": "Content Writing",
+    "services.design": "Branding & Design",
 
     // Common
     "common.learnMore": "Learn More",
