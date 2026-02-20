@@ -67,14 +67,13 @@ export function Navigation() {
       ],
     },
 
+    { href: "/blog", label: t("nav.blog"), icon: BookOpen },
+    { href: "/contact", label: t("nav.contact"), icon: Mail },
     { 
       href: "/free-tools", 
       label: t("Free Tools"), 
       icon: Wrench 
     },
-
-    { href: "/blog", label: t("nav.blog"), icon: BookOpen },
-    { href: "/contact", label: t("nav.contact"), icon: Mail },
     { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
   ]
 

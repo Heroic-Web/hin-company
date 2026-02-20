@@ -37,9 +37,9 @@ const translations = {
 
 
     // Services
-    "services.landingpage": "Landing Page",
-    "services.web": "Web Development",
-    "services.seo": "Content Writing",
+    "services.landingpage": "Jasa Pembuatan Landing Page",
+    "services.web": "Jasa Pembuatan Website",
+    "services.seo": "Jasa Penulisan Artikel SEO",
     "services.design": "Branding & Design",
 
     // Common
