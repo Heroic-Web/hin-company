@@ -198,6 +198,7 @@ export function CareerApplication({ selectedPosition }: CareerApplicationProps) 
                     <SelectItem value="Digital Marketing Specialist">Digital Marketing Specialist</SelectItem>
                     <SelectItem value="Content Writer">Content Writer</SelectItem>
                     <SelectItem value="Project Manager">Project Manager</SelectItem>
+                    <SelectItem value="Project Manager">Social Media Specialist</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
