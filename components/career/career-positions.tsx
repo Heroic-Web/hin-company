@@ -37,7 +37,7 @@ export function CareerPositions({ onSelectPosition }: CareerPositionsProps) {
         "Develop scalable and modern web interfaces using React and Next.js.",
       requirements: [
         "1.5+ year React experience",
-        "TypeScript knowledge",
+        "React.js, Next.js, & TypeScript knowledge",
         "Understanding of UI/UX",
       ],
     },
@@ -50,7 +50,7 @@ export function CareerPositions({ onSelectPosition }: CareerPositionsProps) {
       description:
         "Build robust backend systems and APIs to power our web applications.",
       requirements: [
-        "Node.js experience",
+        "Node.js, Python experience, and Practical API development",
         "Database knowledge",
         "API security understanding",
       ],
