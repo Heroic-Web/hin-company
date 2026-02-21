@@ -25,7 +25,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { FaMoneyBill, FaMoneyBillAlt, FaMoneyCheck } from "react-icons/fa"
+import { FaMoneyBill, FaMoneyBillAlt, FaMoneyCheck, FaTools } from "react-icons/fa"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -58,7 +58,7 @@ export function Navigation() {
     {
       href: "/services",
       label: t("nav.services"),
-      icon: Briefcase,
+      icon: FaTools,
       submenu: [
         { href: "/services/web", label: t("services.web") },
         { href: "/services/landing-page", label: t("services.landingpage") },
@@ -69,6 +69,7 @@ export function Navigation() {
 
     { href: "/blog", label: t("nav.blog"), icon: BookOpen },
     { href: "/contact", label: t("nav.contact"), icon: Mail },
+    { href: "/career", label: t("nav.career"), icon: Briefcase },
     { 
       href: "/free-tools", 
       label: t("Free Tools"), 
