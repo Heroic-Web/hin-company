@@ -22,7 +22,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground mb-4 text-pretty">
-              Professional web development, Landing Page Design and Development, Article SEO, Iklan Digital, and design services to help your business succeed online.
+              We provide professional Website Development, High Converting Landing Pages, SEO Optimized Content, Digital Advertising Solutions, and Creative Design Services to accelerate your business growth in the digital world.
             </p>
           </div>
 

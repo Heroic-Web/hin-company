@@ -7,6 +7,8 @@ import Link from "next/link"
 import { SEOArticleProcess } from "@/components/services/seo/seo-article-process"
 import { SEOArticlePortfolio } from "@/components/services/seo/seo-article-portfolio"
 import { SEOArticlePricing } from "@/components/services/seo/seo-article-pricing"
+import { SEOArticleCompleteContent } from "@/components/services/seo/seo-article-complete-content"
+import { SEOArticleEnterpriseContent } from "@/components/services/seo/seo-article-enterprise-content"
 import Image from "next/image"
 
 export const metadata = {
@@ -128,13 +130,14 @@ export default function SEOArticlesPage() {
             </div>
           </section>
 
-
           <SEOArticlePricing />
-
+          <SEOArticleCompleteContent />
+          
           <SEOArticleProcess />
-
           <SEOArticlePortfolio />
-
+          <SEOArticleEnterpriseContent />
+          
+          
         </main>
         
       </div>

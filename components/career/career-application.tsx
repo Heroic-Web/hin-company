@@ -1,120 +1,290 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Upload, Send } from "lucide-react"
-import { useLanguage } from "@/components/language-provider"
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select"
+import { Upload, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react"
 
-export function CareerApplication() {
-  const { t } = useLanguage()
+interface CareerApplicationProps {
+  selectedPosition: string
+}
+
+export function CareerApplication({ selectedPosition }: CareerApplicationProps) {
+
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState("")
+  const [file, setFile] = useState<File | null>(null)
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    position: "",
+    experience: "",
+    message: "",
+  })
+
+  useEffect(() => {
+    if (selectedPosition) {
+      setFormData(prev => ({ ...prev, position: selectedPosition }))
+    }
+  }, [selectedPosition])
+
+  const handleChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }))
+  }
+
+  const validateForm = () => {
+    if (!formData.firstName) return "First name is required"
+    if (!formData.lastName) return "Last name is required"
+    if (!formData.email) return "Email is required"
+    if (!formData.phone) return "Phone number is required"
+    if (!formData.position) return "Position is required"
+    if (!formData.experience) return "Experience is required"
+    if (!formData.message) return "Please tell us about yourself"
+    if (!file) return "Please upload your CV"
+    return ""
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+    setSuccess(false)
+
+    const validationError = validateForm()
+    if (validationError) {
+      setError(validationError)
+      return
+    }
+
+    setLoading(true)
+
+    const data = new FormData()
+    data.append("firstName", formData.firstName)
+    data.append("lastName", formData.lastName)
+    data.append("email", formData.email)
+    data.append("phone", formData.phone)
+    data.append("position", formData.position)
+    data.append("experience", formData.experience)
+    data.append("message", formData.message)
+    if (file) {
+      data.append("resume", file)
+    }
+
+    try {
+      const res = await fetch("/api/career", {
+        method: "POST",
+        body: data,
+      })
+
+      const result = await res.json()
+
+      if (!res.ok) {
+        setError(result.error || "Failed to submit application")
+        setLoading(false)
+        return
+      }
+
+      setSuccess(true)
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        position: "",
+        experience: "",
+        message: "",
+      })
+      setFile(null)
+
+    } catch (err) {
+      setError("Network error. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t("career.application.title") || "Ready to Join Us?"}
+    <section id="career-application-form" className="py-24 bg-muted/30">
+      <div className="max-w-4xl mx-auto px-4">
+
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold mb-4">
+            Submit Your Application
           </h2>
-          <p className="text-xl text-muted-foreground">
-            {t("career.application.description") ||
-              "Don't see the perfect position? Send us your resume and tell us how you'd like to contribute to our team."}
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Fill in your details carefully. Our HR team will review your application and contact you shortly.
           </p>
         </div>
 
-        <Card className="shadow-xl">
+        <Card className="shadow-2xl border-0">
           <CardHeader>
-            <CardTitle>{t("career.application.formTitle") || "General Application"}</CardTitle>
+            <CardTitle>Career Application Form</CardTitle>
             <CardDescription>
-              {t("career.application.formDescription") ||
-                "Fill out the form below and we'll get back to you within 48 hours."}
+              Please ensure all information is accurate before submitting.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="firstName">{t("career.application.firstName") || "First Name"}</Label>
-                <Input id="firstName" placeholder="John" />
+
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-8">
+
+              {/* Name */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <Label>First Name</Label>
+                  <Input
+                    value={formData.firstName}
+                    onChange={(e)=>handleChange("firstName", e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Label>Last Name</Label>
+                  <Input
+                    value={formData.lastName}
+                    onChange={(e)=>handleChange("lastName", e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="lastName">{t("career.application.lastName") || "Last Name"}</Label>
-                <Input id="lastName" placeholder="Doe" />
+
+              {/* Email */}
+              <div>
+                <Label>Email Address</Label>
+                <Input
+                  type="email"
+                  value={formData.email}
+                  onChange={(e)=>handleChange("email", e.target.value)}
+                />
               </div>
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="email">{t("career.application.email") || "Email Address"}</Label>
-              <Input id="email" type="email" placeholder="john.doe@example.com" />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="phone">{t("career.application.phone") || "Phone Number"}</Label>
-              <Input id="phone" type="tel" placeholder="+62 812 3456 7890" />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="position">{t("career.application.position") || "Position of Interest"}</Label>
-              <Select>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select a position" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="frontend">Senior Frontend Developer</SelectItem>
-                  <SelectItem value="seo">SEO Content Specialist</SelectItem>
-                  <SelectItem value="designer">UI/UX Designer</SelectItem>
-                  <SelectItem value="backend">Backend Developer</SelectItem>
-                  <SelectItem value="marketing">Digital Marketing Manager</SelectItem>
-                  <SelectItem value="pm">Project Manager</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="experience">{t("career.application.experience") || "Years of Experience"}</Label>
-              <Select>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select experience level" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="0-1">0-1 years</SelectItem>
-                  <SelectItem value="2-3">2-3 years</SelectItem>
-                  <SelectItem value="4-5">4-5 years</SelectItem>
-                  <SelectItem value="6-10">6-10 years</SelectItem>
-                  <SelectItem value="10+">10+ years</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="message">{t("career.application.message") || "Tell us about yourself"}</Label>
-              <Textarea
-                id="message"
-                placeholder="Tell us about your experience, skills, and why you'd like to join our team..."
-                className="min-h-[120px]"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="resume">{t("career.application.resume") || "Resume/CV"}</Label>
-              <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors cursor-pointer">
-                <Upload className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                <p className="text-sm text-muted-foreground">
-                  {t("career.application.uploadText") || "Click to upload or drag and drop your resume"}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">PDF, DOC, DOCX (max 5MB)</p>
+              {/* Phone */}
+              <div>
+                <Label>Phone Number</Label>
+                <Input
+                  value={formData.phone}
+                  onChange={(e)=>handleChange("phone", e.target.value)}
+                />
               </div>
-            </div>
 
-            <Button className="w-full" size="lg">
-              <Send className="mr-2 h-5 w-5" />
-              {t("career.application.submit") || "Submit Application"}
-            </Button>
+              {/* Position */}
+              <div>
+                <Label>Position of Interest</Label>
+                <Select
+                  value={formData.position}
+                  onValueChange={(value)=>handleChange("position", value)}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select position" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Co-Founder">Co-Founder</SelectItem>
+                    <SelectItem value="Frontend Developer">Frontend Developer</SelectItem>
+                    <SelectItem value="Backend Developer">Backend Developer</SelectItem>
+                    <SelectItem value="UI/UX Designer">UI/UX Designer</SelectItem>
+                    <SelectItem value="Digital Marketing Specialist">Digital Marketing Specialist</SelectItem>
+                    <SelectItem value="Content Writer">Content Writer</SelectItem>
+                    <SelectItem value="Project Manager">Project Manager</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Experience */}
+              <div>
+                <Label>Years of Experience</Label>
+                <Select
+                  value={formData.experience}
+                  onValueChange={(value)=>handleChange("experience", value)}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select experience" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="0-1">0-1 Years</SelectItem>
+                    <SelectItem value="2-3">2-3 Years</SelectItem>
+                    <SelectItem value="4-5">4-5 Years</SelectItem>
+                    <SelectItem value="6-10">6-10 Years</SelectItem>
+                    <SelectItem value="10+">10+ Years</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <Label>Tell Us About Yourself</Label>
+                <Textarea
+                  className="min-h-[150px]"
+                  value={formData.message}
+                  onChange={(e)=>handleChange("message", e.target.value)}
+                />
+              </div>
+
+              {/* Upload CV */}
+              <div>
+                <Label>Upload CV (PDF / DOC / DOCX)</Label>
+                <div className="border-2 border-dashed rounded-2xl p-8 text-center hover:border-primary transition">
+                  <Upload className="h-10 w-10 mx-auto mb-3 text-muted-foreground" />
+                  <Input
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    onChange={(e)=>setFile(e.target.files?.[0] || null)}
+                  />
+                </div>
+                {file && (
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    Selected file: {file.name}
+                  </p>
+                )}
+              </div>
+
+              {/* Error */}
+              {error && (
+                <div className="flex items-center text-red-600 text-sm">
+                  <AlertCircle className="h-4 w-4 mr-2" />
+                  {error}
+                </div>
+              )}
+
+              {/* Success */}
+              {success && (
+                <div className="flex items-center text-green-600 text-sm">
+                  <CheckCircle2 className="h-4 w-4 mr-2" />
+                  Application submitted successfully!
+                </div>
+              )}
+
+              {/* Submit */}
+              <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                {loading ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-5 w-5" />
+                    Submit Application
+                  </>
+                )}
+              </Button>
+
+            </form>
           </CardContent>
         </Card>
+
       </div>
     </section>
   )

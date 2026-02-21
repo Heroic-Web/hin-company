@@ -72,7 +72,7 @@ const translations = {
 
     // Career
     "career.hero.badge": "Join Our Team",
-    "career.hero.title": "Build Your Career With Us (Cooming Soon)",
+    "career.hero.title": "Build Your Career With Us",
     "career.hero.description":
       "Join a dynamic team of creative professionals and help us shape the future of digital experiences. We're always looking for talented individuals who share our passion for innovation.",
     "career.hero.viewPositions": "View Open Positions",

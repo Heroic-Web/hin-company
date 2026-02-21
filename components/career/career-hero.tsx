@@ -27,13 +27,32 @@ export function CareerHero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+
+              {/* View Positions */}
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => {
+                  const section = document.getElementById("career-positions")
+                  section?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
                 {t("career.hero.viewPositions") || "View Open Positions"}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg">
+
+              {/* Learn Culture */}
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  const section = document.getElementById("career-culture")
+                  section?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
                 {t("career.hero.learnMore") || "Learn About Our Culture"}
               </Button>
+
             </div>
 
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">

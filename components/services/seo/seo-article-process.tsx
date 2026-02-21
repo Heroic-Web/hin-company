@@ -102,7 +102,7 @@ export function SEOArticleProcess() {
             </h3>
             <p className="text-muted-foreground text-lg">
               {language === "en"
-                ? "We guarantee 100% original, SEO-optimized content that helps improve your search rankings and drives organic traffic to your website."
+                ? "We guarantee 100% original, SEO optimized content that helps improve your search rankings and drives organic traffic to your website."
                 : "Kami menjamin 100% konten original dan teroptimasi SEO yang membantu meningkatkan ranking pencarian dan mendorong traffic organik ke website Anda."}
             </p>
           </div>
