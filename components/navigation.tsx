@@ -16,6 +16,7 @@ import {
   Mail,
   DollarSign,
   Wrench,
+  ExternalLink,
 } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -54,7 +55,11 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: t("nav.home"), icon: Home },
+
     { href: "/about", label: t("nav.about"), icon: User },
+
+    { href: "/contact", label: t("nav.contact"), icon: Mail },
+
     {
       href: "/services",
       label: t("nav.services"),
@@ -67,15 +72,21 @@ export function Navigation() {
       ],
     },
 
-    { href: "/blog", label: t("nav.blog"), icon: BookOpen },
-    { href: "/contact", label: t("nav.contact"), icon: Mail },
-    { href: "/career", label: t("nav.career"), icon: Briefcase },
-    { 
-      href: "/free-tools", 
-      label: t("Free Tools"), 
-      icon: Wrench 
-    },
     { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
+
+    { href: "/portfolio", label: "Portfolio", icon: ExternalLink },
+
+    {
+      href: "#",
+      label: "Resources",
+      icon: BookOpen,
+      submenu: [
+        { href: "/blog", label: t("nav.blog") },
+        { href: "/free-tools", label: "Free Tools" },
+      ],
+    },
+
+    { href: "/career", label: t("nav.career"), icon: Briefcase },
   ]
 
   return (
