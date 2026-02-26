@@ -21,49 +21,49 @@ const tools = [
     icon: FileText,
     description:
       'Gabungkan beberapa file PDF menjadi satu dokumen dengan cepat dan tanpa ribet. Cocok untuk penggabungan laporan, dokumen administrasi, atau file kerja.',
-    link: 'https://heroic.web.id/dashboard/tools/merge-pdf',
+    link: 'https://app.hinaitech.com/dashboard/tools/merge-pdf',
   },
   {
     title: 'PDF to Image',
     icon: Image,
     description:
       'Ubah file PDF menjadi format gambar (JPG/PNG) dengan kualitas tinggi. Ideal untuk preview, presentasi, atau kebutuhan desain.',
-    link: 'https://heroic.web.id/dashboard/tools/pdf-to-image',
+    link: 'https://app.hinaitech.com/dashboard/tools/pdf-to-image',
   },
   {
     title: 'Image to PDF',
     icon: FileText,
     description:
       'Konversi gambar menjadi file PDF dalam hitungan detik. Cocok untuk dokumen scan, tugas, atau arsip digital.',
-    link: 'https://heroic.web.id/dashboard/tools/image-to-pdf',
+    link: 'https://app.hinaitech.com/dashboard/tools/image-to-pdf',
   },
   {
     title: 'Resize Image',
     icon: Minimize2,
     description:
       'Ubah ukuran gambar sesuai kebutuhan tanpa mengurangi kualitas secara signifikan. Cocok untuk upload website atau media sosial.',
-    link: 'https://heroic.web.id/dashboard/tools/resize-image',
+    link: 'https://app.hinaitech.com/dashboard/tools/resize-image',
   },
   {
     title: 'Compress Image',
     icon: Maximize2,
     description:
       'Kompres ukuran file gambar agar lebih ringan dan cepat diakses tanpa kehilangan kualitas yang berarti.',
-    link: 'https://heroic.web.id/dashboard/tools/compress-image',
+    link: 'https://app.hinaitech.com/dashboard/tools/compress-image',
   },
   {
     title: 'QR Code Generator',
     icon: QrCode,
     description:
       'Buat QR Code instan untuk link website, WhatsApp, lokasi Google Maps, atau data lainnya dengan mudah.',
-    link: 'https://heroic.web.id/dashboard/tools/generate-qr',
+    link: 'https://app.hinaitech.com/dashboard/tools/generate-qr',
   },
   {
     title: 'Convert Case',
     icon: Type,
     description:
       'Ubah format huruf menjadi UPPERCASE, lowercase, atau Capitalize secara otomatis. Berguna untuk penulisan cepat dan efisien.',
-    link: 'https://heroic.web.id/dashboard/tools/convert-case',
+    link: 'https://app.hinaitech.com/dashboard/tools/convert-case',
   },
 ];
 

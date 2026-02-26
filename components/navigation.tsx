@@ -83,9 +83,9 @@ export function Navigation() {
       submenu: [
         { href: "/blog", label: t("nav.blog") },
         { href: "/career", label: t("nav.career"), icon: Briefcase },
+        { href: "/free-tools", label: "Free Tools" },
       ],
     },
-
   ]
 
   return (
