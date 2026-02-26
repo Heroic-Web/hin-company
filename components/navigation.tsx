@@ -82,11 +82,10 @@ export function Navigation() {
       icon: BookOpen,
       submenu: [
         { href: "/blog", label: t("nav.blog") },
-        { href: "/free-tools", label: "Free Tools" },
+        { href: "/career", label: t("nav.career"), icon: Briefcase },
       ],
     },
 
-    { href: "/career", label: t("nav.career"), icon: Briefcase },
   ]
 
   return (
