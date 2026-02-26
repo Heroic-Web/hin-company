@@ -33,38 +33,6 @@ const categories = [
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Cyber Security App",
-    category: "Website",
-    image: "/",
-    client: "Internal Project",
-    year: "2024",
-    description:
-      "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with URL Detection, File Detection, and Text Detection features.",
-    results: [
-      "Threat detection automation",
-      "Multi-layer security validation",
-      "Improved system vulnerability analysis",
-    ],
-    services: ["Web App Development", "Cyber Security", "Machine Learning"],
-  },
-  {
-    id: 2,
-    title: "SlideShow Creator Tools",
-    category: "Website",
-    image: "/",
-    client: "SaaS Project",
-    year: "2024",
-    description:
-      "User-friendly slideshow creation tool with ready templates and export system built with scalable backend architecture.",
-    results: [
-      "Automated slide generation",
-      "Dockerized deployment",
-      "High-speed API processing",
-    ],
-    services: ["Web Application", "API Development", "Cloud Deployment"],
-  },
-  {
-    id: 3,
     title: "Blog Platform",
     category: "Website",
     image: "/yaedu.png",
@@ -80,7 +48,7 @@ const portfolioItems: PortfolioItem[] = [
     services: ["Fullstack Development", "CMS Development"],
   },
   {
-    id: 4,
+    id: 2,
     title: "Travel Agency Website",
     category: "Website",
     image: "/travel.jpeg",
@@ -96,7 +64,7 @@ const portfolioItems: PortfolioItem[] = [
     services: ["Next.js Development", "UI/UX", "Backend Integration"],
   },
   {
-    id: 5,
+    id: 3,
     title: "Ultimate Cyber Protection Suite",
     category: "Website",
     image: "/protectweb.jpeg",
@@ -110,6 +78,38 @@ const portfolioItems: PortfolioItem[] = [
       "Secure system architecture",
     ],
     services: ["Cyber Security System", "Backend Development"],
+  },
+  {
+    id: 4,
+    title: "Cyber Security App",
+    category: "Website",
+    image: "/",
+    client: "Internal Project",
+    year: "2024",
+    description:
+      "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with URL Detection, File Detection, and Text Detection features.",
+    results: [
+      "Threat detection automation",
+      "Multi-layer security validation",
+      "Improved system vulnerability analysis",
+    ],
+    services: ["Web App Development", "Cyber Security", "Machine Learning"],
+  },
+  {
+    id: 5,
+    title: "SlideShow Creator Tools",
+    category: "Website",
+    image: "/",
+    client: "SaaS Project",
+    year: "2024",
+    description:
+      "User-friendly slideshow creation tool with ready templates and export system built with scalable backend architecture.",
+    results: [
+      "Automated slide generation",
+      "Dockerized deployment",
+      "High-speed API processing",
+    ],
+    services: ["Web Application", "API Development", "Cloud Deployment"],
   },
   {
     id: 6,
@@ -488,7 +488,7 @@ const portfolioItems: PortfolioItem[] = [
     ],
   },
   {
-    id: 22,
+    id: 28,
     title: "LiTool – SQL Injection Security Scanner",
     category: "Application",
     image: "/",
