@@ -6,9 +6,9 @@ import { ContactInfo } from "@/components/contact/contact-info"
 import { ContactFAQ } from "@/components/contact/contact-faq"
 
 export const metadata = {
-  title: "Contact Us - Heroic WebS",
+  title: "Contact Us - HINAI TechS",
   description:
-    "Get in touch with Heroic Web for your web development, SEO, and design needs. We're here to help bring your vision to life.",
+    "Get in touch with HINAI Tech for your web development, SEO, and design needs. We're here to help bring your vision to life.",
 }
 
 export default function ContactPage() {

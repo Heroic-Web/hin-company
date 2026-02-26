@@ -16,7 +16,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. General Information</h2>
                 <p className="mb-4">
-                  The information provided on <strong>Heroic Web (heroic.web.id)</strong> is for general informational 
+                  The information provided on <strong>HINAI Tech (HINAI.web.id)</strong> is for general informational 
                   purposes only. While we strive to keep the information accurate and up to date, we make no 
                   representations or warranties of any kind, express or implied, about the completeness, accuracy, 
                   reliability, suitability, or availability of the information, products, services, or related graphics 
@@ -36,7 +36,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">3. Advertising & Affiliate Disclaimer</h2>
                 <p className="mb-4">
-                  Heroic Web may display advertisements, including Google AdSense or other third-party advertising 
+                  HINAI Tech may display advertisements, including Google AdSense or other third-party advertising 
                   networks. These ads help us maintain and grow our website. We are not responsible for the content, 
                   claims, or products promoted in these advertisements. Some links on our site may be affiliate links, 
                   meaning we may earn a commission if you click or make a purchase through them, at no additional cost 
@@ -56,7 +56,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">5. Limitation of Liability</h2>
                 <p className="mb-4">
-                  Under no circumstances shall Heroic Web or its owners be held liable for any loss or damage, 
+                  Under no circumstances shall HINAI Tech or its owners be held liable for any loss or damage, 
                   including indirect or consequential loss, arising out of or in connection with the use of this website.
                 </p>
               </section>

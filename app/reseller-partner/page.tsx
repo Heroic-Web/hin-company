@@ -38,7 +38,7 @@ export default function ResellerPartner() {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             Reseller Website & Article SEO
             <span className="block text-primary">
-              Didukung Resmi PT Heroic Inovasi Nusantara
+              Didukung Resmi PT. Heroic Inovasi Nusantara
             </span>
           </h1>
 
@@ -75,11 +75,11 @@ export default function ResellerPartner() {
               </span>
 
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Apa Itu Reseller Partner Program Heroic??
+                Apa Itu Reseller Partner Program HINAI??
               </h2>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Program Reseller Heroic adalah skema kemitraan resmi dari
+                Program Reseller HINAI adalah skema kemitraan resmi dari
                 PT Heroic Inovasi Nusantara yang membuka peluang penghasilan
                 tambahan bagi individu maupun pelaku usaha melalui rekomendasi
                 layanan website dan artikel profesional.
@@ -87,7 +87,7 @@ export default function ResellerPartner() {
 
               <p className="text-muted-foreground leading-relaxed">
                 Seluruh proses teknis, produksi, hingga penyelesaian proyek
-                dikelola sepenuhnya oleh tim Heroic. Anda cukup berfokus pada
+                dikelola sepenuhnya oleh tim HINAI. Anda cukup berfokus pada
                 membangun relasi, menjalin komunikasi, dan memperluas jaringan
                 klien potensial.
               </p>
@@ -103,7 +103,7 @@ export default function ResellerPartner() {
                 <div className="relative overflow-hidden rounded-2xl aspect-square">
                   <img
                     src="/reseller.png"
-                    alt="Program Reseller Heroic"
+                    alt="Program Reseller HINAI"
                     className="w-full h-full object-cover hover:scale-105 transition duration-500"
                   />
                 </div>
@@ -166,8 +166,8 @@ export default function ResellerPartner() {
 
           <div className="aspect-square rounded-3xl overflow-hidden">
             <img
-              src="/Jasa Digital by Heroic.png"
-              alt="Reseller Heroic"
+              src="/Jasa Digital by HINAI.png"
+              alt="Reseller HINAI"
               className="w-full h-full object-cover"
             />
           </div>
@@ -297,7 +297,7 @@ export default function ResellerPartner() {
         {/* CARA BERGABUNG */}
         <div id="cara-bergabung" className="mb-32">
           <h2 className="text-3xl font-bold mb-6">
-            Cara Bergabung Menjadi Reseller Heroic Web
+            Cara Bergabung Menjadi Reseller HINAI Tech
           </h2>
 
           <p className="max-w-3xl text-muted-foreground mb-12 leading-relaxed">
@@ -310,7 +310,7 @@ export default function ResellerPartner() {
             {[
               {
                 title: "Hubungi Tim Kami",
-                desc: "Daftarkan diri Anda dengan menghubungi tim Heroic Web melalui WhatsApp atau email resmi kami.",
+                desc: "Daftarkan diri Anda dengan menghubungi tim HINAI Tech melalui WhatsApp atau email resmi kami.",
               },
               {
                 title: "Terima Materi Promosi",
@@ -386,7 +386,7 @@ export default function ResellerPartner() {
               },
               {
                 q: "Apakah ada biaya pendaftaran atau deposit awal?",
-                a: "Tidak ada. Program reseller Heroic sepenuhnya gratis tanpa biaya pendaftaran, deposit, atau kewajiban penjualan minimum.",
+                a: "Tidak ada. Program reseller HINAI sepenuhnya gratis tanpa biaya pendaftaran, deposit, atau kewajiban penjualan minimum.",
               },
               {
                 q: "Kapan dan bagaimana komisi dibayarkan?",
@@ -426,7 +426,7 @@ export default function ResellerPartner() {
               },
               {
                 q: "Bagaimana jika klien membutuhkan penjelasan teknis mendalam?",
-                a: "Tim Heroic siap membantu. Anda dapat menghubungkan klien langsung dengan tim kami untuk diskusi teknis lanjutan.",
+                a: "Tim HINAI siap membantu. Anda dapat menghubungkan klien langsung dengan tim kami untuk diskusi teknis lanjutan.",
               },
             ].map((item, i) => (
               <details

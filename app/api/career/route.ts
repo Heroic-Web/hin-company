@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Heroic Career <onboarding@resend.dev>",
+      from: "HINAI Career <onboarding@resend.dev>",
       to: "almufid.business@gmail.com",
       replyTo: email,
       subject: `New Job Application - ${position}`,

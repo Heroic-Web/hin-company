@@ -95,21 +95,24 @@ export function Navigation() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="w-full px-4 sm:px-6 lg:px-10 2xl:px-20">
+        <div className="flex items-center justify-between h-20 lg:h-24 w-full">
+          
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/Heroic_Logo.png"
-              alt="Heroic Web Logo"
-              width={120}
-              height={40}
-              priority
-            />
+          <Link href="/" className="flex items-center justify-start shrink-0">
+            <div className="relative h-12 w-[160px] lg:h-16 lg:w-[220px]">
+              <Image
+                src="/HINAI_Tech_Logo.png"
+                alt="HINAI Tech Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <div key={item.href} className="relative">
                 {item.submenu ? (
@@ -155,7 +158,7 @@ export function Navigation() {
           </div>
 
           {/* Desktop Controls */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="flex items-center space-x-2">

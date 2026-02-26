@@ -16,7 +16,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
                 <p className="mb-4">
-                  By accessing and using <strong>Heroic Web</strong> (heroic.web.id), you accept and agree to comply with these
+                  By accessing and using <strong>HINAI Tech</strong> (HINAI.web.id), you accept and agree to comply with these
                   Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of our website
                   and services immediately.
                 </p>
@@ -25,7 +25,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">2. Services</h2>
                 <p className="mb-4">
-                  Heroic Web provides web development, SEO optimization, digital design, and related online services. We reserve
+                  HINAI Tech provides web development, SEO optimization, digital design, and related online services. We reserve
                   the right to add, modify, or discontinue services at any time without prior notice.
                 </p>
               </section>
@@ -33,7 +33,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">3. Advertising & Monetization</h2>
                 <p className="mb-4">
-                  Heroic Web may display advertisements from third-party providers such as <strong>Google AdSense</strong> and
+                  HINAI Tech may display advertisements from third-party providers such as <strong>Google AdSense</strong> and
                   other advertising networks. These third parties may use cookies to serve ads based on your prior visits to this
                   or other websites. By using our site, you consent to the use of cookies for ad personalization unless you opt
                   out through your browser settings or directly at{" "}
@@ -42,7 +42,7 @@ export default function TermsConditionsPage() {
                   </a>.
                 </p>
                 <p className="mb-4">
-                  Heroic Web is not responsible for the content, offers, products, or services promoted in the displayed
+                  HINAI Tech is not responsible for the content, offers, products, or services promoted in the displayed
                   advertisements. Any transactions or interactions with advertisers are strictly between you and the third-party
                   provider.
                 </p>
@@ -60,8 +60,8 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">5. Intellectual Property</h2>
                 <p className="mb-4">
-                  All content, trademarks, designs, and materials provided on Heroic Web are protected by intellectual property
-                  laws. Upon full payment for commissioned projects, clients receive ownership of the final deliverables. Heroic
+                  All content, trademarks, designs, and materials provided on HINAI Tech are protected by intellectual property
+                  laws. Upon full payment for commissioned projects, clients receive ownership of the final deliverables. HINAI
                   Web retains the right to showcase completed work in our portfolio for promotional purposes.
                 </p>
               </section>
@@ -79,7 +79,7 @@ export default function TermsConditionsPage() {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">7. User Conduct</h2>
                 <p className="mb-4">
                   You agree not to misuse our services or engage in activities that may harm, disrupt, or negatively affect the
-                  website, its users, or the reputation of Heroic Web. Any violation may result in suspension or termination of
+                  website, its users, or the reputation of HINAI Tech. Any violation may result in suspension or termination of
                   access to our services.
                 </p>
               </section>
@@ -87,7 +87,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">8. Limitation of Liability</h2>
                 <p className="mb-4">
-                  Heroic Web shall not be held liable for any indirect, incidental, special, or consequential damages arising
+                  HINAI Tech shall not be held liable for any indirect, incidental, special, or consequential damages arising
                   from the use or inability to use our website or services, including but not limited to loss of data, revenue,
                   or business opportunities.
                 </p>

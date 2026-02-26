@@ -23,7 +23,7 @@ export function LandingPageProcess() {
       icon: MessageCircle,
       title: "Konsultasi Awal",
       description:
-        "Ceritakan kebutuhan, target market, dan tujuan website Anda. Tim Heroic Web akan memberikan arahan serta solusi terbaik sesuai kebutuhan bisnis Anda.",
+        "Ceritakan kebutuhan, target market, dan tujuan website Anda. Tim HINAI Tech akan memberikan arahan serta solusi terbaik sesuai kebutuhan bisnis Anda.",
     },
     {
       number: "02",
@@ -69,7 +69,7 @@ export function LandingPageProcess() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Alur Pengerjaan Landing Page Heroic Web
+            Alur Pengerjaan Landing Page HINAI Tech
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Proses cepat, transparan, dan profesional. Kami memastikan setiap

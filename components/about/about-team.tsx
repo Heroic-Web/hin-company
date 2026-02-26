@@ -36,7 +36,7 @@ export function AboutTeam() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Meet Our Team</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            The talented individuals behind Heroic Web's success
+            The talented individuals behind HINAI Tech's success
           </p>
         </div>
 

@@ -13,7 +13,7 @@ export function AboutHero() {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">{t("about.title")}</h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty leading-relaxed">
-            We are passionate creators, innovators, and problem-solvers dedicated to helping businesses thrive in the
+            We are passionate creators, innovators, and problem solvers dedicated to helping businesses thrive in the
             digital world.
           </p>
         </div>

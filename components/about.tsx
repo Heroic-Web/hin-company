@@ -40,7 +40,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden bg-green-500">
               <img
-                src="/Jasa Digital by Heroic.png"
+                src="/Jasa Digital by HINAI.png"
                 alt="Background"
                 className="w-full h-full object-cover"
               />

@@ -7,7 +7,7 @@ import { SEOResults } from "@/components/services/seo/seo-results"
 import { SEOPricing } from "@/components/services/seo/seo-pricing"
 
 export const metadata = {
-  title: "SEO Services - Heroic Web",
+  title: "SEO Services - HINAI Tech",
   description: "Professional SEO optimization and content creation services to improve your search engine rankings.",
 }
 

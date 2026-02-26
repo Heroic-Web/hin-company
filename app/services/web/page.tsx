@@ -8,7 +8,7 @@ import { WebPortfolio } from "@/components/services/web/web-portfolio"
 import { WebPricing } from "@/components/services/web/web-pricing"
 
 export const metadata = {
-  title: "Web Development Services - Heroic Web",
+  title: "Web Development Services - HINAI Tech",
   description: "Professional web development services using modern technologies like React, Next.js, and more.",
 }
 

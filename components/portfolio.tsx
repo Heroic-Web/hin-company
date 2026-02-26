@@ -9,13 +9,13 @@ export function Portfolio() {
     {
       title: "Cyber Protection Tools",
       category: "Dekstop Development",
-      image: "/cytools.jpeg",
+      image: "/",
       description: "Advanced cyber protection tools for threat detection and prevention",
     },
     {
       title: "Cyber Security App",
       category: "Web Development",
-      image: "/drcyber.jpeg",
+      image: "/",
       description: "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with some fitures like URL Detection, File Detection, and Text Detection",
     },
     {

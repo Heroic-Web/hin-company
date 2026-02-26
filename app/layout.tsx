@@ -12,13 +12,13 @@ import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Heroic Web - Web Development, SEO & Design Services",
+  title: "HINAI Tech - Web Development, SEO & Design Services",
   description:
-    "Heroic Web, SEO optimization, and design services. We create modern, responsive websites that drive results for your business.",
+    "HINAI Tech, SEO optimization, and design services. We create modern, responsive websites that drive results for your business.",
   keywords: ["web development", "SEO", "design", "website creation", "digital marketing"],
-  authors: [{ name: "Heroic Web" }],
+  authors: [{ name: "HINAI Tech" }],
   openGraph: {
-    title: "Heroic - Web Development, SEO & Design Services",
+    title: "HINAI - Web Development, SEO & Design Services",
     description: "b development, SEO optimization, and design services.",
     type: "website",
   },

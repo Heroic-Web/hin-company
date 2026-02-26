@@ -11,10 +11,10 @@ export function AboutStory() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">Our Story</h2>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-              Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.
+              HINAI is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-              Founded in 2023, Heroic Web began as a small team of passionate developers and designers who believed
+              Founded in 2023, HINAI Tech began as a small team of passionate developers and designers who believed
               that every business deserves a powerful online presence.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
@@ -26,7 +26,7 @@ export function AboutStory() {
               putting our clients' success at the heart of everything we do.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
-              We are committed to providing the best services to the community, including a variety of writing solutions, design, web applications, problem-solving, and customer inquiry responses. With dedication and responsibility, we handle each project meticulously to ensure the satisfaction of Heroic's clients.
+              We are committed to providing the best services to the community, including a variety of writing solutions, design, web applications, problem-solving, and customer inquiry responses. With dedication and responsibility, we handle each project meticulously to ensure the satisfaction of HINAI's clients.
             </p>
             <p className="text-lg text-muted-foreground mb-6 text-pretty leading-relaxed">
               One of our visions is to be a bridge between the business world and the workforce. Given the rapid technological advancements, we believe that businesses must adapt to these changes. As intermediaries, we help businesses attract customers and foster good relationships between business owners and clients, thereby enhancing business potential amidst the growing market demands.

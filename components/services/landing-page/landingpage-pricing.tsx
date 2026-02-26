@@ -12,7 +12,7 @@ export function LandingPagePricing() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Paket Harga Landing Page Heroic Web
+            Paket Harga Landing Page HINAI Tech
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Pilih paket sesuai kebutuhan bisnis Anda. Semua sudah termasuk domain,

@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react"
 export function WhatsAppFloat() {
   const handleWhatsAppClick = () => {
     const phoneNumber = "6282144137914" 
-    const message = "Halo! Saya tertarik dengan layanan Heroic Web. Perkenalkan nama saya ... ingin berkonsultasi tentang ..."
+    const message = "Halo! Saya tertarik dengan layanan HINAI Tech. Perkenalkan nama saya ... ingin berkonsultasi tentang ..."
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }

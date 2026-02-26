@@ -10,7 +10,7 @@ import { LandingPageProcess } from "@/components/services/landing-page/landingpa
 import { LandingPagePortfolio } from "@/components/services/landing-page/landingpage-portfolio"
 import { LandingPageFAQ } from "@/components/services/landing-page/landingpage-faq"
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Landing Page Profesional | Heroic Web",
+  title: "Jasa Pembuatan Landing Page Profesional | HINAI Tech",
   description:
     "Jasa landing page murah namun profesional untuk bisnis, UMKM, startup, event, dan launching produk. Gratis domain & hosting, SEO friendly, dan siap iklan Google Ads & FB Pixel.",
   keywords: [
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
     "landing page murah",
     "website bisnis",
     "jasa website profesional",
-    "heroic web",
+    "HINAI Tech",
   ],
   openGraph: {
-    title: "Jasa Pembuatan Landing Page Profesional | Heroic Web",
+    title: "Jasa Pembuatan Landing Page Profesional | HINAI Tech",
     description:
       "Website landing page elegan, cepat, SEO friendly, dan siap iklan. Cocok untuk bisnis, UMKM, startup, event, dan webinar.",
     type: "website",
     locale: "id_ID",
-    siteName: "Heroic Web",
+    siteName: "HINAI Tech",
   },
 }
 

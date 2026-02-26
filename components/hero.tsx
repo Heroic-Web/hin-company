@@ -52,7 +52,7 @@ export function Hero() {
             {/* Main heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
               {t("hero.title")}
-              <span className="block text-primary mt-2">Heroic Web</span>
+              <span className="block text-primary mt-2">HINAI Tech</span>
             </h1>
 
             {/* Subtitle */}

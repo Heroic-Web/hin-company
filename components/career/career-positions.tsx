@@ -19,7 +19,7 @@ export function CareerPositions({ onSelectPosition }: CareerPositionsProps) {
       type: "Equity Partnership",
       compensation: "Equity Stake + Performance Bonus",
       description:
-        "Join as a Co-Founder to shape the long-term vision and growth of Heroic Web.",
+        "Join as a Co-Founder to shape the long-term vision and growth of HINAI Tech.",
       requirements: [
         "Entrepreneurial experience",
         "Leadership capability",
@@ -145,7 +145,7 @@ export function CareerPositions({ onSelectPosition }: CareerPositionsProps) {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Open Positions</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Build your future with Heroic Web and grow in a performance-driven digital environment.
+            Build your future with HINAI Tech and grow in a performance-driven digital environment.
           </p>
         </div>
 

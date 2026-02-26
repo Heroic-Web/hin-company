@@ -6,8 +6,8 @@ import { BlogGrid } from "@/components/blog/blog-grid"
 import { BlogSidebar } from "@/components/blog/blog-sidebar"
 
 export const metadata = {
-  title: "Blog - Heroic Web",
-  description: "Insights, tips, and trends in web development, SEO, and design from the Heroic Web team.",
+  title: "Blog - HINAI Tech",
+  description: "Insights, tips, and trends in web development, SEO, and design from the HINAI Tech team.",
 }
 
 export default function BlogPage() {

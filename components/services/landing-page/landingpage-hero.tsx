@@ -15,7 +15,7 @@ export function LandingPageHero() {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-6">
-            Heroic Web menghadirkan jasa landing page murah namun tidak murahan.
+            HINAI Tech menghadirkan jasa landing page murah namun tidak murahan.
             Cocok untuk profil perusahaan, event dengan countdown & form registrasi,
             launching produk, webinar, hingga undangan digital.
           </p>
@@ -45,7 +45,7 @@ export function LandingPageHero() {
         <div>
           <img 
             src="/jasaweb_mufid.png"
-            alt="Heroic Web Landing Page"
+            alt="HINAI Tech Landing Page"
             className="rounded-2xl shadow-2xl"
           />
         </div>

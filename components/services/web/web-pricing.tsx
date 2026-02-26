@@ -16,7 +16,7 @@ export function WebPricing() {
         {/* ================= HEADER ================= */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Paket Harga Website Heroic Web
+            Paket Harga Website HINAI Tech
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
             Solusi digital lengkap untuk UMKM dan bisnis yang ingin berkembang secara profesional di era digital.
@@ -57,7 +57,7 @@ export function WebPricing() {
               </div>
 
               <p>
-                Paket Bundling UMKM dari <span className="font-semibold text-foreground">Heroic Web</span> merupakan solusi terpadu
+                Paket Bundling UMKM dari <span className="font-semibold text-foreground">HINAI Tech</span> merupakan solusi terpadu
                 yang dirancang khusus untuk membantu pelaku UMKM melakukan digitalisasi secara menyeluruh.
                 Tidak hanya sekadar membuat website, tetapi membangun fondasi digital yang kuat
                 agar bisnis Anda lebih dipercaya, lebih mudah ditemukan, dan lebih cepat berkembang.
@@ -109,7 +109,7 @@ export function WebPricing() {
               <p>
                 Semua dirancang secara <span className="font-medium text-foreground">strategis, efisien, dan terukur</span>,
                 sesuai kebutuhan UMKM yang ingin berkembang secara digital tanpa ribet dan tanpa pusing teknis.
-                Anda fokus mengembangkan bisnis, tim Heroic Web yang mengurus sistem digitalnya.
+                Anda fokus mengembangkan bisnis, tim HINAI Tech yang mengurus sistem digitalnya.
               </p>
 
               <div className="pt-4">

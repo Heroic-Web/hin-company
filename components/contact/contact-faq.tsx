@@ -30,7 +30,7 @@ export function ContactFAQ() {
         "While we don't directly provide hosting, we can recommend reliable hosting providers and help with the setup process. We can also assist with domain registration and DNS configuration.",
     },
     {
-      question: "What makes Heroic Web different?",
+      question: "What makes HINAI Tech different?",
       answer:
         "Our combination of technical expertise, creative design, and strategic thinking sets us apart. We focus on building long-term partnerships and delivering solutions that drive real business results, not just pretty websites.",
     },

@@ -58,9 +58,9 @@ const translations = {
       "Build your dream website quickly and affordably. Top quality for both personal and business needs.",
 
     // About
-    "about.title": "About Heroic Web",
+    "about.title": "About HINAI Tech",
     "about.description":
-      "Heroic is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.",
+      "HINAI is an information technology company that offers high quality and premium digital services to meet your needs. Founded by a group of experienced individuals, we have a team of experts in the field of web application development, SEO Writing, and design.",
 
     // Contact
     "contact.title": "Get In Touch",
@@ -164,7 +164,7 @@ const translations = {
       "Kami menciptakan website yang menakjubkan, mengoptimalkan untuk mesin pencari, dan mendesain brand yang berkesan untuk mendorong pertumbuhan bisnis.",
 
     // About
-    "about.title": "Tentang Heroic Web",
+    "about.title": "Tentang HINAI Tech",
     "about.description":
       "Kami adalah tim developer, spesialis SEO, dan desainer yang berdedikasi membantu bisnis sukses secara online.",
 

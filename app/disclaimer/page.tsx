@@ -16,10 +16,10 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. General Information</h2>
                 <p className="mb-4">
-                  All content provided on <strong>Heroic Web</strong> (heroic.web.id) is published for general information,
+                  All content provided on <strong>HINAI Tech</strong> (HINAI.web.id) is published for general information,
                   educational, service, and reference purposes only. We strive to provide accurate, up-to-date, and reliable
                   content, but we make no guarantees that all information is always complete, correct, or suitable for your needs.
-                  Any action you take based on information found on this website is strictly at your own risk, and Heroic Web will
+                  Any action you take based on information found on this website is strictly at your own risk, and HINAI Tech will
                   not be liable for any losses or damages in connection with the use of our website.
                 </p>
               </section>
@@ -27,7 +27,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">2. Disclaimer of Liability</h2>
                 <p className="mb-4">
-                  Heroic Web makes no warranties of any kind regarding the accuracy, completeness, or suitability of the
+                  HINAI Tech makes no warranties of any kind regarding the accuracy, completeness, or suitability of the
                   information provided for any particular purpose. All content may change at any time without prior notice. We
                   shall not be held liable for any loss or damage, direct or indirect, arising from the use of this website.
                 </p>
@@ -38,7 +38,7 @@ export default function DisclaimerPage() {
                 <p className="mb-4">
                   This website may contain links to third-party websites or external advertisements. While we aim to provide only
                   relevant and trustworthy links, we have no control over the content, privacy policies, or practices of external
-                  sites. By clicking external links, you acknowledge that you do so at your own risk, and Heroic Web assumes no
+                  sites. By clicking external links, you acknowledge that you do so at your own risk, and HINAI Tech assumes no
                   responsibility for any loss or damages resulting from the use of third-party services.
                 </p>
               </section>
@@ -46,8 +46,8 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">4. Advertising & Monetization</h2>
                 <p className="mb-4">
-                  Heroic Web uses third-party advertising services such as <strong>Google AdSense</strong> and other advertising
-                  networks. Ads displayed on this site may use cookies to deliver more relevant content to users. Heroic Web is not
+                  HINAI Tech uses third-party advertising services such as <strong>Google AdSense</strong> and other advertising
+                  networks. Ads displayed on this site may use cookies to deliver more relevant content to users. HINAI Tech is not
                   responsible for the content, offers, or transactions that occur through the advertisements displayed. Users can
                   manage their ad preferences via browser settings or by visiting{" "}
                   <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">
@@ -59,7 +59,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">5. Copyright & Content</h2>
                 <p className="mb-4">
-                  All articles, images, logos, and other materials published on <strong>Heroic Web</strong> are owned by us or
+                  All articles, images, logos, and other materials published on <strong>HINAI Tech</strong> are owned by us or
                   legally licensed from third parties. It is prohibited to copy, reproduce, or republish content from this site
                   without prior written permission.
                 </p>
@@ -77,7 +77,7 @@ export default function DisclaimerPage() {
                 <p className="mb-4">
                   If you have any questions or need clarification regarding this Disclaimer, please contact us at: <br />
                   📧 Email: <a href="mailto:cs.heroicweb@gmail.com">cs.heroicweb@gmail.com</a> <br />
-                  🌐 Website: <a href="https://heroic.web.id">https://heroic.web.id</a>
+                  🌐 Website: <a href="https://hinaitech.com">https://hinaitech.com</a>
                 </p>
               </section>
             </div>

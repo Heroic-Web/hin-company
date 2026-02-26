@@ -16,7 +16,7 @@ export function WebPortfolio() {
     {
       title: "SlideShow Creator Tools",
       description: "User-friendly slideshow creation tool with templates and export options",
-      image: "/slidetools.jpeg",
+      image: "/",
       technologies: ["Python", "Fast API", "Docker"],
     },
     {

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { id } from "date-fns/locale";
+import { title } from "process";
 
 type PortfolioItem = {
   id: number;
@@ -20,6 +22,7 @@ const categories = [
   "All",
   "Website",
   "Landing Page",
+  "Application",
   "Design",
   "SEO",
   "Artikel",
@@ -30,83 +33,480 @@ const categories = [
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Corporate Website Modern – PT Artha Nusantara",
+    title: "Cyber Security App",
     category: "Website",
-    image: "/portfolio/web1.jpg",
-    client: "PT Artha Nusantara",
+    image: "/",
+    client: "Internal Project",
     year: "2024",
     description:
-      "Website company profile premium dengan struktur SEO kuat, performa tinggi, serta desain modern minimalis yang meningkatkan kredibilitas bisnis.",
+      "Robust cyber security application for threat detection and prevention (SQL Injection, XSS, Cross-Site Scripting) with URL Detection, File Detection, and Text Detection features.",
     results: [
-      "Traffic naik 210%",
-      "Lead meningkat 3x lipat",
-      "Durasi kunjungan naik 48%",
+      "Threat detection automation",
+      "Multi-layer security validation",
+      "Improved system vulnerability analysis",
     ],
-    services: ["Website Development", "UI/UX", "Technical SEO"],
+    services: ["Web App Development", "Cyber Security", "Machine Learning"],
   },
   {
     id: 2,
-    title: "Landing Page High Conversion – Brand Skincare",
-    category: "Landing Page",
-    image: "/portfolio/lp1.jpg",
-    client: "Glow Beauty",
-    year: "2023",
+    title: "SlideShow Creator Tools",
+    category: "Website",
+    image: "/",
+    client: "SaaS Project",
+    year: "2024",
     description:
-      "Landing page berbasis strategi copywriting persuasif dengan struktur AIDA dan optimasi konversi.",
+      "User-friendly slideshow creation tool with ready templates and export system built with scalable backend architecture.",
     results: [
-      "Conversion rate 13%",
-      "ROAS meningkat 2.5x",
-      "CPL turun 37%",
+      "Automated slide generation",
+      "Dockerized deployment",
+      "High-speed API processing",
     ],
-    services: ["Landing Page", "Copywriting", "Conversion Optimization"],
+    services: ["Web Application", "API Development", "Cloud Deployment"],
   },
   {
     id: 3,
-    title: "Brand Identity & Logo – Klinik Medika",
-    category: "Design",
-    image: "/portfolio/design1.jpg",
-    client: "Klinik Medika Sehat",
-    year: "2024",
+    title: "Blog Platform",
+    category: "Website",
+    image: "/yaedu.png",
+    client: "Content Platform",
+    year: "2023",
     description:
-      "Brand identity profesional dengan guideline lengkap untuk menjaga konsistensi visual.",
+      "Feature-rich blog platform with authentication system and full content management dashboard.",
     results: [
-      "Brand awareness meningkat",
-      "Visual lebih premium",
-      "Konsistensi di semua media",
+      "Custom CMS system",
+      "Secure authentication",
+      "SEO-ready blog structure",
     ],
-    services: ["Logo Design", "Branding", "Visual Identity"],
+    services: ["Fullstack Development", "CMS Development"],
   },
   {
     id: 4,
-    title: "SEO Optimization – Portal Edukasi",
-    category: "SEO",
-    image: "/portfolio/seo1.jpg",
-    client: "EduSmart",
+    title: "Travel Agency Website",
+    category: "Website",
+    image: "/travel.jpeg",
+    client: "Travel Company",
     year: "2024",
     description:
-      "Optimasi SEO teknikal dan konten untuk meningkatkan ranking Google.",
+      "Modern travel agency website with booking integration and itinerary management system.",
     results: [
-      "Top 3 Google untuk 12 keyword",
-      "Traffic organik naik 180%",
-      "Bounce rate turun 32%",
+      "Integrated booking system",
+      "Mobile-first UI",
+      "Optimized performance",
     ],
-    services: ["On Page SEO", "Technical SEO", "Keyword Strategy"],
+    services: ["Next.js Development", "UI/UX", "Backend Integration"],
   },
   {
     id: 5,
-    title: "Artikel SEO Blog – Industri Properti",
-    category: "Artikel",
-    image: "/portfolio/seo1.jpg",
-    client: "Properti Indonesia",
+    title: "Ultimate Cyber Protection Suite",
+    category: "Website",
+    image: "/protectweb.jpeg",
+    client: "Security Startup",
+    year: "2024",
+    description:
+      "Comprehensive cyber protection suite designed to enhance online safety with advanced detection algorithms.",
+    results: [
+      "Real-time monitoring",
+      "Advanced threat prevention",
+      "Secure system architecture",
+    ],
+    services: ["Cyber Security System", "Backend Development"],
+  },
+  {
+    id: 6,
+    title: "Cyber Protection Tools",
+    category: "Application",
+    image: "/cytools.jpeg",
+    client: "Security Platform",
     year: "2023",
     description:
-      "Penulisan artikel SEO dengan riset keyword dan struktur SEO-friendly.",
+      "Advanced cyber protection tools for detecting and preventing modern digital threats.",
     results: [
-      "Page 1 Google dalam 3 bulan",
-      "Organic leads stabil",
-      "Authority meningkat",
+      "Threat pattern recognition",
+      "Scalable Flask backend",
+      "Vue.js dynamic dashboard",
     ],
-    services: ["SEO Article Writing", "Content Strategy"],
+    services: ["Web Security", "Dashboard Development"],
+  },
+  {
+    id: 7,
+    title: "Seina's Boutique",
+    category: "Website",
+    image: "/butik.jpeg",
+    client: "Fashion Brand",
+    year: "2023",
+    description:
+      "Elegant boutique website with product showcase and integrated shopping cart system.",
+    results: [
+      "WooCommerce integration",
+      "Improved online sales flow",
+      "Optimized product layout",
+    ],
+    services: ["WordPress Development", "E-Commerce Setup"],
+  },
+  {
+    id: 8,
+    title: "Book Store Website",
+    category: "Website",
+    image: "/bookstore.jpeg",
+    client: "Online Bookstore",
+    year: "2023",
+    description:
+      "Online bookstore platform with product search and recommendation features.",
+    results: [
+      "Shopify optimization",
+      "Improved product discoverability",
+      "Enhanced checkout flow",
+    ],
+    services: ["Shopify Development", "E-Commerce Optimization"],
+  },
+  {
+    id: 9,
+    title: "E-commerce Platform",
+    category: "Website",
+    image: "/shop.jpeg",
+    client: "Retail Brand",
+    year: "2023",
+    description:
+      "Modern online shop with payment integration and inventory management system.",
+    results: [
+      "Custom payment gateway integration",
+      "Inventory automation",
+      "Responsive frontend design",
+    ],
+    services: ["Frontend Development", "E-Commerce System"],
+  },
+  {
+    id: 10,
+    title: "AISEO Tools App",
+    category: "Application",
+    image: "/aiseo.jpeg",
+    client: "SEO SaaS",
+    year: "2024",
+    description:
+      "AI-powered SEO tools platform for website optimization and performance tracking.",
+    results: [
+      "AI-based keyword analysis",
+      "SEO automation tools",
+      "Performance analytics dashboard",
+    ],
+    services: ["SEO Tools Development", "AI Integration"],
+    },
+    {
+      id: 11,
+      title: "Premium Corporate Fashion Solutions",
+      category: "Design",
+      image: "/corporate-design.jpeg",
+      client: "Corporate Brand",
+      year: "2024",
+      description:
+        "Complete brand identity and visual design system for corporate fashion solutions.",
+      results: [
+        "Strong brand positioning",
+        "Consistent visual identity",
+        "Modern corporate look",
+      ],
+      services: ["Brand Identity", "Figma Design System"],
+    },
+    {
+    id: 12,
+    title: "Landing Page SaaS Cyber Monitoring",
+    category: "Landing Page",
+    image: "/lp-cyber.jpeg",
+    client: "SecureWatch",
+    year: "2024",
+    description:
+      "High-converting landing page untuk SaaS cyber monitoring dengan struktur AIDA, visual trust badge, dan funnel lead magnet.",
+    results: [
+      "Conversion rate 14.8%",
+      "CPL turun 42%",
+      "Lead masuk 3x lebih cepat",
+    ],
+    services: ["Landing Page Development", "Copywriting", "Conversion Strategy"],
+  },
+  {
+    id: 13,
+    title: "Brand Identity – Tech Startup AI Platform",
+    category: "Design",
+    image: "/design-ai.jpeg",
+    client: "NeuroTech Labs",
+    year: "2024",
+    description:
+      "Complete brand identity system untuk startup AI termasuk logo, typography system, brand color psychology, dan UI design guideline.",
+    results: [
+      "Brand positioning lebih premium",
+      "Visual identity konsisten",
+      "Investor-ready presentation",
+    ],
+    services: ["Brand Strategy", "Logo Design", "Design System"],
+  },
+  {
+    id: 14,
+    title: "SEO Optimization – E-Commerce Fashion",
+    category: "SEO",
+    image: "/",
+    client: "Urban Style Co",
+    year: "2024",
+    description:
+      "Optimasi SEO teknikal dan konten untuk meningkatkan organic traffic dan ranking Google di industri fashion.",
+    results: [
+      "Traffic organik naik 230%",
+      "Top 3 Google untuk 18 keyword",
+      "Revenue organic naik 2.7x",
+    ],
+    services: ["Technical SEO", "Keyword Research", "On Page Optimization"],
+  },
+  {
+    id: 15,
+    title: "SEO Artikel Series – Industri Properti",
+    category: "Artikel",
+    image: "/",
+    client: "Properti Digital Indonesia",
+    year: "2023",
+    description:
+      "Strategi konten SEO berbasis search intent dengan cluster topic dan internal linking untuk meningkatkan authority domain.",
+    results: [
+      "Page 1 Google dalam 1 bulan",
+      "Organic leads stabil tiap bulan",
+      "Domain authority meningkat",
+    ],
+    services: ["SEO Article Writing", "Content Strategy", "Search Intent Mapping"],
+  },
+  {
+    id: 16,
+    title: "Meta Ads Campaign – Skincare Brand",
+    category: "Digital Ads",
+    image: "/",
+    client: "GlowSkin Official",
+    year: "2024",
+    description:
+      "Strategi Meta Ads berbasis funnel (TOF-MOF-BOF) dengan creative testing dan retargeting untuk meningkatkan ROAS.",
+    results: [
+      "ROAS 3.8x",
+      "CPC turun 35%",
+      "Penjualan naik 180%",
+    ],
+    services: ["Meta Ads Strategy", "Creative Testing", "Funnel Optimization"],
+  },
+  {
+    id: 17,
+    title: "Social Media Growth – Personal Branding Tech Founder",
+    category: "Social Media",
+    image: "/",
+    client: "Tech Founder Indonesia",
+    year: "2024",
+    description:
+      "Strategi konten LinkedIn & Instagram berbasis authority positioning untuk membangun personal branding di industri teknologi.",
+    results: [
+      "Follower naik 320% dalam 6 bulan",
+      "Engagement rate 9%",
+      "Inbound collaboration meningkat",
+    ],
+    services: ["Content Strategy", "Personal Branding", "Social Media Management"],
+  },
+  {
+    id: 18,
+    title: "Website Design - AI Tech Tools",
+    category: "Website",
+    image: "/aitools.png",
+    client: "AI Tech Tools",
+    year: "2024",
+    description:
+      "Desain website modern untuk platform AI tools dengan fokus pada UX yang intuitif dan visual branding yang konsisten.",
+    results: [
+      "User engagement meningkat 45%",
+      "Page load time 3x lebih cepat",
+      "Mobile responsiveness optimal",
+    ],
+    services: ["UI/UX Design", "Responsive Web Design", "Brand Consistency"],
+  },
+  {
+  id: 19,
+    title: "Landing Page – Landing Page untuk Perumahan Subsidi",
+    category: "Landing Page",
+    image: "/rumahsubsidi.png",
+    client: "Perumahan Subsidi Lampung",
+    year: "2025",
+    description:
+      "Desain landing page yang menarik dan responsif untuk proyek perumahan subsidi dengan fokus pada konversi dan pengalaman pengguna.",
+    results: [
+      "Konversi lead meningkat 150%",
+      "Page load time optimal",
+      "Mobile user experience meningkat",
+    ],
+    services: ["Landing Page Design", "Conversion Optimization", "Mobile Responsive"],
+  },
+  {
+    id: 20,
+    title: "Payment Gateway Integration – School Payment System",
+    category: "Website",
+    image: "/schoolpay.png",
+    client: "School Payment System",
+    year: "2026",
+    description:
+      "Integrasi payment gateway untuk sistem pembayaran sekolah dengan fokus pada keamanan transaksi dan kemudahan penggunaan.",
+    results: [
+      "Transaksi aman dengan enkripsi SSL",
+      "Proses pembayaran lebih cepat",
+      "User satisfaction meningkat",
+    ],
+    services: ["Payment Gateway Integration", "Web Security", "User Experience"],
+  },
+  {
+    id: 21,
+    title: "Property Listing Website and Portfolio for Property Developer",
+    category: "Landing Page",
+    image: "/consultantpro.png",
+    client: "Property Developer Indonesia",
+    year: "2026",
+    description:
+      "Website listing properti dengan portfolio yang menarik untuk developer properti, fokus pada visual branding dan pengalaman pengguna.",
+    results: [
+      "Konversi lead meningkat 120%",
+      "Page load time optimal",
+      "Mobile user experience meningkat",
+    ],
+    services: ["Property Listing Website", "Portfolio Design", "Mobile Responsive"],
+  },
+  {
+    id: 22,
+    title: "Muana Bimbel Website and Portfolio for Education Consultant",
+    category: "Landing Page",
+    image: "/muanabimbel.png",
+    client: "Muana Bimbel",
+    year: "2023",
+    description:
+      "Website dan portfolio untuk bimbel Muana dengan fokus pada branding yang menarik dan pengalaman pengguna yang optimal.",
+    results: [
+      "Konversi lead meningkat 110%",
+      "Page load time optimal",
+      "Mobile user experience meningkat",
+    ],
+    services: ["Website Design", "Portfolio Design", "Mobile Responsive"],
+  },
+  {
+    id: 23,
+    title: "Slideshow Creator – Image Tool Generator",
+    category: "Website",
+    image: "/",
+    client: "Internal SaaS Product",
+    year: "2024",
+    description:
+      "Advanced image processing & slideshow creation application with 8 powerful built-in editing tools. Designed for fast, efficient, and scalable image manipulation using modern backend architecture.",
+    results: [
+      "8 built-in image processing tools",
+      "3x automatic image generation (Dark & Light Style)",
+      "Fast API-based processing engine",
+      "Docker-ready scalable deployment",
+    ],
+    services: [
+      "SaaS Development",
+      "Image Processing System",
+      "Backend API Engineering",
+      "Docker Deployment",
+    ],
+  },
+  {
+    id: 24,
+    title: "Online Store for Local Fashion Brand",
+    category: "Website",
+    image: "/almufid_store.png",
+    client: "Local Fashion Brand",
+    year: "2025",
+    description:
+      "E-commerce website untuk brand fesyen lokal dengan fokus pada pengalaman belanja yang menyenangkan dan antarmuka yang ramah pengguna.",
+    results: [
+      "Konversi penjualan meningkat 130%",
+      "User experience optimal",
+      "Mobile responsive design",
+    ],
+    services: ["E-commerce Development", "UI/UX Design", "Mobile Responsive"],
+  },
+  {
+    id: 25,
+    title: "WScrapy – Web Scraping & Data Extraction Tool",
+    category: "Website",
+    image: "/",
+    client: "Internal Automation Project",
+    year: "2024",
+    description:
+      "Advanced web scraping tool designed to extract structured and unstructured data from websites and automatically export it into CSV format. Built for automation, research, and scalable data collection workflows.",
+    results: [
+      "Automated domain & metadata extraction",
+      "CSV-based structured data export",
+      "Bulk image downloading system",
+      "Robust error logging & handling",
+    ],
+    services: [
+      "Web Scraping Automation",
+      "Data Extraction System",
+      "Python Backend Development",
+      "Data Processing Pipeline",
+    ],
+  },
+  {
+    id: 26,
+    title: "Author Tools – AI Content Generator CLI",
+    category: "Application",
+    image: "/author-tools.jpeg",
+    client: "Internal Automation Product",
+    year: "2025",
+    description:
+      "Terminal based content generation application designed to automate the creation of pantun, puisi, blog articles, and Instagram copywriting. Each generated content is automatically saved into structured local files for efficient workflow management.",
+    results: [
+      "Automated multi-format content generation",
+      "CLI-based lightweight system",
+      "Structured local file storage",
+      "Faster content production workflow",
+    ],
+    services: [
+      "Automation Tool Development",
+      "AI Content System",
+      "CLI Application Engineering",
+      "Content Workflow Optimization",
+    ],
+  },
+  {
+    id: 27,
+    title: "SmartLink – URL Shortener & Analytics System",
+    category: "Website",
+    image: "/",
+    client: "Internal SaaS Project",
+    year: "2024",
+    description:
+      "Terminal-based URL shortener application built with Python featuring advanced link management, analytics tracking, QR generation, and custom domain support. Designed for efficient link distribution and performance monitoring.",
+    results: [
+      "Custom alias & branded short links",
+      "Built-in analytics & click tracking",
+      "QR Code auto generation",
+      "Secure & expiration-based link control",
+    ],
+    services: [
+      "Backend Development",
+      "Link Management System",
+      "API Integration",
+      "Analytics System Engineering",
+    ],
+  },
+  {
+    id: 22,
+    title: "LiTool – SQL Injection Security Scanner",
+    category: "Application",
+    image: "/",
+    client: "Internal Security Research Tool",
+    year: "2025",
+    description:
+      "LiTool is a lightweight security testing application designed to detect potential SQL Injection vulnerabilities in web applications. Built for ethical security research and vulnerability assessment workflows.",
+    results: [
+      "Automated SQL Injection vulnerability detection",
+      "Structured scan report generation",
+      "Exportable TXT & PDF security reports",
+    ],
+    services: [
+      "Security Testing Tool",
+      "Vulnerability Assessment",
+      "Automation Script Development",
+      "Security Reporting System",
+    ],
   },
 ];
 
@@ -137,7 +537,7 @@ export default function PortfolioPage() {
           {/* LEFT TEXT */}
           <div className="space-y-6">
             <h1 className="text-5xl font-bold leading-tight">
-              Portfolio Heroic Web
+              Portfolio HINAI Tech
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               Kami tidak hanya membuat website. Kami membangun sistem digital
@@ -278,7 +678,7 @@ export default function PortfolioPage() {
     {/* HEADER */}
     <div className="text-center space-y-6 px-2">
       <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
-        Mengapa Strategi Heroic Web Berbeda?
+        Mengapa Strategi HINAI Tech Berbeda?
       </h2>
       <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
         Kami tidak sekadar membuat tampilan visual yang menarik. Setiap project
@@ -468,7 +868,7 @@ export default function PortfolioPage() {
           </li>
         </ul>
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          Inilah yang membuat website Heroic Web bukan hanya menarik, tetapi
+          Inilah yang membuat website HINAI Tech bukan hanya menarik, tetapi
           memiliki daya tarik psikologis dan kekuatan branding yang tahan lama.
         </p>
       </div>
@@ -480,7 +880,7 @@ export default function PortfolioPage() {
       <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
         Dengan kombinasi strategi bisnis, pengalaman pengguna modern,
         struktur konversi teruji, optimasi SEO menyeluruh, dan branding
-        profesional, Heroic Web menghadirkan solusi digital yang bukan hanya
+        profesional, HINAI Tech menghadirkan solusi digital yang bukan hanya
         terlihat bagus — tetapi benar-benar menghasilkan.
       </p>
     </div>
@@ -497,7 +897,7 @@ export default function PortfolioPage() {
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
             Bangun website profesional, landing page konversi tinggi,
             optimasi SEO, desain branding premium, serta artikel SEO
-            yang meningkatkan visibilitas bisnis Anda bersama Heroic Web.
+            yang meningkatkan visibilitas bisnis Anda bersama HINAI Tech.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">

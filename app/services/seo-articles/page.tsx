@@ -12,7 +12,7 @@ import { SEOArticleEnterpriseContent } from "@/components/services/seo/seo-artic
 import Image from "next/image"
 
 export const metadata = {
-  title: "Artikel SEO Services - Heroic Web",
+  title: "Artikel SEO Services - HINAI Tech",
   description:
     "Professional SEO article writing services to boost your website ranking and organic traffic with quality content.",
 }

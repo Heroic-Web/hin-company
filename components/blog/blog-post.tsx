@@ -115,7 +115,7 @@ export function BlogPost({ slug }: BlogPostProps) {
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{post.author}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Full-stack developer and founder of Heroic Web with over 8 years of experience in building
+                  Full-stack developer and founder of HINAI Tech with over 8 years of experience in building
                   scalable web applications. Passionate about sharing knowledge and helping developers grow.
                 </p>
               </div>

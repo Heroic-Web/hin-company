@@ -5,7 +5,7 @@ import { ServicesGrid } from "@/components/services/services-grid"
 import { ProcessSection } from "@/components/services/process-section"
 import { PricingSection } from "@/components/services/pricing-section"
 export const metadata = {
-  title: "Our Services - Heroic Web",
+  title: "Our Services - HINAI Tech",
   description:
     "We provide professional Website Development, High Converting Landing Pages, SEO Optimized Content, Digital Advertising Solutions, and Creative Design Services to accelerate your business growth in the digital world.",
 }

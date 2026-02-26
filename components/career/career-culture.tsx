@@ -33,7 +33,7 @@ export function CareerCulture() {
     },
   ]
 
-  const heroicValues = [
+  const HINAIValues = [
     {
       icon: HeartHandshake,
       title: "Helpfulness",
@@ -105,18 +105,18 @@ export function CareerCulture() {
           ))}
         </div>
 
-        {/* ================= HEROIC CORE VALUES ================= */}
+        {/* ================= HINAI CORE VALUES ================= */}
         <div className="text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Our Core Values
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            The core values that drive everything we do at Heroic Web.
+            The core values that drive everything we do at HINAI Tech.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {heroicValues.map((value, index) => (
+          {HINAIValues.map((value, index) => (
             <div
               key={index}
               className="border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 bg-background"

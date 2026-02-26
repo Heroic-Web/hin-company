@@ -63,7 +63,7 @@ export function Testimonials() {
       name: "Sarah",
       company: "Tech Startup",
       content:
-        "Heroic Web transformed our online presence completely. The website they built is not only beautiful but also performs exceptionally well.",
+        "HINAI Tech transformed our online presence completely. The website they built is not only beautiful but also performs exceptionally well.",
       rating: 5,
     },
     {

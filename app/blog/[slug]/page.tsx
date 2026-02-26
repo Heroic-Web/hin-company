@@ -12,7 +12,7 @@ interface BlogPostPageProps {
 export async function generateMetadata({ params }: BlogPostPageProps) {
   // In a real app, you'd fetch the post data here
   return {
-    title: `Blog Post - Heroic Web`,
+    title: `Blog Post - HINAI Tech`,
     description: "Read our latest insights on web development, SEO, and design.",
   }
 }

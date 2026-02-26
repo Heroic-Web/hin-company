@@ -7,7 +7,7 @@ export function AboutTimeline() {
     {
       year: "2023",
       title: "Company Founded",
-      description: "Heroic Web was established with a vision to transform digital experiences.",
+      description: "HINAI Tech was established with a vision to transform digital experiences.",
     },
     {
       year: "2024",

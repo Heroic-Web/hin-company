@@ -15,7 +15,7 @@ export function LandingPageFAQ() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            F.A.Q Jasa Landing Page Heroic Web
+            F.A.Q Jasa Landing Page HINAI Tech
           </h2>
           <p className="text-muted-foreground">
             Temukan jawaban dari pertanyaan yang paling sering ditanyakan
@@ -36,7 +36,7 @@ export function LandingPageFAQ() {
           </AccordionItem>
 
           <AccordionItem value="item-2" className="bg-background rounded-lg px-6 shadow-sm">
-            <AccordionTrigger>Bagaimana kualitas landing page Heroic Web?</AccordionTrigger>
+            <AccordionTrigger>Bagaimana kualitas landing page HINAI Tech?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               Website dibuat dengan desain modern, responsif, cepat (maksimal 3 detik),
               dan dioptimasi agar mendukung konversi serta performa iklan.
@@ -55,7 +55,7 @@ export function LandingPageFAQ() {
             <AccordionTrigger>Saya tidak paham website, apakah tetap bisa pesan?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               Tentu bisa. Anda hanya perlu kirim konten & kebutuhan.
-              Tim Heroic Web akan mengurus semuanya hingga website siap online.
+              Tim HINAI Tech akan mengurus semuanya hingga website siap online.
             </AccordionContent>
           </AccordionItem>
 
@@ -108,7 +108,7 @@ export function LandingPageFAQ() {
           </AccordionItem>
 
           <AccordionItem value="item-11" className="bg-background rounded-lg px-6 shadow-sm">
-            <AccordionTrigger>Bagaimana cara order landing page di Heroic Web?</AccordionTrigger>
+            <AccordionTrigger>Bagaimana cara order landing page di HINAI Tech?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               Hubungi kami via WhatsApp, lakukan pembayaran DP 50%.
               Setelah website selesai dan disetujui, pelunasan 50% dilakukan

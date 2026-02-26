@@ -83,7 +83,7 @@ export function SEOArticleEnterpriseContent() {
 
   const faq = [
     {
-      q: "Bagaimana cara memesan artikel di Heroic Web?",
+      q: "Bagaimana cara memesan artikel di HINAI Tech?",
       a: "Silakan hubungi tim kami melalui halaman kontak atau WhatsApp resmi untuk konsultasi dan pemesanan.",
     },
     {
@@ -149,7 +149,7 @@ export function SEOArticleEnterpriseContent() {
             Siap Tingkatkan Trafik Website Anda?
           </h3>
           <p className="mb-6 max-w-2xl mx-auto">
-            Konsultasikan kebutuhan artikel SEO Anda bersama tim Heroic Web
+            Konsultasikan kebutuhan artikel SEO Anda bersama tim HINAI Tech
             dan dapatkan strategi terbaik untuk bisnis Anda.
           </p>
 

@@ -14,8 +14,8 @@ export function Footer() {
           <div className="col-span-2">
              <Link href="/" className="flex items-center">
               <Image
-                src="/Heroic_Logo.png"
-                alt="Heroic Web Logo"
+                src="/HINAI_Tech_Logo.png"
+                alt="HINAI Tech Logo"
                 width={120}
                 height={40}
                 priority
@@ -105,7 +105,7 @@ export function Footer() {
             </ul>
 
             <p className="text-muted-foreground text-sm">
-              © 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by Heroic Team.
+              © 2025 PT. Heroic Inovasi Nusantara. All rights reserved. Built with ♥️ and Sincerity by HINAI Team.
             </p>
           </div>
         </div>

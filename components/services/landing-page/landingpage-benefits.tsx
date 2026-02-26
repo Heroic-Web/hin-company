@@ -5,7 +5,7 @@ export function LandingPageBenefits() {
     <section className="py-20">
       <div className="max-w-5xl mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-8">
-          Kenapa Harus Heroic Web?
+          Kenapa Harus HINAI Tech?
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 text-left">

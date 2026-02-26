@@ -7,7 +7,7 @@ import { DesignPortfolio } from "@/components/services/design/design-portfolio"
 import { DesignPricing } from "@/components/services/design/design-pricing"
 
 export const metadata = {
-  title: "Design Services - Heroic Web",
+  title: "Design Services - HINAI Tech",
   description: "Professional design services including brand identity, UI/UX design, and graphic design.",
 }
 

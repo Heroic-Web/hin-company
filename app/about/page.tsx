@@ -8,9 +8,9 @@ import { AboutTimeline } from "@/components/about/about-timeline"
 import { AboutCTA } from "@/components/about/about-cta"
 
 export const metadata = {
-  title: "About Us - Heroic Web",
+  title: "About Us - HINAI Tech",
   description:
-    "Learn about Heroic's mission, team, and commitment to delivering exceptional web development, SEO, and design services.",
+    "Learn about HINAI's mission, team, and commitment to delivering exceptional web development, SEO, and design services.",
 }
 
 export default function AboutPage() {
