@@ -41,7 +41,7 @@ Project Details:
 ${formData.message}
     `
 
-    const mailtoLink = `mailto:cs.heroicweb@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cs.hintech@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`
 
@@ -120,7 +120,9 @@ ${formData.message}
                       <SelectItem value="web">Web Development</SelectItem>
                       <SelectItem value="seo">SEO Services</SelectItem>
                       <SelectItem value="design">Design Services</SelectItem>
-                      <SelectItem value="all">All Services</SelectItem>
+                      <SelectItem value="ai-ml">AI & Machine Learning</SelectItem>
+                      <SelectItem value="ds">Data Science</SelectItem>
+                      <SelectItem value="all">Other Services</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

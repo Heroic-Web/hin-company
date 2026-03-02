@@ -65,8 +65,8 @@ export default function DisclaimerPage() {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">6. Contact Us</h2>
                 <p className="mb-4">
                   If you have any questions about this Disclaimer, please contact us at{" "}
-                  <a href="mailto:cs.heroicweb@gmail.com" className="text-primary underline">
-                    cs.heroicweb@gmail.com
+                  <a href="mailto:cs.hintech@gmail.com" className="text-primary underline">
+                    cs.hintech@gmail.com
                   </a>.
                 </p>
               </section>

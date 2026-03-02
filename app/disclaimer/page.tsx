@@ -76,7 +76,7 @@ export default function DisclaimerPage() {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">7. Contact Us</h2>
                 <p className="mb-4">
                   If you have any questions or need clarification regarding this Disclaimer, please contact us at: <br />
-                  📧 Email: <a href="mailto:cs.heroicweb@gmail.com">cs.heroicweb@gmail.com</a> <br />
+                  📧 Email: <a href="mailto:cs.hintech@gmail.com">cs.hintech@gmail.com</a> <br />
                   🌐 Website: <a href="https://hinaitech.com">https://hinaitech.com</a>
                 </p>
               </section>

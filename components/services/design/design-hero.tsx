@@ -35,7 +35,7 @@ export function DesignHero() {
               className="bg-emerald-600 hover:bg-emerald-700 text-white"
             >
               <a
-                href="mailto:cs.heroicweb@gmail.com?subject=Permintaan Penawaran&body=Halo,%0ASaya ingin menanyakan mengenai layanan Anda.%0ATolong informasikan lebih lanjut mengenai harga, paket, dan proses kerja.%0ATerima kasih."
+                href="mailto:cs.hintech@gmail.com?subject=Permintaan Penawaran&body=Halo,%0ASaya ingin menanyakan mengenai layanan Anda.%0ATolong informasikan lebih lanjut mengenai harga, paket, dan proses kerja.%0ATerima kasih."
               >
                 <Sparkles className="w-5 h-5 mr-2" />
                 {language === "en" ? "Get Quote" : "Dapatkan Penawaran"}

@@ -69,6 +69,7 @@ export function Navigation() {
         { href: "/services/landing-page", label: t("services.landingpage") },
         { href: "/services/seo-articles", label: t("services.seo") },
         { href: "/services/design", label: t("services.design") },
+        { href: "/services/ai-ml", label: t("Jasa ML & Data Science") },
       ],
     },
 

@@ -105,7 +105,7 @@ export default function TermsConditionsPage() {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">10. Contact Information</h2>
                 <p className="mb-4">
                   For questions or concerns regarding these Terms & Conditions, please contact us at: <br />
-                  📧 Email: <a href="cs.heroicweb@gmail.com">cs.heroicweb@gmail.com</a> <br />
+                  📧 Email: <a href="cs.hintech@gmail.com">cs.hintech@gmail.com</a> <br />
                   
                 </p>
               </section>

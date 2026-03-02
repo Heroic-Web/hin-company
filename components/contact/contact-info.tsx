@@ -8,7 +8,7 @@ export function ContactInfo() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["cs.heroicweb@gmail.com"],
+      details: ["cs.hintech@gmail.com"],
     },
     {
       icon: Phone,
