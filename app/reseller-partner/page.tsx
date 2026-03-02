@@ -166,7 +166,7 @@ export default function ResellerPartner() {
 
           <div className="aspect-square rounded-3xl overflow-hidden">
             <img
-              src="/Jasa Digital by HIN.jpeg"
+              src="/Jasa Digital By HIN.jpeg"
               alt="Reseller HINAI"
               className="w-full h-full object-cover"
             />
