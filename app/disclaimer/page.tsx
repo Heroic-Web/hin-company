@@ -16,7 +16,7 @@ export default function DisclaimerPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. General Information</h2>
                 <p className="mb-4">
-                  All content provided on <strong>HINAI Tech</strong> (HINAI.web.id) is published for general information,
+                  All content provided on <strong>HINAI Tech</strong> (hinaitech.com) is published for general information,
                   educational, service, and reference purposes only. We strive to provide accurate, up-to-date, and reliable
                   content, but we make no guarantees that all information is always complete, correct, or suitable for your needs.
                   Any action you take based on information found on this website is strictly at your own risk, and HINAI Tech will

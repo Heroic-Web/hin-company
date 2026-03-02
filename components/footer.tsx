@@ -46,6 +46,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/ai-ml" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t("Jasa AI Solutions")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/design" className="text-muted-foreground hover:text-primary transition-colors">
                   {t("services.design")}
                 </Link>

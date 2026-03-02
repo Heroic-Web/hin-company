@@ -16,7 +16,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
                 <p className="mb-4">
-                  By accessing and using <strong>HINAI Tech</strong> (HINAI.web.id), you accept and agree to comply with these
+                  By accessing and using <strong>HINAI Tech</strong> (hinaitech.com), you accept and agree to comply with these
                   Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of our website
                   and services immediately.
                 </p>

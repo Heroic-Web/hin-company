@@ -32,11 +32,18 @@ export function Services() {
       link: "/services/seo-articles", // halaman artikel seo
     },
     {
+      icon: Code,
+      title: t("AI Solutions"),
+      description: "AI and Machine Learning Solutions for Business Growth",
+      features: ["AI Consulting", "ML Development", "Data Analysis", "Automation Solutions"],
+      link: "/services/ai-ml",
+    },
+    {
       icon: Palette,
       title: t("services.design"),
       description: "Beautiful, user-centered designs that tell your story",
       features: ["Brand Identity", "UI/UX Design", "Graphic Design", "Document Design", "Marketing & Promotion Design"],
-      link: "/services/design", // halaman desain
+      link: "/services/design", 
     },
   ]
 
