@@ -99,16 +99,15 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20 lg:h-24 w-full">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center justify-start shrink-0">
-            <div className="relative h-12 w-[160px] lg:h-16 lg:w-[220px]">
-              <Image
-                src="/HINAI_Tech_Logo.png"
-                alt="HINAI Tech Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/HINAI_Tech_Logo.png"
+              alt="HINAI Tech Logo"
+              width={260}
+              height={100}
+              className="h-16 lg:h-20 xl:h-24 w-auto object-contain drop-shadow-md"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
