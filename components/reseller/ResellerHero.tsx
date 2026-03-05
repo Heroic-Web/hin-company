@@ -73,9 +73,7 @@ Tentang
 
 <p className="text-lg text-black/80">
 
-Mitra resmi Hinai Tech yang membantu bisnis
-mendapatkan layanan digital terbaik seperti
-website, landing page, SEO, AI dan desain profesional.
+Mitra resmi Hinai Tech yang siap membantu bisnis Anda berkembang melalui layanan digital profesional seperti pembuatan website, landing page, SEO, pengembangan AI, dan desain kreatif.
 
 </p>
 
