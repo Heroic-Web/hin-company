@@ -36,7 +36,7 @@ export default function ResellerPartner() {
           </span>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Reseller Website & Article SEO
+            Reseller Partner Program
             <span className="block text-primary">
               Didukung Resmi PT. Heroic Inovasi Nusantara
             </span>
