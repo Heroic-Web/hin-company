@@ -102,7 +102,7 @@ export default function ResellerPartner() {
               <div className="relative rounded-3xl border bg-background p-3 shadow-xl">
                 <div className="relative overflow-hidden rounded-2xl aspect-square">
                   <img
-                    src="/reseller.png"
+                    src="/affiliate_web.png"
                     alt="Program Reseller HINAI"
                     className="w-full h-full object-cover hover:scale-105 transition duration-500"
                   />
