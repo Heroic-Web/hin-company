@@ -2,6 +2,8 @@
 
 import Image from "next/image"
 import QRReseller from "./QRReseller"
+import StatCircle from "./StatCircle"
+import VerifiedBadge from "./VerifiedBadge"
 import { Phone, Mail, Star } from "lucide-react"
 
 interface Props {
@@ -22,13 +24,35 @@ return (
 
 <div className="max-w-7xl mx-auto px-6">
 
-<div className="grid lg:grid-cols-12 gap-8 lg:gap-3 items-center">
+<div className="grid lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-{/* ================= LEFT PROFILE ================= */}
+{/* PROFILE */}
 
-<div className="lg:col-span-5 flex items-center gap-3">
+<div className="lg:col-span-5 flex items-center gap-4">
 
-<div className="w-44 h-44 rounded-full border-4 border-white overflow-hidden shadow-xl flex-shrink-0">
+<div className="relative">
+
+<div className="
+absolute
+-inset-1
+rounded-full
+bg-gradient-to-r
+from-yellow-200
+to-yellow-500
+blur
+opacity-40
+"/>
+
+<div className="
+relative
+w-44
+h-44
+rounded-full
+border-4
+border-white
+overflow-hidden
+shadow-xl
+">
 
 <Image
 src={reseller.photo}
@@ -37,6 +61,8 @@ width={200}
 height={200}
 className="object-cover w-full h-full"
 />
+
+</div>
 
 </div>
 
@@ -50,16 +76,14 @@ className="object-cover w-full h-full"
 HINAI Technology
 </p>
 
-<div className="inline-block bg-white px-4 py-1 rounded-lg shadow text-sm mt-2">
-<b>Reseller Partner</b>
-</div>
+<VerifiedBadge/>
 
 </div>
 
 </div>
 
 
-{/* ================= ABOUT ================= */}
+{/* ABOUT */}
 
 <div className="lg:col-span-3 lg:-ml-6 mt-8 lg:mt-0">
 
@@ -78,7 +102,7 @@ landing page, SEO, pengembangan AI, dan desain kreatif.
 </div>
 
 
-{/* ================= RIGHT SIDE ================= */}
+{/* RIGHT SIDE */}
 
 <div className="lg:col-span-4 flex flex-col items-end gap-6">
 
@@ -86,39 +110,40 @@ landing page, SEO, pengembangan AI, dan desain kreatif.
 
 <div className="flex gap-5">
 
-<div className="bg-white w-28 h-28 rounded-full flex flex-col justify-center items-center shadow-lg">
+<StatCircle
+value={reseller.sold}
+label="Project"
+/>
 
-<p className="text-3xl font-bold">
-{reseller.sold}
-</p>
+<StatCircle
+value={30}
+label="Klien+"
+/>
 
-<p className="text-gray-600 text-sm">
-Project
-</p>
+{/* RATING */}
 
-</div>
-
-<div className="bg-white w-28 h-28 rounded-full flex flex-col justify-center items-center shadow-lg">
-
-<p className="text-3xl font-bold">
-30+
-</p>
-
-<p className="text-gray-600 text-sm">
-Klien
-</p>
-
-</div>
-
-<div className="bg-white w-28 h-28 rounded-full flex flex-col justify-center items-center shadow-lg">
+<div className="
+bg-white
+w-28 h-28
+rounded-full
+flex
+flex-col
+justify-center
+items-center
+shadow-lg
+hover:scale-105
+hover:shadow-2xl
+transition
+duration-300
+">
 
 <div className="flex text-yellow-500 mb-1">
 
-<Star size={18} fill="currentColor"/>
-<Star size={18} fill="currentColor"/>
-<Star size={18} fill="currentColor"/>
-<Star size={18} fill="currentColor"/>
-<Star size={18} fill="currentColor"/>
+<Star fill="currentColor" size={18}/>
+<Star fill="currentColor" size={18}/>
+<Star fill="currentColor" size={18}/>
+<Star fill="currentColor" size={18}/>
+<Star fill="currentColor" size={18}/>
 
 </div>
 
@@ -133,14 +158,26 @@ Rating
 
 {/* BUTTON + QR */}
 
-<div className="flex items-center gap-6">
+<div className="flex items-center gap-8">
 
 <div className="flex flex-col gap-3">
 
 <a
 href={`https://wa.me/${reseller.phone}`}
-className="flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-3 rounded-xl shadow hover:bg-green-600 transition"
->
+className="
+flex
+items-center
+justify-center
+gap-3
+bg-green-500
+text-white
+px-8
+py-3
+rounded-xl
+shadow
+hover:bg-green-600
+transition
+">
 
 <Phone size={18}/>
 WhatsApp
@@ -149,8 +186,19 @@ WhatsApp
 
 <a
 href={`mailto:${reseller.email || "admin@hinaitech.com"}`}
-className="flex items-center justify-center gap-3 bg-white px-8 py-3 rounded-xl shadow hover:bg-gray-100 transition"
->
+className="
+flex
+items-center
+justify-center
+gap-3
+bg-white
+px-8
+py-3
+rounded-xl
+shadow
+hover:bg-gray-100
+transition
+">
 
 <Mail size={18}/>
 Email

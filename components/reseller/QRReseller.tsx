@@ -8,20 +8,27 @@ phone:string
 
 export default function QRReseller({phone}:Props){
 
-const link = `https://wa.me/${phone}`
+const url = `https://wa.me/${phone}`
 
 return(
 
-<div className="bg-white p-4 rounded-xl shadow-lg text-center">
+<div className="
+bg-white
+p-3
+rounded-xl
+shadow-lg
+w-[120px]
+h-[120px]
+flex
+items-center
+justify-center
+">
 
 <QRCode
-value={link}
-size={130}
+value={url}
+size={100}
+style={{ width:"100%", height:"100%" }}
 />
-
-<p className="text-xs mt-2">
-Scan untuk chat reseller
-</p>
 
 </div>
 

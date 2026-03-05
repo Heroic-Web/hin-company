@@ -10,6 +10,11 @@ interface PageProps {
   }
 }
 
+export const metadata = {
+title: "Reseller Hinai Tech",
+description: "Mitra resmi Hinai Tech yang menyediakan layanan website, SEO, AI development dan digital marketing."
+}
+
 export default function Page({ params }: PageProps) {
 
   const reseller = resellers.find((r) => r.slug === params.slug)
