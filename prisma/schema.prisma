@@ -1,0 +1,25 @@
+model Reseller {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  phone     String
+  leads     Lead[]
+  clicks    Click[]
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String?
+  service   String
+  createdAt DateTime @default(now())
+  reseller  Reseller @relation(fields: [resellerId], references: [id])
+  resellerId String
+}
+
+model Click {
+  id        String   @id @default(cuid())
+  service   String
+  createdAt DateTime @default(now())
+  reseller  Reseller @relation(fields: [resellerId], references: [id])
+  resellerId String
+}
