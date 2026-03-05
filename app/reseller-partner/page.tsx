@@ -241,6 +241,264 @@ export default function ResellerPartner() {
           </div>
         </div>
 
+        {/* BENEFIT RESELLER */}
+        <div className="relative mb-32 perspective-[1200px]">
+
+          {/* background glow */}
+          <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-primary/20 blur-3xl rounded-full -z-10"/>
+          <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-green-400/20 blur-3xl rounded-full -z-10"/>
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Apa yang Didapat Jika Bergabung
+            <span className="block text-primary">
+              Dengan Reseller Partner HINAI Tech?
+            </span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {/* CARD TEMPLATE */}
+            {[
+              {
+                title:"1. Harga Khusus / Harga Reseller 💰",
+                text:(
+                  <>
+                  Reseller mendapatkan harga khusus yang lebih murah dibandingkan harga normal.
+                  Semakin banyak klien yang Anda dapatkan, semakin besar diskon yang diperoleh.
+                  <br/><br/>
+                  Contoh:
+                  <br/>
+                  Harga normal website: Rp2.500.000
+                  <br/>
+                  Harga reseller: Rp1.700.000
+                  <br/><br/>
+                  Skema diskon:
+                  <br/>
+                  • 1 klien: diskon 5%<br/>
+                  • 2 klien: diskon 8%<br/>
+                  • 3 klien: diskon 11%<br/>
+                  • 4 klien: diskon 15% dan seterusnya
+                  </>
+                )
+              },
+
+              {
+                title:"2. Produk Siap Jual 📦",
+                text:(
+                  <>
+                  Reseller tidak perlu membuat produk sendiri karena semua layanan sudah
+                  disiapkan oleh tim HINAI Tech.
+                  <br/><br/>
+                  Produk yang bisa dijual:
+                  <br/>
+                  • Website & Landing Page<br/>
+                  • Artikel SEO<br/>
+                  • Iklan Digital<br/>
+                  • Desain Grafis<br/>
+                  • AI / ML / Data Science<br/>
+                  • Dll
+                  <br/><br/>
+                  Anda cukup fokus mencari klien dan membangun relasi.
+                  </>
+                )
+              },
+
+              {
+                title:"3. Custom Domain Website Sendiri 🌐",
+                text:(
+                  <>
+                  Reseller juga mendapatkan fasilitas website khusus dengan custom domain
+                  sendiri untuk membantu promosi layanan digital.
+                  <br/><br/>
+                  Website ini bisa digunakan sebagai:
+                  <br/>
+                  • Media promosi jasa digital<br/>
+                  • Website agency pribadi<br/>
+                  • Landing page penawaran layanan<br/>
+                  • Branding atas nama sendiri
+                  <br/><br/>
+                  Dengan ini Anda dapat terlihat lebih profesional saat menawarkan jasa
+                  kepada klien.
+                  </>
+                )
+              },
+
+              {
+                title:"4. Support Tim Teknis 👨‍💻",
+                text:(
+                  <>
+                  Anda tidak perlu memiliki kemampuan teknis atau coding.
+                  Semua pekerjaan teknis akan ditangani oleh tim profesional HINAI Tech.
+                  <br/><br/>
+                  Support yang tersedia:
+                  <br/>
+                  • Tim developer<br/>
+                  • Tim desain<br/>
+                  • Tim support klien
+                  <br/><br/>
+                  Anda cukup fokus pada marketing dan relasi klien.
+                  </>
+                )
+              },
+
+              {
+                title:"5. Materi Marketing 📢",
+                text:(
+                  <>
+                  Reseller akan mendapatkan berbagai materi promosi siap pakai untuk
+                  memudahkan proses penjualan.
+                  <br/><br/>
+                  Materi yang biasanya disediakan:
+                  <br/>
+                  • Banner promosi<br/>
+                  • Template postingan<br/>
+                  • Copywriting<br/>
+                  • Brosur digital<br/>
+                  • Landing page reseller
+                  </>
+                )
+              },
+
+              {
+                title:"6. Komunitas & Group Support 🤝",
+                text:(
+                  <>
+                  Semua reseller akan tergabung dalam komunitas resmi untuk saling
+                  membantu dan berbagi strategi.
+                  <br/><br/>
+                  Fasilitas komunitas:
+                  <br/>
+                  • Group WhatsApp / Telegram<br/>
+                  • Tempat diskusi dan bertanya<br/>
+                  • Sharing strategi marketing<br/>
+                  • Update produk terbaru
+                  </>
+                )
+              },
+
+              {
+                title:"7. Potensi Penghasilan Besar 🚀",
+                text:(
+                  <>
+                  Program reseller memiliki potensi penghasilan yang sangat besar.
+                  <br/><br/>
+                  Contoh sederhana:
+                  <br/>
+                  Jika menjual 5 website per bulan
+                  <br/>
+                  Margin: Rp800.000 / project
+                  <br/><br/>
+                  Total penghasilan:
+                  <br/>
+                  5 × 800.000 = Rp4.000.000 / bulan
+                  <br/><br/>
+                  Jika mencapai 10–20 klien, penghasilan bisa jauh lebih besar.
+                  </>
+                )
+              },
+
+              {
+                title:"8. Tanpa Modal Besar 📉",
+                text:(
+                  <>
+                  Program ini dapat dijalankan tanpa modal besar.
+                  <br/><br/>
+                  Anda tidak perlu:
+                  <br/>
+                  • Kantor<br/>
+                  • Tim developer<br/>
+                  • Server
+                  <br/><br/>
+                  Cukup:
+                  <br/>
+                  • HP atau Laptop<br/>
+                  • Internet<br/>
+                  • Skill marketing
+                  </>
+                )
+              },
+
+              {
+                title:"9. Sistem Referral / Komisi Tambahan 🔗",
+                text:(
+                  <>
+                  Selain margin penjualan, reseller juga bisa mendapatkan komisi tambahan
+                  dari sistem referral.
+                  <br/><br/>
+                  Jika Anda mengajak orang lain menjadi reseller dan mereka berhasil
+                  mendapatkan klien, Anda akan mendapatkan komisi tambahan sebesar
+                  <strong> 10% dari setiap project </strong> yang mereka hasilkan.
+                  <br/><br/>
+                  Ini membuka peluang penghasilan pasif.
+                  </>
+                )
+              },
+
+              {
+                title:"10. Prioritas Pengerjaan Project ⚡",
+                text:(
+                  <>
+                  Project dari reseller mendapatkan prioritas pengerjaan oleh tim HINAI Tech.
+                  <br/><br/>
+                  Keuntungannya:
+                  <br/>
+                  • Proses pengerjaan lebih cepat<br/>
+                  • Antrian project lebih diutamakan<br/>
+                  • Support teknis lebih responsif
+                  </>
+                )
+              },
+
+              {
+                title:"11. Sertifikat Partner Resmi 🏅",
+                text:(
+                  <>
+                  Reseller akan mendapatkan status sebagai partner resmi HINAI Tech.
+                  <br/><br/>
+                  Benefit:
+                  <br/>
+                  • Sertifikat resmi reseller<br/>
+                  • Status Official Partner<br/>
+                  • Meningkatkan kepercayaan klien saat menawarkan layanan
+                  </>
+                )
+              }
+
+            ].map((item,i)=>(
+              
+              <div
+                key={i}
+                className="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6
+                shadow-lg transform-gpu transition-all duration-500
+                hover:-translate-y-3 hover:rotate-x-6 hover:rotate-y-3
+                hover:shadow-primary/30"
+              >
+
+                {/* glow hover */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 via-transparent to-green-400/20 opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"/>
+
+                {/* content */}
+                <div className="relative z-10">
+
+                  <h3 className="text-xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {item.text}
+                  </p>
+
+                </div>
+
+                {/* accent line */}
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full"/>
+
+              </div>
+
+            ))}
+
+          </div>
+        </div>
 
         {/* WHO */}
         <div className="mb-32">

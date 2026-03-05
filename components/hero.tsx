@@ -18,7 +18,7 @@ export function Hero() {
     "/mobile-friendly.jpeg",
     "/opennow.jpeg",
     "/jasaweb.jpeg",
-    "/affiliate_web.jpeg",
+    "/affiliate_web.png",
   ]
 
   useEffect(() => {
