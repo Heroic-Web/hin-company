@@ -13,7 +13,7 @@ export const resellers = [
     phone: "6285187483025",
     email: "cs.hintech@gmail.com",
     photo: "/dio.jpeg",
-    sold: 137,
+    sold: 39,
     rating: 5,
     location: "Indonesia",
     about:
