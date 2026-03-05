@@ -48,14 +48,13 @@ className="object-cover"
 
 <div className="bg-white px-4 py-1 rounded shadow text-sm mt-2">
 
-Reseller Hinai Tech
+Reseller Partner
 
 </div>
 
 <p className="mt-4 text-black/80 max-w-sm">
 
-Profesional Reseller Partner di  
-<b> PT. Heroic Inovasi Nusantara</b>
+<b>HINAI Tech</b>
 
 </p>
 

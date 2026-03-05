@@ -9,10 +9,10 @@ export interface Reseller {
 export const resellers = [
   {
     slug: "handrio",
-    name: "Handrio",
+    name: "HANDRIO",
     phone: "6285187483025",
     email: "cs.hintech@gmail.com",
-    photo: "/reseller/handrio.jpg",
+    photo: "/dio.jpeg",
     sold: 137,
     rating: 5,
     location: "Indonesia",
