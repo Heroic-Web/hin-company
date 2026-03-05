@@ -1,12 +1,25 @@
 "use client"
 
 import { MessageCircle } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export function WhatsAppFloat() {
+
+  const pathname = usePathname()
+
+  // Jika halaman reseller → jangan tampilkan
+  if (pathname.startsWith("/reseller")) {
+    return null
+  }
+
   const handleWhatsAppClick = () => {
-    const phoneNumber = "6282144137914" 
-    const message = "Halo! Saya tertarik dengan layanan HINAI Tech. Perkenalkan nama saya ... ingin berkonsultasi tentang ..."
+    const phoneNumber = "6282144137914"
+
+    const message =
+      "Halo! Saya tertarik dengan layanan HINAI Tech. Perkenalkan nama saya ... ingin berkonsultasi tentang ..."
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+
     window.open(whatsappUrl, "_blank")
   }
 
