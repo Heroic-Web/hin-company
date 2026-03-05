@@ -22,9 +22,12 @@ id:"website",
 title:"Jasa Pembuatan Website",
 description:"Website profesional untuk bisnis, perusahaan, UMKM, maupun personal brand.",
 images:[
-"/services/web1.jpg",
-"/services/web2.jpg",
-"/services/web3.jpg"
+  "/Jasa Web Portofolio/1.png",
+  "/Jasa Web Portofolio/2.png",
+  "/Jasa Web Portofolio/3.png",
+  "/Jasa Web Portofolio/4.png",
+  "/Jasa Web Portofolio/5.png",
+  "/Jasa Web Portofolio/6.png",
 ],
 packages:[
 
@@ -110,9 +113,9 @@ id:"landing",
 title:"Jasa Landing Page",
 description:"Landing page profesional untuk meningkatkan konversi penjualan dan kampanye marketing.",
 images:[
-"/services/landing1.jpg",
-"/services/landing2.jpg",
-"/services/landing3.jpg"
+"/Jasa Landing Page/4.png",
+"/Jasa Landing Page/5.png",
+"/Jasa Landing Page/6.png",
 ],
 packages:[
 
@@ -165,8 +168,11 @@ id:"seo",
 title:"Jasa Artikel SEO",
 description:"Artikel SEO berkualitas untuk meningkatkan ranking website di Google.",
 images:[
-"/services/seo1.jpg",
-"/services/seo2.jpg"
+"/Jasa Artikel/1.png",
+"/Jasa Artikel/2.png",
+"/Jasa Artikel/3.png",  
+"/Jasa Artikel/4.png",
+"/Jasa Artikel/5.png",
 ],
 packages:[
 
@@ -211,8 +217,7 @@ id:"ai",
 title:"Machine Learning & AI Development",
 description:"Pengembangan sistem AI dan Machine Learning untuk kebutuhan bisnis, startup, maupun penelitian.",
 images:[
-"/services/ai1.jpg",
-"/services/ai2.jpg"
+"/jasa-ai-ml.png"
 ],
 packages:[
 
@@ -274,8 +279,7 @@ id:"design",
 title:"Jasa Desain Grafis",
 description:"Layanan desain profesional untuk branding, marketing, dan kebutuhan bisnis.",
 images:[
-"/services/design1.jpg",
-"/services/design2.jpg"
+"/Jasa Desain.png",
 ],
 packages:[
 
