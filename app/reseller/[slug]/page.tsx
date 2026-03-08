@@ -17,37 +17,37 @@ description: "Mitra resmi Hinai Tech yang menyediakan layanan website, SEO, AI d
 
 export default function Page({ params }: PageProps) {
 
-  const reseller = resellers.find((r) => r.slug === params.slug)
+const reseller = resellers.find((r)=>r.slug === params.slug)
 
-  if (!reseller) {
-    return notFound()
-  }
+if(!reseller){
+return notFound()
+}
 
-  return (
+return(
 
-    <div>
+<div className="min-h-screen">
 
-      {/* HERO RESELLER */}
+{/* HERO RESELLER */}
 
-      <ResellerHero reseller={reseller} />
+<ResellerHero reseller={reseller} />
 
-      {/* SERVICES */}
+{/* SERVICES */}
 
-      <div className="max-w-6xl mx-auto px-4 py-10">
+<div className="max-w-6xl mx-auto px-4 md:px-6 py-10">
 
-        <ServiceGrid
-          phone={reseller.phone}
-          reseller={reseller.slug}
-        />
+<ServiceGrid
+phone={reseller.phone}
+reseller={reseller.slug}
+/>
 
-      </div>
+</div>
 
-      {/* FLOATING WA */}
+{/* FLOATING WA */}
 
-      <FloatingWA phone={reseller.phone} />
+<FloatingWA phone={reseller.phone} />
 
-    </div>
+</div>
 
-  )
+)
 
 }
