@@ -211,8 +211,8 @@ Email
 
 </div>
 
-<div>
-  
+<div className="flex justify-center w-full">
+
 <QRReseller phone={reseller.phone}/>
 
 </div>
