@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { id } from "date-fns/locale";
-import { title } from "process";
 
 type PortfolioItem = {
   id: number;
@@ -207,38 +205,38 @@ const portfolioItems: PortfolioItem[] = [
       ],
       services: ["Brand Identity", "Figma Design System"],
     },
+     {
+      id: 12,
+      title: "Property Listing Website and Portfolio for Property Developer",
+      category: "Landing Page",
+      image: "/consultantpro.png",
+      client: "Property Developer Indonesia",
+      year: "2026",
+      description:
+        "Website listing properti dengan portfolio yang menarik untuk developer properti, fokus pada visual branding dan pengalaman pengguna.",
+      results: [
+        "Konversi lead meningkat 120%",
+        "Page load time optimal",
+        "Mobile user experience meningkat",
+      ],
+      services: ["Property Listing Website", "Portfolio Design", "Mobile Responsive"],
+    },
     {
-    id: 12,
-    title: "Landing Page SaaS Cyber Monitoring",
-    category: "Landing Page",
-    image: "/lp-cyber.jpeg",
-    client: "SecureWatch",
-    year: "2024",
-    description:
-      "High-converting landing page untuk SaaS cyber monitoring dengan struktur AIDA, visual trust badge, dan funnel lead magnet.",
-    results: [
-      "Conversion rate 14.8%",
-      "CPL turun 42%",
-      "Lead masuk 3x lebih cepat",
-    ],
-    services: ["Landing Page Development", "Copywriting", "Conversion Strategy"],
-  },
-  {
-    id: 13,
-    title: "Brand Identity – Tech Startup AI Platform",
-    category: "Design",
-    image: "/design-ai.jpeg",
-    client: "NeuroTech Labs",
-    year: "2024",
-    description:
-      "Complete brand identity system untuk startup AI termasuk logo, typography system, brand color psychology, dan UI design guideline.",
-    results: [
-      "Brand positioning lebih premium",
-      "Visual identity konsisten",
-      "Investor-ready presentation",
-    ],
-    services: ["Brand Strategy", "Logo Design", "Design System"],
-  },
+      id: 13,
+      title: "Brand Identity – Tech Startup AI Platform",
+      category: "Design",
+      image: "/design-ai.jpeg",
+      client: "NeuroTech Labs",
+      year: "2024",
+      description:
+        "Complete brand identity system untuk startup AI termasuk logo, typography system, brand color psychology, dan UI design guideline.",
+      results: [
+        "Brand positioning lebih premium",
+        "Visual identity konsisten",
+        "Investor-ready presentation",
+      ],
+      services: ["Brand Strategy", "Logo Design", "Design System"],
+    },
   {
     id: 14,
     title: "SEO Optimization – E-Commerce Fashion",
@@ -353,20 +351,21 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 21,
-    title: "Property Listing Website and Portfolio for Property Developer",
+    title: "Landing Page SaaS Cyber Monitoring",
     category: "Landing Page",
-    image: "/consultantpro.png",
-    client: "Property Developer Indonesia",
-    year: "2026",
+    image: "/lp-cyber.jpeg",
+    client: "SecureWatch",
+    year: "2024",
     description:
-      "Website listing properti dengan portfolio yang menarik untuk developer properti, fokus pada visual branding dan pengalaman pengguna.",
+      "High-converting landing page untuk SaaS cyber monitoring dengan struktur AIDA, visual trust badge, dan funnel lead magnet.",
     results: [
-      "Konversi lead meningkat 120%",
-      "Page load time optimal",
-      "Mobile user experience meningkat",
+      "Conversion rate 14.8%",
+      "CPL turun 42%",
+      "Lead masuk 3x lebih cepat",
     ],
-    services: ["Property Listing Website", "Portfolio Design", "Mobile Responsive"],
+    services: ["Landing Page Development", "Copywriting", "Conversion Strategy"],
   },
+
   {
     id: 22,
     title: "Muana Bimbel Website and Portfolio for Education Consultant",
@@ -590,20 +589,22 @@ export default function PortfolioPage() {
             Jelajahi Berdasarkan Layanan
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-full transition-all ${
-                  activeCategory === cat
-                    ? "bg-black text-white dark:bg-white dark:text-black"
-                    : "bg-gray-200 dark:bg-gray-800"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="flex justify-center">
+            <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-3 rounded-full whitespace-nowrap transition-all ${
+                    activeCategory === cat
+                      ? "bg-black text-white dark:bg-white dark:text-black"
+                      : "bg-gray-200 dark:bg-gray-800 hover:bg-gray-300"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>

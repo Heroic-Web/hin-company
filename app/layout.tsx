@@ -9,6 +9,7 @@ import { LanguageProvider } from "@/components/language-provider"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
+import PurchaseNotification from "@/components/PurchaseNotification"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -42,18 +43,26 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <LanguageProvider>
-              {/* ✅ Navbar selalu tampil */}
+
+              {/* Navbar */}
               <Navigation />
 
-              {/* ✅ Konten halaman */}
+              {/* Konten halaman */}
               <main>{children}</main>
 
-              {/* ✅ Footer & WhatsApp selalu tampil */}
+              {/* Footer */}
               <Footer />
+
+              {/* WhatsApp Float */}
               <WhatsAppFloat />
+
+              {/* 🔥 Social Proof Notification */}
+              <PurchaseNotification />
+
             </LanguageProvider>
           </ThemeProvider>
         </Suspense>
+
         <Analytics />
       </body>
     </html>
