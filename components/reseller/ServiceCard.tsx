@@ -5,7 +5,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { createWA } from "@/lib/whatsapp"
 import { trackClick } from "@/lib/analytics"
-import { ChevronLeft,ChevronRight } from "lucide-react"
+import { ChevronLeft,ChevronRight,X } from "lucide-react"
 
 interface Props{
 service:any
@@ -17,6 +17,7 @@ export default function ServiceCard({service,phone,reseller}:Props){
 
 const [open,setOpen] = useState(false)
 const [index,setIndex] = useState(0)
+const [viewer,setViewer] = useState(false)
 
 const next=()=>{
 
@@ -36,6 +37,8 @@ prev === 0 ? service.images.length-1 : prev-1
 
 return(
 
+<>
+
 <motion.div
 whileHover={{scale:1.03}}
 className="bg-white rounded-xl shadow-xl overflow-hidden"
@@ -49,7 +52,8 @@ className="bg-white rounded-xl shadow-xl overflow-hidden"
 src={service.images[index]}
 alt={service.title}
 fill
-className="object-cover"
+className="object-cover cursor-pointer"
+onClick={()=>setViewer(true)}
 />
 
 <button
@@ -142,6 +146,57 @@ className="block bg-green-500 text-white text-center py-2 rounded mt-3"
 </div>
 
 </motion.div>
+
+
+{/* ================= IMAGE VIEWER ================= */}
+
+{viewer && (
+
+<div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+
+<button
+onClick={()=>setViewer(false)}
+className="absolute top-6 right-6 text-white"
+>
+
+<X size={30}/>
+
+</button>
+
+<button
+onClick={prev}
+className="absolute left-6 text-white"
+>
+
+<ChevronLeft size={40}/>
+
+</button>
+
+<div className="relative w-[90vw] h-[80vh]">
+
+<Image
+src={service.images[index]}
+alt={service.title}
+fill
+className="object-contain"
+/>
+
+</div>
+
+<button
+onClick={next}
+className="absolute right-6 text-white"
+>
+
+<ChevronRight size={40}/>
+
+</button>
+
+</div>
+
+)}
+
+</>
 
 )
 

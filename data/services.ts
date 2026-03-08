@@ -22,12 +22,10 @@ id:"website",
 title:"Jasa Pembuatan Website",
 description:"Website profesional untuk bisnis, perusahaan, UMKM, maupun personal brand.",
 images:[
-  "/Jasa Web Portofolio/1.png",
-  "/Jasa Web Portofolio/2.png",
-  "/Jasa Web Portofolio/3.png",
-  "/Jasa Web Portofolio/4.png",
-  "/Jasa Web Portofolio/5.png",
-  "/Jasa Web Portofolio/6.png",
+  "/Jasa Web/1.png",
+  "/Jasa Web/2.png",
+  "/Jasa Web/3.png",
+  "/Jasa Web/4.png",
 ],
 packages:[
 
@@ -106,6 +104,87 @@ features:[
 ]
 },
 
+/* ================= WEBSITE PORTFOLIO ================= */
+
+{
+id:"website-portfolio",
+title:"Jasa Pembuatan Website Portofolio",
+description:"Website portofolio profesional untuk personal brand, freelancer, kreator, developer, maupun perusahaan yang ingin menampilkan karya dan project secara elegan.",
+images:[
+"/Jasa Website Portfolio/5.png",
+"/Jasa Website Portfolio/6.png",
+],
+packages:[
+
+{
+name:"Starter Portfolio",
+price:"Rp 350.000",
+button:"Pesan Website Portofolio",
+features:[
+"Website Portofolio Personal",
+"1 Halaman Website",
+"Hosting Gratis",
+"Domain Gratis .my.id",
+"Section About Me",
+"Section Skills",
+"Section Experience",
+"Section Education",
+"Section Portfolio Project",
+"Kontak WhatsApp / Email",
+"Revisi 2x",
+"Pengerjaan 1 Hari",
+"Maintenance ❌"
+]
+},
+
+{
+name:"Elite Portfolio",
+price:"Rp 400.000",
+button:"Pesan Website Portofolio",
+features:[
+"Website Portofolio Profesional",
+"3 Halaman Website",
+"Hosting Gratis",
+"Domain Gratis .my.id",
+"Section About Me",
+"Section Experience",
+"Portfolio Gallery",
+"Integrasi Social Media",
+"Revisi 3x",
+"Pengerjaan 1 Hari",
+"Maintenance ✔"
+]
+},
+
+{
+name:"Premium Portfolio",
+price:"Rp 500.000",
+button:"Pesan Website Portofolio",
+features:[
+"Website Portofolio Premium",
+"6 Halaman Website",
+"Hosting Gratis",
+"Domain .com Gratis",
+"Section About Me",
+"Section Skills",
+"Section Education",
+"Section Experience",
+"Section Portfolio Project",
+"Section Experience",
+"Blog / Artikel",
+"Portfolio Case Study",
+"Integrasi Social Media",
+"UI/UX Premium Design",
+"Integrasi SEO Basic",
+"Revisi 5x",
+"Pengerjaan 3 Hari",
+"Maintenance and priority support ✔"
+]
+}
+
+]
+},
+
 /* ================= LANDING PAGE ================= */
 
 {
@@ -113,9 +192,7 @@ id:"landing",
 title:"Jasa Landing Page",
 description:"Landing page profesional untuk meningkatkan konversi penjualan dan kampanye marketing.",
 images:[
-"/Jasa Landing Page/4.png",
-"/Jasa Landing Page/5.png",
-"/Jasa Landing Page/6.png",
+"/Jasa Landing Page/1.png",
 ],
 packages:[
 
@@ -170,7 +247,7 @@ description:"Artikel SEO berkualitas untuk meningkatkan ranking website di Googl
 images:[
 "/Jasa Artikel/1.png",
 "/Jasa Artikel/2.png",
-"/Jasa Artikel/3.png",  
+"/Jasa Artikel/3.png",
 "/Jasa Artikel/4.png",
 "/Jasa Artikel/5.png",
 ],
