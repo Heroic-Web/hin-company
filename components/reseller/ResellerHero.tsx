@@ -163,9 +163,8 @@ Rating
 
 {/* BUTTON + QR */}
 
-<div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
-
-<div className="flex flex-col gap-3 w-full sm:w-auto max-w-[220px]">
+<div className="flex items-center gap-6">
+<div className="flex flex-col gap-3">
 
 <a
 href={`https://wa.me/${reseller.phone}`}
@@ -212,8 +211,8 @@ Email
 
 </div>
 
-<div className="flex justify-center w-[160px]">
-
+<div>
+  
 <QRReseller phone={reseller.phone}/>
 
 </div>
