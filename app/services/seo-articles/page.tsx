@@ -51,7 +51,7 @@ export default function SEOArticlesPage() {
                   engage your audience.
                 </p>
                <a
-                href="https://wa.me/6282144137914?text=Halo%20saya%20ingin%20order%20artikel%20SEO"
+                href="https://wa.me/6288210404399?text=Halo%20saya%20ingin%20order%20artikel%20SEO"
                 target="_blank"
                 rel="noopener noreferrer"
               >

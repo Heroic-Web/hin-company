@@ -36,7 +36,7 @@ export function LandingPageHero() {
           </div>
 
           <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-            <Link href="https://wa.me/6282144137914" target="_blank">
+            <Link href="https://wa.me/6288210404399" target="_blank">
               Pesan Website Sekarang
             </Link>
           </Button>

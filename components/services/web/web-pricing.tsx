@@ -115,7 +115,7 @@ export function WebPricing() {
               <div className="pt-4">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <a
-                    href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20info%20Paket%20Bundling%20UMKM"
+                    href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20info%20Paket%20Bundling%20UMKM"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -186,7 +186,7 @@ export function WebPricing() {
 
               <Button asChild className="w-full bg-primary hover:bg-primary/90">
                 <a
-                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Toko%20Online%20Premium"
+                  href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20memesan%20Toko%20Online%20Premium"
                   target="_blank"
                 >
                   Pesan Website Sekarang
@@ -272,7 +272,7 @@ export function WebPricing() {
                         className="bg-primary hover:bg-primary/90 text-primary-foreground"
                       >
                         <a
-                          href={`https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Paket%20Website%20${pkg}`}
+                          href={`https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20memesan%20Paket%20Website%20${pkg}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -301,7 +301,7 @@ export function WebPricing() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <a
-                href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20terkait%20paket%20website"
+                href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20terkait%20paket%20website"
                 target="_blank"
                 rel="noopener noreferrer"
               >

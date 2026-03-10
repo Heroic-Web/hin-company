@@ -13,7 +13,7 @@ export function ContactInfo() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+62 821 4413 7914"],
+      details: ["+62 882 1040 4399"],
     },
     {
       icon: MapPin,

@@ -8,7 +8,7 @@ import { FileText, Package, ShoppingBag } from "lucide-react"
 export function SEOArticlePricing() {
   const { t, language } = useLanguage()
 
-  const whatsappNumber = "6282144137914" // gunakan format internasional tanpa 0
+  const whatsappNumber = "6288210404399" // gunakan format internasional tanpa 0
 
   // ==================== DATA ====================
   const paketSatuan = [

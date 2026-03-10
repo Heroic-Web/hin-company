@@ -19,7 +19,7 @@ export function CTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Tombol Get Started */}
           <a
-            href="https://wa.me/6282144137914?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda"
+            href="https://wa.me/6288210404399?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -31,7 +31,7 @@ export function CTA() {
 
           {/* Tombol Contact */}
           <a
-            href="https://wa.me/6282144137914"
+            href="https://wa.me/6288210404399"
             target="_blank"
             rel="noopener noreferrer"
           >
