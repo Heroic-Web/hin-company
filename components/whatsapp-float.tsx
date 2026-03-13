@@ -13,7 +13,7 @@ export function WhatsAppFloat() {
   }
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "6288210404399"
+    const phoneNumber = "6282144137914"
 
     const message =
       "Halo! Saya tertarik dengan layanan HINAI Tech. Perkenalkan nama saya ... ingin berkonsultasi tentang ..."

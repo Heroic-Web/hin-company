@@ -57,7 +57,7 @@ export function LandingPagePricing() {
 
               <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
                 <a
-                  href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20memesan%20Landing%20Page"
+                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Landing%20Page"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -110,7 +110,7 @@ export function LandingPagePricing() {
 
               <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                 <a
-                  href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20memesan%20Toko%20Online%20Lite"
+                  href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20memesan%20Toko%20Online%20Lite"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

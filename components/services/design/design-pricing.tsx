@@ -17,7 +17,7 @@ export function DesignPricing() {
   const { t } = useLanguage();
 
   // Nomor WA Anda dalam format internasional (tanpa + / tanpa 0 awal)
-  const whatsappNumber = "6288210404399";
+  const whatsappNumber = "6282144137914";
 
   const services: DesignService[] = [
     {

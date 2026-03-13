@@ -14,7 +14,7 @@ export function LandingPageCTA() {
         </p>
         <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
           <a
-            href="https://wa.me/6288210404399"
+            href="https://wa.me/6282144137914"
             target="_blank"
             rel="noopener noreferrer"
           >

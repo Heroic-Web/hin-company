@@ -166,7 +166,7 @@ export function SEOArticlePortfolio() {
         </div>
         <div className="mt-16 text-center">
           <a
-            href="https://wa.me/6288210404399?text=Halo,%20saya%20ingin%20mulai%20proyek%20SEO%20konten"
+            href="https://wa.me/6282144137914?text=Halo,%20saya%20ingin%20mulai%20proyek%20SEO%20konten"
             target="_blank"
             rel="noopener noreferrer"
           >
