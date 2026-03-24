@@ -33,7 +33,7 @@ export const resellers = [
   },
   {
     slug: "akmal",
-    name: "Maizatul Akmal",
+    name: "Maizzatul Akmal",
     phone: "6283840458299",
     email: "cs.hintech@gmail.com",
     photo: "/reseller/akmal.jpg",
