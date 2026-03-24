@@ -44,4 +44,3 @@ export const resellers = [
       "Profesional Reseller Partner di PT. Heroic Inovasi Nusantara yang membantu bisnis memiliki website profesional, SEO, AI dan desain berkualitas.",
   },
 ]
-]
