@@ -31,4 +31,17 @@ export const resellers = [
     about:
       "Profesional Reseller Partner di PT. Heroic Inovasi Nusantara yang membantu bisnis memiliki website profesional, SEO, AI dan desain berkualitas.",
   },
+  {
+    slug: "akmal",
+    name: "Maizatul Akmal",
+    phone: "6283840458299",
+    email: "cs.hintech@gmail.com",
+    photo: "/reseller/akmal.jpg",
+    sold: 25,
+    rating: 5,
+    location: "Indonesia",
+    about:
+      "Profesional Reseller Partner di PT. Heroic Inovasi Nusantara yang membantu bisnis memiliki website profesional, SEO, AI dan desain berkualitas.",
+  },
+]
 ]
