@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Code, Search, Palette, ArrowRight } from "lucide-react"
+import { Code, Search, Palette, ArrowRight, Box } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function Services() {
@@ -23,6 +23,13 @@ export function Services() {
       description: "Beautiful, high-converting landing pages tailored to your brand",
       features: ["Custom Design", "Conversion Focused", "Responsive Layouts", "A/B Testing"],
       link: "/services/landing-page", // halaman landing page
+    },
+    {
+      icon: Box,
+      title: t("services.ar-development"),
+      description: "Immersive augmented reality applications for engaging user experiences",
+      features: ["AR App Development", "3D Modeling", "Interactive Experiences", "Cross-Platform Support"],
+      link: "/services/ar-development",
     },
     {
       icon: Search,

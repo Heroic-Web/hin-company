@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Icon } from "lucide-react"
 
 export function ContactInfo() {
   const contactDetails = [
@@ -13,12 +13,12 @@ export function ContactInfo() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+62 882 1040 4399"],
+      details: ["+62 821 4413 7914"],
     },
     {
       icon: MapPin,
       title: "Office Address",
-      details: ["Jl. Trisnomaju III, 009, Negerikaton, Pesawaran, Lampung, 35353"],
+      details: ["Jl. Trisnomaju III, N0. 009, Kec. Negerikaton, Kab. Pesawaran, Lampung, 35353"],
     },
     {
       icon: Clock,

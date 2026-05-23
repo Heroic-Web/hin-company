@@ -41,6 +41,7 @@ const translations = {
     "services.web": "Jasa Pembuatan Website",
     "services.seo": "Jasa Penulisan Artikel SEO",
     "services.design": "Branding & Design",
+    "services.ar-development": "Jasa Pembuatan Aplikasi AR",
 
     // Common
     "common.learnMore": "Learn More",
@@ -149,6 +150,7 @@ const translations = {
     "services.landingpage": "Landing Page",
     "services.seo": "Artikel SEO",
     "services.design": "Desain",
+    "services.ar-development": "Aplikasi AR",
 
     // Common
     "common.learnMore": "Pelajari Lebih Lanjut",

@@ -9,8 +9,8 @@ export default function ThreeScene() {
 
       <ambientLight intensity={1} />
 
-      {/* Environment tanpa file HDR */}
-      <Environment preset="sunset" />
+      <Environment preset="city"/>
+
 
       <OrbitControls />
 
