@@ -8,7 +8,11 @@ type PortfolioItem = {
   id: number;
   title: string;
   category: string;
-  image: string;
+
+  // SUPPORT SINGLE & MULTIPLE IMAGE
+  image?: string;
+  images?: string[];
+
   client: string;
   year: string;
   description: string;
@@ -507,17 +511,417 @@ const portfolioItems: PortfolioItem[] = [
       "Security Reporting System",
     ],
   },
+  {
+    id: 29,
+    title: 'Affiliate Dashboard App',
+    category: 'Website',
+
+    // MULTIPLE IMAGES
+    images: [
+      '/All Portfolio/Affiliate Dashboard App/register.png',
+      '/All Portfolio/Affiliate Dashboard App/login.png',
+    ],
+
+    client: 'Affiliate Marketing Platform',
+
+    year: '2026',
+
+    description:
+      'Dashboard application for managing and tracking affiliate marketing activities, including performance analytics, commission calculations, and campaign management.',
+
+    results: [
+      'Real-time performance tracking',
+      'Automated commission calculations',
+      'Customizable reporting dashboards',
+      'Seamless integration with affiliate networks',
+    ],
+
+    services: [
+      'Dashboard Development',
+      'Analytics Implementation',
+      'API Integration',
+      'User Experience Design',
+    ],
+  },
+  {
+    id: 30,
+    title: 'Alumni Connect App',
+    category: 'Application',
+    // MULTIPLE IMAGES
+    images: [
+      '/All Portfolio/Alumni Connect App/admin_dashboard1.png',
+      '/All Portfolio/Alumni Connect App/admin_dashboard2.png',
+      '/All Portfolio/Alumni Connect App/features.png',
+      '/All Portfolio/Alumni Connect App/forum_portal.png',
+      '/All Portfolio/Alumni Connect App/hero.png',
+      '/All Portfolio/Alumni Connect App/jobs_portal.png',
+      '/All Portfolio/Alumni Connect App/program.png',
+      '/All Portfolio/Alumni Connect App/footer.png',
+      '/All Portfolio/Alumni Connect App/ubah_password.png',
+      '/All Portfolio/Alumni Connect App/student_dashboard1.png',
+
+    ],
+
+    client: 'School Alumni Association',
+
+    year: '2026',
+
+    description:
+      'Dashboard application for managing and tracking alumni activities, including performance analytics, commission calculations, event, jobs, forum, and campaign management.',
+
+    results: [
+      'Real-time performance tracking',
+      'Automated commission calculations',
+      'Customizable reporting dashboards',
+      'Seamless integration with affiliate networks',
+      'Event management system',
+      'Job posting and application portal',
+      'Discussion forum for alumni networking',
+      'User authentication and profile management',
+      'Responsive design for mobile and desktop',
+    ],
+
+    services: [
+      'Dashboard Development',
+      'Analytics Implementation',
+      'API Integration',
+      'User Experience Design',
+    ],
+  },
+  {
+    id: 31,
+    title: 'Media Pembelajaran AR Budaya Lampung',
+    category: 'Application',
+    images: [
+      '/All Portfolio/AR Budaya Lampung/Main Menu.png',
+      '/All Portfolio/AR Budaya Lampung/Daftar Objek.png',
+      '/All Portfolio/AR Budaya Lampung/Guide.png',
+      '/All Portfolio/AR Budaya Lampung/Menu Exit.png',
+      '/All Portfolio/AR Budaya Lampung/Rumus Siger 1.png',
+      '/All Portfolio/AR Budaya Lampung/Rumus Siger 2.png',
+      '/All Portfolio/AR Budaya Lampung/Rumus Siger 3.png',
+      '/All Portfolio/AR Budaya Lampung/Hasil Scan AR/rumahadat.png',
+      '/All Portfolio/AR Budaya Lampung/Hasil Scan AR/siger.png',
+      '/All Portfolio/AR Budaya Lampung/Hasil Scan AR/tapis.png',
+    ],
+
+    client: 'Dinas Pendidikan dan Kebudayaan Provinsi Lampung',
+
+    year: '2026',
+
+    description:
+      'Application for learning Lampung culture through augmented reality.',
+
+    results: [
+      'Interactive AR learning experience',
+      'Comprehensive cultural content',
+      'User-friendly interface for all ages',
+      'Positive feedback from educational institutions',
+      'Increased engagement with local culture among users',
+      'Successful implementation of AR technology in educational context',
+    ],
+
+    services: [
+      'AR Application Development',
+      'Educational Content Creation',
+      'User Experience Design',
+      'AR Technology Integration',
+      'Mobile Application Development',
+      'Cultural Research and Consultation',
+      'User Testing and Feedback Analysis',
+      'Deployment and Maintenance',
+    ],
+  },
+  {
+    id: 32,
+    title: 'Media Pembelajaran AR Koding & Kecerdasan Artifisal (KKA)',
+    category: 'Application',
+    images: [
+      '/All Portfolio/AR KKA App/Opening.png',
+      '/All Portfolio/AR KKA App/MainMenu.png',
+      '/All Portfolio/AR KKA App/Material.png',
+    ],
+
+    client: 'High School implementing AR for learning coding and artificial intelligence',
+
+    year: '2026',
+
+    description:
+      'Application for learning Koding & Kecerdasan Artifisal through augmented reality.',
+
+    results: [
+      'Interactive AR learning experience for coding and AI concepts',
+      'Comprehensive educational content covering coding and AI topics',
+      'User-friendly interface designed for high school students',
+      'Positive feedback from students and educators',
+      'Increased engagement with coding and AI subjects among users',
+      'Successful implementation of AR technology in educational context for STEM learning',
+      'Enhanced understanding of coding and AI concepts through interactive AR experiences',
+    ],
+
+    services: [
+      'AR Application Development',
+      'Educational Content Creation for Coding and AI',
+      'User Experience Design for Educational Apps',
+      'AR Technology Integration',
+      'Mobile Application Development',
+      'STEM Education Consultation',
+      'User Testing and Feedback Analysis',
+      'Deployment and Maintenance of Educational AR Apps',
+    ],
+  },
+  {
+    id: 33,
+    title: 'CBT App – Computer Based Test Application for Schools',
+    category: 'Application',
+    images: [
+      '/All Portfolio/CBT App/Login.png',
+      '/All Portfolio/CBT App/dashboard_admin.png',
+      '/All Portfolio/CBT App/features1.png',
+      '/All Portfolio/CBT App/features2.png',
+      '/All Portfolio/CBT App/landing1.png',
+      '/All Portfolio/CBT App/landing2.png',
+      '/All Portfolio/CBT App/paket.png',
+    ],
+
+    client: 'Educational Institution implementing computer-based testing for students',
+
+    year: '2026',
+
+    description:
+      'Computer-based test application designed for schools to facilitate online examinations with secure authentication, question management, and real-time result tracking.',
+
+    results: [
+      'Secure and efficient online testing platform',
+      'Comprehensive question management system for educators',
+      'Real-time result tracking and analytics for students and educators',
+      'Positive feedback from students and educators on usability and functionality',
+      'Successful implementation of computer-based testing in educational institutions',
+      'Enhanced accessibility to testing for students through online platform',
+      'Improved efficiency in test administration and result processing for educators',
+    ],
+
+    services: [
+      'CBT Application Development',
+      'Secure Authentication System',
+      'Question Management System',
+      'Real-time Result Tracking',
+      'User Experience Design for Educational Apps',
+      'Mobile Application Development',
+      'Educational Consultation for Testing Needs',
+      'User Testing and Feedback Analysis',
+    ],
+  },
+  {
+    id: 34,
+    title: 'Class Presence Web App – Attendance System for Schools',
+    category: 'Application',
+    images: [
+      '/All Portfolio/Class Presence/Absence Page.png',
+      '/All Portfolio/Class Presence/Absensi Kelas.png',
+      '/All Portfolio/Class Presence/Dashboard.png',
+      '/All Portfolio/Class Presence/Dashboard2.png',
+      '/All Portfolio/Class Presence/Input Nilai.png',
+      '/All Portfolio/Class Presence/Laporan Nilai.png',
+    ],
+
+    client: 'Educational Institution implementing an attendance and grading system for students',
+
+    year: '2026',
+
+    description:
+      'Web application for managing class attendance and grading for schools, featuring secure authentication, real-time attendance tracking, and comprehensive grading management for educators.',
+
+    results: [
+      'Efficient attendance tracking system for schools',
+      'Comprehensive grading management system for educators',
+      'Real-time attendance tracking and reporting for students and educators',
+      'Positive feedback from students and educators on usability and functionality',
+      'Successful implementation of attendance and grading system in educational institutions',
+      'Enhanced accessibility to attendance and grading information for students through online platform',  
+      'Improved efficiency in attendance management and grading processes for educators',
+      'Secure authentication and data management for student information',
+    ],
+
+    services: [
+      'Attendance and Grading Web App Development',
+      'Secure Authentication System',
+      'Real-time Attendance Tracking',
+      'Comprehensive Grading Management',
+      'User Experience Design for Educational Apps',
+      'Mobile Application Development',
+      'Educational Consultation for Attendance and Grading Needs',
+      'User Testing and Feedback Analysis',
+    ],
+  },
+  {
+    id: 35,
+    title: 'Cyber Detection App – Web Application for Detecting Cyber Threats',
+    category: 'Application',
+    images: [
+      '/All Portfolio/Cyber Detection App/dashboard.png',
+      '/All Portfolio/Cyber Detection App/admin_panel.png',
+      '/All Portfolio/Cyber Detection App/landing1.png',
+      '/All Portfolio/Cyber Detection App/landing2.png',
+    ],
+
+    client: 'Cyber Security Company providing threat detection solutions for businesses',
+
+    year: '2026',
+
+    description:
+      'Web application designed to detect and prevent cyber threats for businesses, featuring real-time monitoring, advanced threat detection algorithms, and comprehensive reporting for security teams.',
+
+    results: [
+      'Effective cyber threat detection and prevention platform for businesses',
+      'Real-time monitoring and alerting for potential cyber threats',
+      'Advanced threat detection algorithms for comprehensive security coverage',
+      'Positive feedback from businesses on usability and effectiveness of the application',
+      'Successful implementation of cyber threat detection solutions for businesses',
+      'Enhanced security posture for businesses through proactive threat detection and prevention',
+      'Comprehensive reporting and analytics for security teams to assess and respond to cyber threats',
+    ],
+
+    services: [
+      'Cyber Threat Detection Web App Development',
+      'Real-time Monitoring and Alerting System',
+      'Advanced Threat Detection Algorithm Implementation',
+      'User Experience Design for Security Applications',
+      'Mobile Application Development',
+      'Cyber Security Consultation for Businesses',
+      'User Testing and Feedback Analysis',
+      'Deployment and Maintenance of Cyber Detection Solutions',
+    ],
+  },
+  {
+    id: 36,
+    title: 'King and Queen Web App – Interactive Storytelling Platform for Children',
+    category: 'Website',
+    images: [
+      '/All Portfolio/King_Queen/Landing.png',
+      '/All Portfolio/King_Queen/result.png',
+    ],
+
+    client: 'Educational Entertainment Company creating interactive storytelling experiences for children',
+
+    year: '2026',
+
+    description:
+      'Web application designed for children to engage in interactive storytelling experiences, featuring colorful visuals, engaging narratives, and educational content.',
+
+    results: [
+      'Successful launch of interactive storytelling platform for children',
+      'High user engagement and positive feedback from parents and educators',
+      'Effective delivery of educational content through engaging storytelling',
+      'Enhanced learning experience for children through interactive elements',
+      'Increased brand recognition and customer loyalty for the educational entertainment company',
+    ],
+
+    services: [
+      'Interactive Storytelling Web App Development',
+      'User Experience Design for Children’s Applications',
+      'Educational Content Creation',
+      'Mobile Application Development',
+      'Educational Consultation for Storytelling Needs',
+      'User Testing and Feedback Analysis with Target Audience',
+      'Deployment and Maintenance of Interactive Storytelling Platform',
+    ],
+  },
+  {
+    id: 37,
+    title: 'Outcome Based Education Web App – Platform for Outcome Based Learning in Schools',
+    category: 'Application',
+    images: [
+      '/All Portfolio/OBE System/admin_dashboard.png',
+      '/All Portfolio/OBE System/dosen_dashboard.png',
+      '/All Portfolio/OBE System/superadmin_dashboard.png',
+      '/All Portfolio/OBE System/landing1.png',
+    ],
+
+    client: 'New System (OBE)',
+
+    year: '2026',
+
+    description:
+      'Web application designed for student at university to engage in outcome based learning experiences, featuring colorful visuals, engaging narratives, and educational content.',
+    results: [
+      'Successful launch of outcome based education platform for university students',
+      'High user engagement and positive feedback from students and educators',
+      'Effective delivery of educational content through engaging storytelling',
+      'Enhanced learning experience for students through interactive elements',
+      'Increased brand recognition and customer loyalty for the educational institution',
+    ],
+
+    services: [
+      'Outcome Based Education Web App Development',
+      'User Experience Design for Educational Applications',
+      'Educational Content Creation',
+      'Mobile Application Development',
+      'Educational Consultation for Outcome Based Learning Needs',
+      'User Testing and Feedback Analysis with Target Audience',
+      'Deployment and Maintenance of Outcome Based Education Platform',
+    ],
+  },
+  {
+    id: 38,
+    title: 'Presensa App – Attendance and Grading System for Schools',
+    category: 'Application',
+    images: [
+      '/All Portfolio/Presensa App/landing1.png',
+      '/All Portfolio/Presensa App/landing2.png',
+      '/All Portfolio/Presensa App/signup.png',
+    ],
+
+    client: 'New System (Presensa)',
+
+    year: '2026',
+
+    description:
+      'Web Application presence app for high school students to engage in attendance and grading management, featuring secure authentication, real-time attendance tracking, and comprehensive grading management for educators.',
+
+    results: [
+      'Successful launch of attendance and grading system for high school students',
+      'High user engagement and positive feedback from students and educators',
+      'Effective delivery of educational content through engaging storytelling',
+      'Enhanced learning experience for students through interactive elements',
+      'Increased brand recognition and customer loyalty for the educational institution',
+    ],
+
+    services: [
+      'Attendance and Grading Web App Development',
+      'Secure Authentication System',
+      'Real-time Attendance Tracking',
+      'Comprehensive Grading Management',
+      'User Experience Design for Educational Apps',
+      'Mobile Application Development',
+      'Educational Consultation for Attendance and Grading Needs',
+      'User Testing and Feedback Analysis with Target Audience',
+      'Deployment and Maintenance of Attendance and Grading Platform',
+    ],
+  },
 ];
 
 export default function PortfolioPage() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState("All");
-  const [heroIndex, setHeroIndex] = useState(0);
+  const [imageIndexes, setImageIndexes] = useState<Record<number, number>>({});
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHeroIndex((prev) => (prev + 1) % portfolioItems.length);
-    }, 4000);
+      setImageIndexes((prev) => {
+        const updated = { ...prev };
+
+        portfolioItems.forEach((item) => {
+          if (item.images && item.images.length > 1) {
+            updated[item.id] =
+              ((updated[item.id] ?? 0) + 1) % item.images.length;
+          }
+        });
+
+        return updated;
+      });
+    }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -615,17 +1019,95 @@ export default function PortfolioPage() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group rounded-3xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105 hover:-rotate-1 bg-white dark:bg-gray-900"
+              className="group relative rounded-3xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105 hover:-rotate-1 bg-white dark:bg-gray-900"
             >
-              <div className="relative h-72">
+             <div className="relative h-72 overflow-hidden">
+
+              {/* IMAGE SLIDER */}
+              {item.images ? (
+                <>
+                  {item.images.map((img, index) => (
+                    <Image
+                      key={index}
+                      src={img}
+                      alt={item.title}
+                      fill
+                      className={`object-cover transition-all duration-700 ${
+                        (imageIndexes[item.id] ?? 0) === index
+                          ? 'opacity-100 scale-100'
+                          : 'opacity-0 scale-110'
+                      }`}
+                    />
+                  ))}
+
+                  {/* LEFT BUTTON */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+
+                      setImageIndexes((prev) => ({
+                        ...prev,
+                        [item.id]:
+                          ((prev[item.id] ?? 0) - 1 + item.images!.length) %
+                          item.images!.length,
+                      }))
+                    }}
+                    className="absolute left-3 top-1/2 z-30 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur-md transition hover:scale-110 hover:bg-black/70"
+                  >
+                    ←
+                  </button>
+
+                  {/* RIGHT BUTTON */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+
+                      setImageIndexes((prev) => ({
+                        ...prev,
+                        [item.id]:
+                          ((prev[item.id] ?? 0) + 1) %
+                          item.images!.length,
+                      }))
+                    }}
+                    className="absolute right-3 top-1/2 z-30 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur-md transition hover:scale-110 hover:bg-black/70"
+                  >
+                    →
+                  </button>
+
+                  {/* DOTS */}
+                  <div className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 gap-2">
+                    {item.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={(e) => {
+                          e.stopPropagation()
+
+                          setImageIndexes((prev) => ({
+                            ...prev,
+                            [item.id]: index,
+                          }))
+                        }}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          (imageIndexes[item.id] ?? 0) === index
+                            ? 'w-8 bg-white'
+                            : 'w-2 bg-white/40'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              ) : (
                 <Image
-                  src={item.image}
+                  src={item.image || '/placeholder.png'}
                   alt={item.title}
                   fill
                   className="object-cover"
                 />
-              </div>
+              )}
 
+              {/* OVERLAY */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            </div>
               <div className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold">{item.title}</h3>
                 <p className="text-sm text-gray-500">
@@ -639,7 +1121,7 @@ export default function PortfolioPage() {
                   onClick={() =>
                     setActiveId(activeId === item.id ? null : item.id)
                   }
-                  className="text-black dark:text-white font-semibold hover:underline"
+                  className="relative z-40 text-black dark:text-white font-semibold hover:underline"
                 >
                   {activeId === item.id
                     ? "Tutup Detail"
