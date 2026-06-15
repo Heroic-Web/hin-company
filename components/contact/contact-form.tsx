@@ -41,7 +41,7 @@ Project Details:
 ${formData.message}
     `
 
-    const mailtoLink = `mailto:cs.hintech@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cs.hinaitech@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`
 

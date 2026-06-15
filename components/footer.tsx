@@ -1,49 +1,142 @@
+
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+} from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa"
 
 export function Footer() {
   const { t } = useLanguage()
 
-  // Tahun otomatis update
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-muted/50 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="border-t border-border bg-muted/30 backdrop-blur-sm">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div className="grid md:grid-cols-4 gap-8">
+        {/* TOP SECTION */}
+        <div className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* LOGO + DESCRIPTION */}
-
-          <div className="col-span-2">
-            <Link href="/" className="flex items-center">
+          {/* BRAND */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-flex items-center">
               <Image
                 src="/HINAI_Tech_Logo.png"
                 alt="HINAI Tech Logo"
-                width={120}
-                height={40}
+                width={220}
+                height={70}
+                className="h-auto w-auto max-h-20 object-contain"
                 priority
               />
             </Link>
 
-            <p className="text-muted-foreground mb-4 text-pretty mt-4">
-              We provide professional Website Development, High Converting Landing Pages,
-              SEO Optimized Content, Digital Advertising Solutions, and Creative Design
-              Services to accelerate your business growth in the digital world.
+            <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground">
+              HINAI Tech provides professional Website Development,
+              Landing Pages, SEO Content, Digital Advertising,
+              Artificial Intelligence Solutions, Mobile Applications,
+              and Creative Design Services to accelerate business growth
+              in the digital era.
             </p>
+
+            {/* CONTACT */}
+            <div className="mt-6 space-y-3 text-sm text-muted-foreground">
+
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4 shrink-0" />
+                <span>hi@hinaitech.com</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 shrink-0" />
+                <span>+62 821 4413 7914</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 shrink-0" />
+                <span>Indonesia</span>
+              </div>
+            </div>
+
+            {/* SOCIAL */}
+            <div className="mt-6 flex items-center gap-4">
+
+              <Link
+                href="https://instagram.com/hinaitech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram HINAI Tech"
+                className="
+                  rounded-xl
+                  border
+                  border-border
+                  p-2.5
+                  transition-all
+                  duration-300
+                  hover:border-primary
+                  hover:text-primary
+                  hover:-translate-y-1
+                "
+              >
+                <FaInstagram className="h-4 w-4" />
+              </Link>
+
+              <Link
+                href="https://linkedin.com/company/heroic-website"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn HINAI Tech"
+                className="
+                  rounded-xl
+                  border
+                  border-border
+                  p-2.5
+                  transition-all
+                  duration-300
+                  hover:border-primary
+                  hover:text-primary
+                  hover:-translate-y-1
+                "
+              >
+                <FaLinkedin className="h-4 w-4" />
+              </Link>
+
+              <Link
+                href="https://medium.com/hinai-tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Medium HINAI Tech"
+                className="
+                  rounded-xl
+                  border
+                  border-border
+                  p-2.5
+                  transition-all
+                  duration-300
+                  hover:border-primary
+                  hover:text-primary
+                  hover:-translate-y-1
+                "
+              >
+                <FaMedium className="h-4 w-4" />
+              </Link>
+
+            </div>
           </div>
 
           {/* SERVICES */}
-
           <div>
-            <h3 className="font-semibold text-foreground mb-4">
+            <h3 className="mb-5 text-lg font-semibold">
               Services
             </h3>
 
-            <ul className="space-y-2">
+            <ul className="space-y-3 text-sm">
 
               <li>
                 <Link
@@ -77,7 +170,7 @@ export function Footer() {
                   href="/services/ai-ml"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {t("Jasa AI Solutions")}
+                  AI Solutions
                 </Link>
               </li>
 
@@ -94,13 +187,12 @@ export function Footer() {
           </div>
 
           {/* COMPANY */}
-
           <div>
-            <h3 className="font-semibold text-foreground mb-4">
+            <h3 className="mb-5 text-lg font-semibold">
               Company
             </h3>
 
-            <ul className="space-y-2">
+            <ul className="space-y-3 text-sm">
 
               <li>
                 <Link
@@ -108,6 +200,15 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {t("nav.about")}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/portfolio"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Portfolio
                 </Link>
               </li>
 
@@ -134,45 +235,41 @@ export function Footer() {
 
         </div>
 
-        {/* FOOTER BOTTOM */}
+        {/* BOTTOM */}
+        <div className="border-t border-border py-6">
 
-        <div className="border-t border-border mt-8 pt-8 text-center">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 
-          <ul className="flex justify-center gap-6 mb-4">
+            <div className="flex flex-wrap gap-5 text-sm">
 
-            <li>
               <Link
                 href="/privacy-policy"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Privacy Policy
               </Link>
-            </li>
 
-            <li>
               <Link
                 href="/terms-conditions"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Terms & Conditions
               </Link>
-            </li>
 
-            <li>
               <Link
                 href="/disclaimer"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Disclaimer
               </Link>
-            </li>
 
-          </ul>
+            </div>
 
-          <p className="text-muted-foreground text-sm">
-            © {year} PT. Heroic Inovasi Nusantara. All rights reserved.
-            Built with ♥️ and Sincerity by HINAI Team.
-          </p>
+            <p className="text-sm text-muted-foreground">
+              © {year} PT. Heroic Inovasi Nusantara. All Rights Reserved.
+            </p>
+
+          </div>
 
         </div>
 

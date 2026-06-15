@@ -14,7 +14,7 @@ export default function NewsletterSection() {
     const subject = "Newsletter Subscription - HINAI Tech"
     const body = `New Newsletter Subscriber:\n\nEmail: ${email}`
 
-    const mailtoLink = `mailto:cs.hintech@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:cs.hinaitech@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`
 

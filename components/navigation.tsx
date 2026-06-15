@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -30,10 +30,12 @@ import { FaMoneyBill, FaMoneyBillAlt, FaMoneyCheck, FaTools } from "react-icons/
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null)
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const { language, setLanguage, t } = useLanguage()
+  const navRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -52,6 +54,27 @@ export function Navigation() {
       window.removeEventListener("scroll", controlNavbar)
     }
   }, [lastScrollY])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        setDesktopDropdown(null)
+        setMobileDropdown(null)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+
+    return () => {
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      )
+    }
+  }, [])
 
   const navItems = [
     { href: "/", label: t("nav.home"), icon: Home },
@@ -90,6 +113,18 @@ export function Navigation() {
     },
   ]
 
+  const handleDesktopDropdown = (label: string) => {
+    setDesktopDropdown((prev) =>
+      prev === label ? null : label
+    )
+  }
+
+  const handleMobileDropdown = (label: string) => {
+    setMobileDropdown((prev) =>
+      prev === label ? null : label
+    )
+  }
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border transition-transform duration-300 ${
@@ -112,31 +147,55 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
-              <div key={item.href} className="relative">
+              <div
+                key={`${item.label}-${item.href}`}
+                className="relative"
+              >
                 {item.submenu ? (
                   <div className="relative">
                     <button
-                      onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-2"
-                    >
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      handleDesktopDropdown(item.label)
+                    }}
+                    className="
+                      flex
+                      items-center
+                      gap-2
+                      text-foreground
+                      hover:text-primary
+                      transition-colors
+                      duration-200
+                      font-medium
+                      cursor-pointer
+                    "
+                  >
                       <item.icon className="h-4 w-4" />
                       <span>{item.label}</span>
+
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          isServicesOpen ? "rotate-180" : ""
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          desktopDropdown === item.label
+                            ? "rotate-180"
+                            : ""
                         }`}
                       />
                     </button>
-                    {isServicesOpen && (
-                      <div className="absolute left-0 top-full mt-2 bg-background border border-border rounded-lg shadow-lg min-w-[200px]">
+                    {desktopDropdown === item.label && (
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="absolute left-0 top-full mt-2 min-w-[220px] overflow-hidden rounded-xl border border-border bg-background shadow-xl z-50"
+                      >
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
                             className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 first:rounded-t-lg last:rounded-b-lg"
-                            onClick={() => setIsServicesOpen(false)}
+                            onClick={() => setDesktopDropdown(null)}
                           >
                             {subItem.label}
                           </Link>
@@ -206,7 +265,15 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                const nextState = !isOpen
+
+                setIsOpen(nextState)
+
+                if (!nextState) {
+                  setMobileDropdown(null)
+                }
+              }}
               className="p-2"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -219,12 +286,31 @@ export function Navigation() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
               {navItems.map((item) => (
-                <div key={item.href} className="relative">
+                <div
+                  key={`${item.label}-${item.href}`}
+                  className="relative"
+                >
                   {item.submenu ? (
                     <div>
                       <button
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          e.stopPropagation()
+                          handleMobileDropdown(item.label)
+                        }}
+                        className="
+                          flex
+                          items-center
+                          justify-between
+                          w-full
+                          px-3
+                          py-2
+                          text-foreground
+                          hover:text-primary
+                          transition-colors
+                          duration-200
+                        "
                       >
                         <div className="flex items-center space-x-2">
                           <item.icon className="h-4 w-4" />
@@ -232,11 +318,13 @@ export function Navigation() {
                         </div>
                         <ChevronDown
                           className={`h-4 w-4 transition-transform ${
-                            isServicesOpen ? "rotate-180" : ""
+                            mobileDropdown === item.label
+                              ? "rotate-180"
+                              : ""
                           }`}
                         />
                       </button>
-                      {isServicesOpen && (
+                      {mobileDropdown === item.label && (
                         <div className="pl-6 space-y-1">
                           {item.submenu.map((subItem) => (
                             <Link
@@ -244,8 +332,8 @@ export function Navigation() {
                               href={subItem.href}
                               className="block px-3 py-2 text-sm text-muted-foreground hover:text-primary"
                               onClick={() => {
+                                setMobileDropdown(null)
                                 setIsOpen(false)
-                                setIsServicesOpen(false)
                               }}
                             >
                               {subItem.label}
@@ -258,7 +346,10 @@ export function Navigation() {
                     <Link
                       href={item.href}
                       className="flex items-center space-x-2 px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false)
+                        setMobileDropdown(null)
+                      }}
                     >
                       <item.icon className="h-4 w-4" />
                       <span>{item.label}</span>
