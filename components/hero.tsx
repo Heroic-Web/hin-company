@@ -37,7 +37,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 lg:pt-32">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
@@ -52,9 +52,87 @@ export function Hero() {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             {/* Main heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              {t("hero.title")}
-              <span className="block text-primary mt-2">HINAI Tech</span>
+            <h1 className="text-center lg:text-left mb-6">
+              <div className="flex items-center justify-center lg:justify-start gap-4">
+
+                {/* Left Bracket */}
+                <span
+                  className="
+                    text-5xl
+                    md:text-7xl
+                    lg:text-8xl
+                    font-black
+                    text-green-500
+                    select-none
+                    animate-pulse
+                  "
+                  style={{
+                    textShadow: "0 0 15px rgba(34,197,94,.8)",
+                  }}
+                >
+                  [
+                </span>
+
+                <div>
+                  <span
+                    className="
+                      block
+                      text-4xl
+                      md:text-6xl
+                      lg:text-7xl
+                      font-bold
+                      text-foreground
+                    "
+                  >
+                    Welcome To
+                  </span>
+
+                  <span
+                    className="
+                      block
+                      mt-2
+                      text-5xl
+                      md:text-7xl
+                      lg:text-8xl
+                      font-black
+                      bg-gradient-to-r
+                      from-green-400
+                      via-emerald-500
+                      to-green-700
+                      bg-clip-text
+                      text-transparent
+                      animate-pulse
+                    "
+                    style={{
+                      textShadow: `
+                        0 0 15px rgba(34,197,94,.4),
+                        0 0 30px rgba(34,197,94,.3)
+                      `,
+                    }}
+                  >
+                    HINAI Tech
+                  </span>
+                </div>
+
+                {/* Right Bracket */}
+                <span
+                  className="
+                    text-5xl
+                    md:text-7xl
+                    lg:text-8xl
+                    font-black
+                    text-green-500
+                    select-none
+                    animate-pulse
+                  "
+                  style={{
+                    textShadow: "0 0 15px rgba(34,197,94,.8)",
+                  }}
+                >
+                  ]
+                </span>
+
+              </div>
             </h1>
 
             {/* Subtitle */}
