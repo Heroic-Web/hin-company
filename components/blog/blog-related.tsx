@@ -1,86 +1,165 @@
 "use client"
 
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
-import Link from "next/link"
 
 export function BlogRelated() {
   const { t } = useLanguage()
 
   const relatedPosts = [
     {
-      title: "SEO Best Practices for Modern Websites",
-      excerpt: "Learn the essential SEO strategies that will help your website rank higher.",
-      image: "/blog-seo-best-practices.png",
-      category: "SEO",
-      date: "2024-01-10",
+      title: "Jasa Pembuatan Website Bandar Lampung",
+      excerpt:
+        "Website profesional untuk UMKM, startup, sekolah, hingga perusahaan di Bandar Lampung.",
+      image: "Jasa Web/1.png",
+      category: "Website Development",
+      date: "2026-06-15",
+      readTime: 8,
+      slug: "jasa-pembuatan-website-bandar-lampung",
+    },
+
+    {
+      title: "Apa Itu Landing Page dan Mengapa Bisnis Anda Membutuhkannya?",
+      excerpt:
+        "Pelajari bagaimana landing page meningkatkan konversi iklan dan penjualan bisnis.",
+      image: "/Jasa Landing Page/1.png",
+      category: "Landing Page",
+      date: "2026-06-15",
       readTime: 6,
-      slug: "seo-best-practices-modern-websites",
+      slug: "apa-itu-landing-page",
     },
+
     {
-      title: "How to Optimize Your Website for Core Web Vitals",
-      excerpt: "Improve your website's performance and user experience metrics.",
-      image: "/blog-core-web-vitals.png",
-      category: "Performance",
-      date: "2024-01-08",
-      readTime: 5,
-      slug: "optimize-website-core-web-vitals",
+      title: "Cara Website Muncul di Halaman Pertama Google",
+      excerpt:
+        "Panduan SEO praktis untuk meningkatkan ranking website dan trafik organik.",
+      image: "/artikel/seo-ebook.png",
+      category: "SEO",
+      date: "2026-06-15",
+      readTime: 10,
+      slug: "cara-website-muncul-di-halaman-pertama-google",
     },
+
     {
-      title: "The Complete Guide to Modern CSS Grid",
-      excerpt: "Master CSS Grid layout with practical examples and real-world use cases.",
-      image: "/blog-css-grid-guide.png",
-      category: "CSS",
-      date: "2024-01-05",
+      title: "AI Automation untuk Bisnis Kecil",
+      excerpt:
+        "Otomatisasi bisnis menggunakan AI untuk meningkatkan produktivitas dan efisiensi.",
+      image: "/artikel/ai-services.png",
+      category: "Artificial Intelligence",
+      date: "2026-06-15",
       readTime: 7,
-      slug: "complete-guide-modern-css-grid",
+      slug: "ai-automation-untuk-bisnis-kecil",
+    },
+
+    {
+      title: "Cara Melindungi Website dari Hacker",
+      excerpt:
+        "Langkah penting meningkatkan keamanan website agar terhindar dari serangan cyber.",
+      image: "/artikel/hacker.png",
+      category: "Cyber Security",
+      date: "2026-06-15",
+      readTime: 9,
+      slug: "cara-melindungi-website-dari-hacker",
     },
   ]
 
   return (
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">{t("blog.relatedPosts")}</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Continue reading with these related articles
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {t("blog.relatedPosts")}
+          </h2>
+
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Artikel lain yang mungkin menarik untuk Anda baca.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {relatedPosts.map((post, index) => (
-            <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
+        {/* Cards */}
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {relatedPosts.map((post) => (
+            <Card
+              key={post.slug}
+              className="
+                group
+                overflow-hidden
+                border-border/50
+                hover:shadow-xl
+                hover:-translate-y-1
+                transition-all
+                duration-300
+              "
+            >
+              <div className="aspect-[16/10] overflow-hidden">
                 <img
-                  src={post.image || "/placeholder.svg"}
+                  src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-500
+                    group-hover:scale-105
+                  "
                 />
               </div>
+
               <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
-                  <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">
+                <div className="flex flex-wrap items-center gap-3 mb-4 text-xs text-muted-foreground">
+                  <span className="rounded-full bg-primary/10 text-primary px-3 py-1 font-medium">
                     {post.category}
                   </span>
+
                   <div className="flex items-center gap-1">
-                    <Calendar className="h-3 w-3" />
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                    <Calendar className="h-3.5 w-3.5" />
+                    <span>
+                      {new Date(post.date).toLocaleDateString("id-ID")}
+                    </span>
                   </div>
+
                   <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
+                    <Clock className="h-3.5 w-3.5" />
                     <span>
                       {post.readTime} {t("blog.readTime")}
                     </span>
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3 text-balance group-hover:text-primary transition-colors">
+
+                <h3
+                  className="
+                    text-xl
+                    font-bold
+                    text-foreground
+                    mb-3
+                    line-clamp-2
+                    group-hover:text-primary
+                    transition-colors
+                  "
+                >
                   {post.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{post.excerpt}</p>
+
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5 line-clamp-3">
+                  {post.excerpt}
+                </p>
+
                 <Link href={`/blog/${post.slug}`}>
-                  <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                  <Button
+                    variant="ghost"
+                    className="
+                      p-0
+                      h-auto
+                      text-primary
+                      hover:text-primary/80
+                    "
+                  >
                     {t("common.readMore")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

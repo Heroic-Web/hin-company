@@ -8,7 +8,7 @@ export interface Purchase {
 
 export const purchases: Purchase[] = [
   {
-    name: "Seina",
+    name: "Cahaya",
     city: "Lampung",
     product: "Website Toko Online",
     time: "1 menit lalu",
@@ -36,9 +36,9 @@ export const purchases: Purchase[] = [
     avatar: "https://i.pravatar.cc/40?img=3"
   },
   {
-    name: "Intan",
+    name: "Asep",
     city: "Lampung",
-    product: "Website Toko Online",
+    product: "Website PPDB",
     time: "15 menit lalu",
     avatar: "https://i.pravatar.cc/40?img=4"
   }
