@@ -10,16 +10,17 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import PurchaseNotification from "@/components/PurchaseNotification"
+// @ts-ignore: Allow importing global CSS without type declarations
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "HINAI Tech - Web App Development, SEO & Design Services",
+  title: "HINAI Tech - Web App Development, Article SEO & Design Services",
   description:
     "HINAI Tech, SEO optimization, and design services. We create modern, responsive websites that drive results for your business.",
   keywords: ["web development", "SEO", "design", "website creation", "digital marketing"],
   authors: [{ name: "HINAI Tech" }],
   openGraph: {
-    title: "HINAI - App Web Development, SEO & Design Services",
+    title: "HINAI - Web App Development, Article SEO & Design Services",
     description: "b development, SEO optimization, and design services.",
     type: "website",
   },
