@@ -25,7 +25,7 @@ export default function TermsConditionsPage() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-foreground mb-4">2. Services</h2>
                 <p className="mb-4">
-                  HINAI Tech provides web development, SEO optimization, digital design, and related online services. We reserve
+                  HINAI Tech provides web App development, SEO optimization, digital design, and related online services. We reserve
                   the right to add, modify, or discontinue services at any time without prior notice.
                 </p>
               </section>
