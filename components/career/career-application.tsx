@@ -191,14 +191,37 @@ export function CareerApplication({ selectedPosition }: CareerApplicationProps) 
                     <SelectValue placeholder="Select position" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Co-Founder">Co-Founder</SelectItem>
-                    <SelectItem value="Frontend Developer">Frontend Developer</SelectItem>
-                    <SelectItem value="Backend Developer">Backend Developer</SelectItem>
-                    <SelectItem value="UI/UX Designer">UI/UX Designer</SelectItem>
-                    <SelectItem value="Digital Marketing Specialist">Digital Marketing Specialist</SelectItem>
-                    <SelectItem value="Content Writer">Content Writer</SelectItem>
-                    <SelectItem value="Project Manager">Project Manager</SelectItem>
-                    <SelectItem value="Project Manager">Social Media Specialist</SelectItem>
+                    <SelectItem value="Co-Founder & Chief Growth Officer (CGO)">
+                      Co-Founder & Chief Growth Officer (CGO)
+                    </SelectItem>
+
+                    <SelectItem value="Full Stack Developer">
+                      Full Stack Developer
+                    </SelectItem>
+
+                    <SelectItem value="Project Manager">
+                      Project Manager
+                    </SelectItem>
+
+                    <SelectItem value="Social Media Specialist">
+                      Social Media Specialist
+                    </SelectItem>
+
+                    <SelectItem value="Frontend Developer (Internship)">
+                      Frontend Developer (Internship)
+                    </SelectItem>
+
+                    <SelectItem value="Backend Developer (Internship)">
+                      Backend Developer (Internship)
+                    </SelectItem>
+
+                    <SelectItem value="UI/UX Designer">
+                      UI/UX Designer
+                    </SelectItem>
+
+                    <SelectItem value="Content Writer">
+                      Content Writer
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
