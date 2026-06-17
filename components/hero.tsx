@@ -162,43 +162,45 @@ export function Hero() {
           </div>
         </h1>
 
-       <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-6 md:mb-10 max-w-sm sm:max-w-xl lg:max-w-2xl leading-relaxed px-2 sm:px-0 break-words text-center lg:text-left">
-        {t("hero.subtitle")}
-      </p>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-10 max-w-xs sm:max-w-xl lg:max-w-2xl leading-relaxed px-4 sm:px-0 text-justify mx-auto lg:mx-0 whitespace-normal break-words">
+          {t("hero.subtitle")}
+        </p>
 
-       <div className="flex flex-row w-full max-w-xl mx-auto lg:mx-0 gap-3 sm:gap-4 px-2 sm:px-0">
-          <Button
-            asChild
-            size="lg"
-            className="flex-1 h-8 sm:h-10 rounded-xl sm:rounded-2xl shadow-lg text-sm sm:text-base font-semibold"
-          >
-            <Link
-              href={t("common.getStarted.link")}
-              target="_blank"
-              rel="noopener noreferrer"
+      <div className="flex justify-center w-full px-4">
+          <div className="flex w-full max-w-xs sm:max-w-sm md:max-w-md gap-2 sm:gap-3">
+            
+            <Button
+              asChild
+              className="flex-1 h-9 sm:h-10 rounded-lg sm:rounded-xl border border-primary/20 shadow-sm text-xs sm:text-sm font-medium"
             >
-              {t("common.getStarted")}
-              <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
-            </Link>
-          </Button>
+              <Link
+                href={t("common.getStarted.link")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("common.getStarted")}
+                <ArrowRight className="ml-1 sm:ml-2 h-4 w-4 shrink-0" />
+              </Link>
+            </Button>
 
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="flex-1 h-8 sm:h-10 rounded-xl sm:rounded-2xl bg-background/60 backdrop-blur-xl text-sm sm:text-base font-semibold"
-          >
-            <Link href="/services">
-              Our Services
-            </Link>
-          </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="flex-1 h-9 sm:h-10 rounded-lg sm:rounded-xl border border-muted shadow-sm text-xs sm:text-sm font-medium"
+            >
+              <Link href="/services">
+                Our Services
+              </Link>
+            </Button>
+
+          </div>
         </div>
       </div>
 
       <div className="relative">
         <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-primary/5 rounded-[40px] blur-2xl" />
 
-        <div className="relative overflow-hidden rounded-[32px] border border-primary/10 bg-background/60 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.25)]">
+        <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-primary/10 bg-background/60 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.25)]">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -213,7 +215,7 @@ export function Hero() {
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`Hero slide ${index + 1}`}
-                  className="w-full h-[240px] sm:h-[320px] md:h-[520px] object-cover"
+                  className="w-full h-[200px] sm:h-[300px] md:h-[520px] object-cover"
                 />
               </div>
             ))}
