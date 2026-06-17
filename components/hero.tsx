@@ -48,7 +48,7 @@ export function Hero() {
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-center">
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left w-full">
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary mb-6">
           Trusted Digital & AI Technology Partner
         </div>
@@ -78,7 +78,7 @@ export function Hero() {
                 [
               </span>
 
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left w-full">
                 <span
                   className="
                     block
@@ -143,34 +143,34 @@ export function Hero() {
             </div>
 
             <div className="mt-6 flex flex-nowrap overflow-x-auto gap-3 justify-start lg:justify-start scrollbar-hide">
-  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
-    Digital Innovation Business
-  </span>
+              <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+                Digital Innovation Business
+              </span>
 
-  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
-    Growth AI Automation
-  </span>
+              <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+                Growth AI Automation
+              </span>
 
-  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
-    Smart Solutions
-  </span>
+              <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+                Smart Solutions
+              </span>
 
-  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
-    Technology Partner
-  </span>
-</div>
+              <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+                Technology Partner
+              </span>
+            </div>
           </div>
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-full sm:max-w-xl lg:max-w-2xl leading-relaxed px-2 sm:px-0 break-words">
           {t("hero.subtitle")}
         </p>
 
-        <div className="flex w-full max-w-xl mx-auto lg:mx-0 gap-3 sm:gap-4">
+       <div className="flex flex-row w-full max-w-xl mx-auto lg:mx-0 gap-3 sm:gap-4 px-2 sm:px-0">
           <Button
             asChild
             size="lg"
-            className="flex-1 h-14 rounded-2xl shadow-lg text-base font-semibold"
+            className="flex-1 h-11 sm:h-13 rounded-xl sm:rounded-2xl shadow-lg text-sm sm:text-base font-semibold"
           >
             <Link
               href={t("common.getStarted.link")}
@@ -186,7 +186,7 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="flex-1 h-14 rounded-2xl bg-background/60 backdrop-blur-xl text-base font-semibold"
+            className="flex-1 h-11 sm:h-13 rounded-xl sm:rounded-2xl bg-background/60 backdrop-blur-xl text-sm sm:text-base font-semibold"
           >
             <Link href="/services">
               Our Services
