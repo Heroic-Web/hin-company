@@ -50,13 +50,9 @@ export function AboutValues() {
 
   return (
     <>
-      {/* ==================================== */}
       {/* VISION & MISSION PREMIUM 3D */}
-      {/* ==================================== */}
-
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/[0.03] to-background" />
-
         <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
         <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-primary/10 blur-[120px]" />
         <div className="absolute top-20 left-0 h-[300px] w-[300px] rounded-full bg-primary/5 blur-[120px]" />
@@ -76,48 +72,44 @@ export function AboutValues() {
             </h2>
 
             <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
-              Our vision and mission serve as the foundation of every
-              innovation, technology, and strategic solution we create to help
-              businesses grow in the digital era.
+              Our vision and mission serve as the foundation of every innovation,
+              technology, and strategic solution we create to help businesses grow
+              in the digital era.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Vision */}
-
             <div className="group perspective-[2000px]">
               <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-br from-background via-background to-primary/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_35px_80px_-15px_rgba(0,0,0,0.35)]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--primary),0.15),transparent_40%)]" />
-
                 <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
 
-                <CardContent className="relative p-10 md:p-12">
+                <CardContent className="relative p-6 sm:p-8 md:p-12">
                   <div className="mb-8 flex items-center justify-between">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
-                      <Eye className="h-10 w-10 text-primary-foreground" />
+                    <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
+                      <Eye className="h-8 w-8 sm:h-10 sm:w-10 text-primary-foreground" />
                     </div>
-
-                    <Orbit className="h-12 w-12 text-primary/30" />
+                    <Orbit className="h-10 w-10 sm:h-12 sm:w-12 text-primary/30" />
                   </div>
 
                   <div className="mb-4">
                     <span className="text-primary font-semibold uppercase tracking-[0.25em] text-xs">
                       Vision
                     </span>
-
-                    <h3 className="mt-2 text-3xl md:text-4xl font-black text-foreground">
+                    <h3 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
                       Our Vision
                     </h3>
                   </div>
 
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    To become a trusted digital partner and a symbol of modern
-                    heroism that provides creative and innovative solutions,
-                    accelerating the global digital revolution and driving
-                    clients’ success with determination and HINAI spirit.
+                  <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+                    To become a trusted digital partner and a symbol of modern heroism
+                    that provides creative and innovative solutions, accelerating the
+                    global digital revolution and driving clients’ success with
+                    determination and HINAI spirit.
                   </p>
 
-                  <div className="mt-10 flex items-center gap-3">
+                  <div className="mt-8 sm:mt-10 flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
                     <span className="text-sm text-muted-foreground">
                       Future-focused digital transformation
@@ -128,33 +120,29 @@ export function AboutValues() {
             </div>
 
             {/* Mission */}
-
             <div className="group perspective-[2000px]">
               <Card className="relative overflow-hidden border-primary/20 bg-gradient-to-br from-background via-background to-primary/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_35px_80px_-15px_rgba(0,0,0,0.35)]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(var(--primary),0.15),transparent_40%)]" />
-
                 <div className="absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-primary/15 blur-3xl" />
 
-                <CardContent className="relative p-10 md:p-12">
+                <CardContent className="relative p-6 sm:p-8 md:p-12">
                   <div className="mb-8 flex items-center justify-between">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
-                      <Target className="h-10 w-10 text-primary-foreground" />
+                    <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
+                      <Target className="h-8 w-8 sm:h-10 sm:w-10 text-primary-foreground" />
                     </div>
-
-                    <Rocket className="h-12 w-12 text-primary/30" />
+                    <Rocket className="h-10 w-10 sm:h-12 sm:w-12 text-primary/30" />
                   </div>
 
                   <div className="mb-6">
                     <span className="text-primary font-semibold uppercase tracking-[0.25em] text-xs">
                       Mission
                     </span>
-
-                    <h3 className="mt-2 text-3xl md:text-4xl font-black text-foreground">
+                    <h3 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
                       Our Mission
                     </h3>
                   </div>
 
-                  <div className="space-y-5">
+                  <div className="space-y-4 sm:space-y-5">
                     {[
                       "Overcome every challenge through determination, innovation, and proactive solutions.",
                       "Implement cutting-edge technologies to deliver exceptional business value.",
@@ -163,13 +151,12 @@ export function AboutValues() {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-start gap-4 rounded-2xl border border-primary/10 bg-background/70 p-4 backdrop-blur-sm"
+                        className="flex items-start gap-3 sm:gap-4 rounded-2xl border border-primary/10 bg-background/70 p-3 sm:p-4 backdrop-blur-sm"
                       >
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground text-sm font-bold">
+                        <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground text-xs sm:text-sm font-bold">
                           {index + 1}
                         </div>
-
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                           {item}
                         </p>
                       </div>
@@ -182,47 +169,44 @@ export function AboutValues() {
         </div>
       </section>
 
-      {/* ==================================== */}
       {/* CORE VALUES PREMIUM */}
-      {/* ==================================== */}
-
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/[0.02] to-background" />
-
         <div className="absolute top-0 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16 sm:mb-20">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-medium text-primary">
               <Award className="h-4 w-4" />
               Core Values
             </div>
 
-            <h2 className="mt-6 text-4xl md:text-6xl font-black text-foreground">
+            <h2 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-black text-foreground">
               PT. Heroic Inovasi
               <span className="block bg-gradient-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent">
                 Nusantara
               </span>
             </h2>
 
-            <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
-              The principles that shape our culture, drive innovation, and
-              inspire every achievement we create together.
+            <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+              The principles that shape our culture, drive innovation, and inspire
+              every achievement we create together.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {/* MOBILE FIX: horizontal scroll on mobile */}
+          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-2 xl:grid-cols-3 md:overflow-visible">
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-primary/10 bg-gradient-to-br from-background via-background to-primary/5 transition-all duration-500 hover:-translate-y-4 hover:border-primary/30 hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)]"
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-start group relative overflow-hidden border-primary/10 bg-gradient-to-br from-background via-background to-primary/5 transition-all duration-500 hover:-translate-y-4 hover:border-primary/30 hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)]"
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_right,rgba(var(--primary),0.12),transparent_45%)]" />
 
-                <CardContent className="relative p-8">
+                <CardContent className="relative p-6 sm:p-8">
                   <div className="mb-6">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_15px_35px_rgba(0,0,0,0.2)] transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <value.icon className="h-10 w-10 text-primary-foreground" />
+                    <div className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/70 shadow-[0_15px_35px_rgba(0,0,0,0.2)] transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <value.icon className="h-8 w-8 sm:h-10 sm:w-10 text-primary-foreground" />
                     </div>
                   </div>
 
@@ -230,15 +214,14 @@ export function AboutValues() {
                     <span className="text-xs font-bold tracking-widest text-primary uppercase">
                       0{index + 1}
                     </span>
-
                     <div className="h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                     {value.title}
                   </h3>
 
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </CardContent>

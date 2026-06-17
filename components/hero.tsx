@@ -38,237 +38,240 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 lg:pt-32">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
+    <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+    <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-accent/10 blur-3xl animate-pulse delay-1000" />
+  </div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-center">
+      <div className="text-center lg:text-left">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary mb-6">
+          Trusted Digital & AI Technology Partner
+        </div>
+
+        <h1 className="mb-8">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="relative inline-flex items-center justify-center">
+              <span
+                className="
+                  absolute
+                  -left-7
+                  md:-left-10
+                  lg:-left-12
+                  top-1/2
+                  -translate-y-1/2
+                  text-5xl
+                  md:text-7xl
+                  lg:text-8xl
+                  font-black
+                  text-green-500
+                  select-none
+                "
+                style={{
+                  textShadow: "0 0 25px rgba(34,197,94,.6)",
+                }}
+              >
+                [
+              </span>
+
+              <div className="text-center lg:text-left">
+                <span
+                  className="
+                    block
+                    text-xl
+                    md:text-2xl
+                    lg:text-3xl
+                    font-semibold
+                    tracking-[0.25em]
+                    uppercase
+                    text-muted-foreground
+                    mb-3
+                  "
+                >
+                  Welcome To
+                </span>
+
+                <span
+                  className="
+                    block
+                    text-5xl
+                    md:text-7xl
+                    lg:text-8xl
+                    xl:text-9xl
+                    font-black
+                    leading-none
+                    bg-gradient-to-r
+                    from-green-400
+                    via-emerald-500
+                    to-green-700
+                    bg-clip-text
+                    text-transparent
+                  "
+                  style={{
+                    filter: "drop-shadow(0 0 30px rgba(34,197,94,.35))",
+                  }}
+                >
+                  HINAI Tech
+                </span>
+              </div>
+
+              <span
+                className="
+                  absolute
+                  -right-7
+                  md:-right-10
+                  lg:-right-12
+                  top-1/2
+                  -translate-y-1/2
+                  text-5xl
+                  md:text-7xl
+                  lg:text-8xl
+                  font-black
+                  text-green-500
+                  select-none
+                "
+                style={{
+                  textShadow: "0 0 25px rgba(34,197,94,.6)",
+                }}
+              >
+                ]
+              </span>
+            </div>
+
+            <div className="mt-6 flex flex-nowrap overflow-x-auto gap-3 justify-start lg:justify-start scrollbar-hide">
+  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+    Digital Innovation Business
+  </span>
+
+  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+    Growth AI Automation
+  </span>
+
+  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+    Smart Solutions
+  </span>
+
+  <span className="shrink-0 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary">
+    Technology Partner
+  </span>
+</div>
+          </div>
+        </h1>
+
+        <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+          {t("hero.subtitle")}
+        </p>
+
+        <div className="flex w-full max-w-xl mx-auto lg:mx-0 gap-3 sm:gap-4">
+          <Button
+            asChild
+            size="lg"
+            className="flex-1 h-14 rounded-2xl shadow-lg text-base font-semibold"
+          >
+            <Link
+              href={t("common.getStarted.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("common.getStarted")}
+              <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
+            </Link>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="flex-1 h-14 rounded-2xl bg-background/60 backdrop-blur-xl text-base font-semibold"
+          >
+            <Link href="/services">
+              Our Services
+            </Link>
+          </Button>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left">
-            {/* Main heading */}
-            <h1 className="text-center lg:text-left mb-6">
-              <div className="flex items-center justify-center lg:justify-start gap-4">
+      <div className="relative">
+        <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-primary/5 rounded-[40px] blur-2xl" />
 
-                {/* Left Bracket */}
-                <span
-                  className="
-                    text-5xl
-                    md:text-7xl
-                    lg:text-8xl
-                    font-black
-                    text-green-500
-                    select-none
-                    animate-pulse
-                  "
-                  style={{
-                    textShadow: "0 0 15px rgba(34,197,94,.8)",
-                  }}
-                >
-                  [
-                </span>
-
-                <div>
-                  <span
-                    className="
-                      block
-                      text-4xl
-                      md:text-6xl
-                      lg:text-7xl
-                      font-bold
-                      text-foreground
-                    "
-                  >
-                    Welcome To
-                  </span>
-
-                  <span
-                    className="
-                      block
-                      mt-2
-                      text-5xl
-                      md:text-7xl
-                      lg:text-8xl
-                      font-black
-                      bg-gradient-to-r
-                      from-green-400
-                      via-emerald-500
-                      to-green-700
-                      bg-clip-text
-                      text-transparent
-                      animate-pulse
-                    "
-                    style={{
-                      textShadow: `
-                        0 0 15px rgba(34,197,94,.4),
-                        0 0 30px rgba(34,197,94,.3)
-                      `,
-                    }}
-                  >
-                    HINAI Tech
-                  </span>
-                </div>
-
-                {/* Right Bracket */}
-                <span
-                  className="
-                    text-5xl
-                    md:text-7xl
-                    lg:text-8xl
-                    font-black
-                    text-green-500
-                    select-none
-                    animate-pulse
-                  "
-                  style={{
-                    textShadow: "0 0 15px rgba(34,197,94,.8)",
-                  }}
-                >
-                  ]
-                </span>
-
-              </div>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl text-pretty leading-relaxed">
-              {t("hero.subtitle")}
-            </p>
-
-            {/* Service icons */}
-            <div className="flex justify-center lg:justify-start items-center space-x-8 mb-12">
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Code className="h-8 w-8 text-primary" />
-                </div>
-                <span className="text-sm font-medium text-foreground">{t("services.web")}</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Smartphone className="h-8 w-8 text-primary" />
-                </div>
-                <span className="text-sm font-medium text-foreground">{t("services.landingpage")}</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Search className="h-8 w-8 text-primary" />
-                </div>
-                <span className="text-sm font-medium text-foreground">{t("services.seo")}</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Palette className="h-8 w-8 text-primary" />
-                </div>
-                <span className="text-sm font-medium text-foreground">{t("services.design")}</span>
-              </div>
-            </div>
-
-            {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              {/* Tombol Consult Now (WhatsApp) */}
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
-              >
-                <Link
-                  href={t("common.getStarted.link")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("common.getStarted")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-
-              {/* Tombol Learn More (About) */}
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 bg-transparent"
-              >
-                <Link href={t("common.learnMore.link")}>
-                  {t("common.learnMore")}
-                </Link>
-              </Button>
-            </div>
-
-          </div>
-
-          {/* Right side - Image carousel */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+        <div className="relative overflow-hidden rounded-[32px] border border-primary/10 bg-background/60 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.25)]">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+            }}
+          >
+            {heroImages.map((image, index) => (
               <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                key={index}
+                className="w-full flex-shrink-0"
               >
-                {heroImages.map((image, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <img
-                      src={image || "/placeholder.svg"}
-                      alt={`Hero slide ${index + 1}`}
-                      className="w-full h-[400px] lg:h-[500px] object-cover"
-                    />
-                  </div>
-                ))}
+                <img
+                  src={image || "/placeholder.svg"}
+                  alt={`Hero slide ${index + 1}`}
+                  className="w-full h-[420px] md:h-[520px] object-cover"
+                />
               </div>
+            ))}
+          </div>
 
-              {/* Navigation buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-background/80 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-background/80 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+            {heroImages.map((_, index) => (
               <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full transition-colors"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full transition-colors"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-
-              {/* Slide indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {heroImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? "bg-primary" : "bg-background/50"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-primary">99%</div>
-            <div className="text-sm text-muted-foreground">On Time Delivery</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary">1000+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary">5+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary">24/7</div>
-            <div className="text-sm text-muted-foreground">Support</div>
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  index === currentSlide
+                    ? "w-8 h-3 bg-primary"
+                    : "w-3 h-3 bg-white/40"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div className="mt-20 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        { value: "99%", label: "On Time Delivery" },
+        { value: "1000+", label: "Happy Clients" },
+        { value: "5+", label: "Years Experience" },
+        { value: "24/7", label: "Support Service" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="rounded-3xl border border-primary/10 bg-background/60 backdrop-blur-xl p-6 text-center shadow-lg"
+        >
+          <div className="text-3xl md:text-4xl font-black text-primary mb-2">
+            {item.value}
+          </div>
+
+          <div className="text-sm text-muted-foreground">
+            {item.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
   )
 }
