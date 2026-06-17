@@ -15,12 +15,13 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 // --- Dictionary Lengkap ---
-const translations = {
+const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
     "nav.home": "Home",
     "nav.about": "About",
     "nav.services": "Services",
+    "nav.whyChooseUs": "Why Choose Us",
     "nav.blog": "Blog",
     "nav.career": "Career",
     "nav.contact": "Contact",
@@ -295,6 +296,11 @@ export function Navbar() {
     <nav className="flex gap-4 items-center">
       <span>{t("nav.home")}</span>
       <span>{t("nav.about")}</span>
+      <span>{t("nav.services")}</span>
+      <span>{t("nav.whyChooseUs")}</span>
+      <span>{t("nav.blog")}</span>
+      <span>{t("nav.career")}</span>
+      <span>{t("nav.contact")}</span>
       <LanguageToggle />
     </nav>
   )

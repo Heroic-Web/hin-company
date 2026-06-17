@@ -81,7 +81,7 @@ export function Navigation() {
 
     { href: "/about", label: t("nav.about"), icon: User },
 
-    { href: "/contact", label: t("nav.contact"), icon: Mail },
+    { href: "/why-choose-us", label: t("nav.whyChooseUs"), icon: Wrench },
 
     {
       href: "/services",
@@ -97,8 +97,6 @@ export function Navigation() {
       ],
     },
 
-    { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
-
     { href: "/portfolio", label: "Portfolio", icon: ExternalLink },
 
     {
@@ -109,8 +107,11 @@ export function Navigation() {
         { href: "/blog", label: t("nav.blog") },
         { href: "/career", label: t("nav.career"), icon: Briefcase },
         { href: "/free-tools", label: "Free Tools" },
+            { href: "/reseller-partner", label: t("nav.resellerPartner"), icon: DollarSign },
       ],
     },
+
+    { href: "/contact", label: t("nav.contact"), icon: Mail },
   ]
 
   const handleDesktopDropdown = (label: string) => {
