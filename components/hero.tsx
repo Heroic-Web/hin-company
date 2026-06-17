@@ -38,15 +38,15 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 lg:pt-32">
-  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 pointer-events-none z-0" />
 
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
+  <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px] z-0 pointer-events-none" />
     <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl animate-pulse" />
     <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-accent/10 blur-3xl animate-pulse delay-1000" />
   </div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-center">
       <div className="text-center lg:text-left w-full">
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl px-4 py-2 text-sm font-medium text-primary mb-6">
@@ -162,7 +162,7 @@ export function Hero() {
           </div>
         </h1>
 
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-10 max-w-xs sm:max-w-xl lg:max-w-2xl leading-relaxed px-4 sm:px-0 text-justify mx-auto lg:mx-0 whitespace-normal break-words">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 md:mb-10 max-w-xs sm:max-w-xl lg:max-w-2xl leading-relaxed px-4 sm:px-0 text-justify mx-auto lg:mx-0 whitespace-normal break-words">
           {t("hero.subtitle")}
         </p>
 
@@ -171,7 +171,7 @@ export function Hero() {
             
             <Button
               asChild
-              className="flex-1 h-9 sm:h-10 rounded-lg sm:rounded-xl border border-primary/20 shadow-sm text-xs sm:text-sm font-medium"
+              className="flex-1 h-11 sm:h-12 rounded-lg sm:rounded-xl border border-primary/20 shadow-sm text-xs sm:text-sm font-medium"
             >
               <Link
                 href={t("common.getStarted.link")}
@@ -186,7 +186,7 @@ export function Hero() {
             <Button
               asChild
               variant="outline"
-              className="flex-1 h-9 sm:h-10 rounded-lg sm:rounded-xl border border-muted shadow-sm text-xs sm:text-sm font-medium"
+              className="flex-1 h-11 sm:h-12 rounded-lg sm:rounded-xl border border-muted shadow-sm text-xs sm:text-sm font-medium"
             >
               <Link href="/services">
                 Our Services
@@ -200,9 +200,11 @@ export function Hero() {
       <div className="relative">
         <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-primary/5 rounded-[40px] blur-2xl" />
 
-        <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-primary/10 bg-background/60 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.25)]">
+        <div className="relative z-20 overflow-hidden rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-primary/10 bg-background/90 backdrop-blur-md shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
+
+          {/* SLIDES */}
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="relative z-10 flex transition-transform duration-500 ease-in-out will-change-transform"
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
             }}
@@ -210,44 +212,51 @@ export function Hero() {
             {heroImages.map((image, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0"
+                className="w-full flex-shrink-0 relative"
               >
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`Hero slide ${index + 1}`}
-                  className="w-full h-[200px] sm:h-[300px] md:h-[520px] object-cover"
+                  className="w-full h-[180px] sm:h-[260px] md:h-[520px] object-cover"
                 />
+
+                {/* LIGHT OVERLAY BIAR TIDAK KETUTUP BACKGROUND */}
+                <div className="absolute inset-0 bg-black/0 sm:bg-black/0 md:bg-black/0 pointer-events-none" />
               </div>
             ))}
           </div>
 
+          {/* LEFT BUTTON */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-background/80 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-9 w-9 sm:h-11 sm:w-11 rounded-full bg-background/90 backdrop-blur-md border border-white/10 flex items-center justify-center hover:scale-105 active:scale-95 transition z-30"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
 
+          {/* RIGHT BUTTON */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-background/80 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-9 w-9 sm:h-11 sm:w-11 rounded-full bg-background/90 backdrop-blur-md border border-white/10 flex items-center justify-center hover:scale-105 active:scale-95 transition z-30"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
 
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+          {/* DOT INDICATOR */}
+          <div className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-30">
             {heroImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentSlide
-                    ? "w-8 h-3 bg-primary"
-                    : "w-3 h-3 bg-white/40"
+                    ? "w-6 sm:w-8 h-2 sm:h-3 bg-primary"
+                    : "w-2.5 sm:w-3 h-2 sm:h-3 bg-white/40"
                 }`}
               />
             ))}
           </div>
+
         </div>
       </div>
     </div>
