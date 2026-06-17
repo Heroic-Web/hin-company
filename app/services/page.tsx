@@ -1,26 +1,27 @@
 import { Navigation } from "@/components/navigation"
 import { LanguageProvider } from "@/components/language-provider"
 import { ServicesHero } from "@/components/services/services-hero"
-import { ServicesGrid } from "@/components/services/services-grid"
-import { ProcessSection } from "@/components/services/process-section"
 import { PricingSection } from "@/components/services/pricing-section"
+import { ContactForm } from "@/components/contact/contact-form"
+
 export const metadata = {
   title: "Our Services - HINAI Tech",
   description:
-    "We provide professional Website Development, High Converting Landing Pages, SEO Optimized Content, Digital Advertising Solutions, and Creative Design Services to accelerate your business growth in the digital world.",
+    "Explore HINAI Tech professional services including Website Development, Landing Page Development, SEO Content Writing, Artificial Intelligence Solutions, Branding & Design, and Digital Transformation services tailored for modern businesses.",
 }
 
 export default function ServicesPage() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-hidden">
         <Navigation />
+
         <main>
           <ServicesHero />
-          
-          <ServicesGrid />
-          <ProcessSection />
+
           <PricingSection />
+
+          <ContactForm />
         </main>
       </div>
     </LanguageProvider>
