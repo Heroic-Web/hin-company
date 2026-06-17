@@ -38,7 +38,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 lg:pt-32">
-  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 pointer-events-none z-0" />
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background/95 to-accent/5 pointer-events-none z-0" />
 
   <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
     <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px] z-0 pointer-events-none" />
@@ -200,7 +200,7 @@ export function Hero() {
       <div className="relative">
         <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-primary/5 rounded-[40px] blur-2xl" />
 
-        <div className="relative z-20 overflow-hidden rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-primary/10 bg-background/90 backdrop-blur-md shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
+        <div className="relative z-30 overflow-hidden rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-primary/10 bg-background/95 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
 
           {/* SLIDES */}
           <div
