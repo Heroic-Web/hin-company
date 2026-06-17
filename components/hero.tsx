@@ -162,15 +162,15 @@ export function Hero() {
           </div>
         </h1>
 
-        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-full sm:max-w-xl lg:max-w-2xl leading-relaxed px-2 sm:px-0 break-words">
-          {t("hero.subtitle")}
-        </p>
+       <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-6 md:mb-10 max-w-sm sm:max-w-xl lg:max-w-2xl leading-relaxed px-2 sm:px-0 break-words text-center lg:text-left">
+        {t("hero.subtitle")}
+      </p>
 
        <div className="flex flex-row w-full max-w-xl mx-auto lg:mx-0 gap-3 sm:gap-4 px-2 sm:px-0">
           <Button
             asChild
             size="lg"
-            className="flex-1 h-11 sm:h-13 rounded-xl sm:rounded-2xl shadow-lg text-sm sm:text-base font-semibold"
+            className="flex-1 h-8 sm:h-10 rounded-xl sm:rounded-2xl shadow-lg text-sm sm:text-base font-semibold"
           >
             <Link
               href={t("common.getStarted.link")}
@@ -186,7 +186,7 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="flex-1 h-11 sm:h-13 rounded-xl sm:rounded-2xl bg-background/60 backdrop-blur-xl text-sm sm:text-base font-semibold"
+            className="flex-1 h-8 sm:h-10 rounded-xl sm:rounded-2xl bg-background/60 backdrop-blur-xl text-sm sm:text-base font-semibold"
           >
             <Link href="/services">
               Our Services
@@ -213,7 +213,7 @@ export function Hero() {
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`Hero slide ${index + 1}`}
-                  className="w-full h-[420px] md:h-[520px] object-cover"
+                  className="w-full h-[240px] sm:h-[320px] md:h-[520px] object-cover"
                 />
               </div>
             ))}
@@ -250,7 +250,7 @@ export function Hero() {
       </div>
     </div>
 
-    <div className="mt-20 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-5">
+    <div className="mt-14 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 px-2 sm:px-0">
       {[
         { value: "99%", label: "On Time Delivery" },
         { value: "1000+", label: "Happy Clients" },
@@ -259,13 +259,13 @@ export function Hero() {
       ].map((item, index) => (
         <div
           key={index}
-          className="rounded-3xl border border-primary/10 bg-background/60 backdrop-blur-xl p-6 text-center shadow-lg"
+          className="rounded-2xl border border-primary/10 bg-background/60 backdrop-blur-xl p-3 sm:p-6 text-center shadow-md sm:shadow-lg"
         >
-          <div className="text-3xl md:text-4xl font-black text-primary mb-2">
+          <div className="text-xl sm:text-2xl md:text-4xl font-black text-primary mb-1 sm:mb-2">
             {item.value}
           </div>
 
-          <div className="text-sm text-muted-foreground">
+          <div className="text-[11px] sm:text-sm text-muted-foreground leading-tight">
             {item.label}
           </div>
         </div>
