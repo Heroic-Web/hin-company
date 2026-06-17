@@ -200,11 +200,11 @@ export function Hero() {
       <div className="relative">
         <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-primary/5 rounded-[40px] blur-2xl" />
 
-        <div className="relative z-30 overflow-hidden rounded-[20px] sm:rounded-[28px] md:rounded-[32px] border border-primary/10 bg-background/95 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
+        <div className="relative z-30 overflow-hidden rounded-[18px] sm:rounded-[28px] md:rounded-[32px] border border-primary/10 bg-transparent shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
 
           {/* SLIDES */}
           <div
-            className="relative z-10 flex transition-transform duration-500 ease-in-out will-change-transform"
+            className="relative z-20 flex transition-transform duration-500 ease-in-out will-change-transform"
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
             }}
@@ -217,7 +217,7 @@ export function Hero() {
                 <img
                   src={image || "/placeholder.svg"}
                   alt={`Hero slide ${index + 1}`}
-                  className="w-full h-[180px] sm:h-[260px] md:h-[520px] object-cover"
+                  className="w-full h-[200px] sm:h-[280px] md:h-[520px] object-contain bg-black/0"
                 />
 
                 {/* LIGHT OVERLAY BIAR TIDAK KETUTUP BACKGROUND */}
