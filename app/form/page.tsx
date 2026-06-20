@@ -61,8 +61,7 @@ export default function FormPage() {
         </p>
 
         <div className="quote">
-          "Proyek hebat tidak dimulai dari kode, tetapi dari brief yang
-          jelas."
+          "Setiap menit yang Anda investasikan hari ini adalah fondasi pertumbuhan bisnis esok hari."
         </div>
 
         <div className="loader3d">
