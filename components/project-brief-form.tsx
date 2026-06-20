@@ -182,59 +182,31 @@ export function ProjectBriefForm() {
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
-
     defaultValues: defaultFormValues,
+    mode: "onChange",
   })
 
-    const [
-        picName,
-        position,
-        companyName,
-        email,
-        whatsapp,
-        companyAddress,
-        operationalArea,
-        projectName,
-        businessDescription,
-        projectGoals,
-        launchTarget,
-        targetAudience,
-        visualStyle,
-        primaryColor,
-        agreements,
-        serviceType,
-    ] = useWatch({
+  const watched = useWatch({
     control: form.control,
-    name: [
-        "picName",
-        "position",
-        "companyName",
-        "email",
-        "whatsapp",
-        "companyAddress",
-        "operationalArea",
-        "projectName",
-        "businessDescription",
-        "projectGoals",
-        "launchTarget",
-        "targetAudience",
-        "visualStyle",
-        "primaryColor",
-        "agreements",
-        "serviceType",
-    ],
+  })
+
+  const serviceType =
+    watched.serviceType ?? "Website Development"
+
+  const projectGoals = watched.projectGoals ?? []
+  const visualStyle = watched.visualStyle ?? []
+  const agreements = watched.agreements ?? []
+
+  useEffect(() => {
+    const subscription = form.watch((value) => {
+      localStorage.setItem(
+        "hinai-project-brief",
+        JSON.stringify(value)
+      )
     })
 
-    useEffect(() => {
-        const subscription = form.watch((value) => {
-            localStorage.setItem(
-            "hinai-project-brief",
-            JSON.stringify(value)
-            )
-        })
-
-        return () => subscription.unsubscribe()
-    }, [form])
+    return () => subscription.unsubscribe()
+  }, [form])
 
   useEffect(() => {
     if (typeof window === "undefined") return
@@ -248,165 +220,213 @@ export function ProjectBriefForm() {
     try {
       const parsed = JSON.parse(saved)
 
-        form.reset({
-        ...form.getValues(),
+      form.reset({
+        ...defaultFormValues,
         ...parsed,
-        serviceType:
-            services.includes(parsed.serviceType)
-            ? parsed.serviceType
-            : "Website Development",
-        })
-    } catch {}
+        serviceType: services.includes(
+          parsed.serviceType
+        )
+          ? parsed.serviceType
+          : "Website Development",
+      })
+    } catch (error) {
+      console.error("LOCAL STORAGE ERROR:", error)
+    }
   }, [form])
 
   const progress = useMemo(() => {
     const requiredFields = [
-        picName,
-        position,
-        companyName,
-        email,
-        whatsapp,
-        companyAddress,
-        operationalArea,
-        projectName,
-        businessDescription,
-        (projectGoals?.length ?? 0) > 0,
-        launchTarget,
-        targetAudience,
-        (visualStyle?.length ?? 0) > 0,
-        primaryColor,
-        (agreements?.length ?? 0) === agreementItems.length,
+      watched.picName,
+      watched.position,
+      watched.companyName,
+      watched.email,
+      watched.whatsapp,
+      watched.companyAddress,
+      watched.operationalArea,
+      watched.projectName,
+      watched.businessDescription,
+      watched.launchTarget,
+      watched.targetAudience,
+      watched.primaryColor,
+
+      projectGoals.length > 0,
+      visualStyle.length > 0,
+      agreements.length === agreementItems.length,
     ]
 
-    const completed = requiredFields.filter((field) => {
-        if (typeof field === "boolean") return field
+    const completedFields = requiredFields.filter(
+      (field) => {
+        if (typeof field === "boolean") {
+          return field
+        }
 
-        return typeof field === "string"
-        ? field.trim().length > 0
-        : false
-    }).length
+        return (
+          typeof field === "string" &&
+          field.trim().length > 0
+        )
+      }
+    ).length
 
     return Math.round(
-        (completed / requiredFields.length) * 100
+      (completedFields / requiredFields.length) * 100
     )
-    }, [
-    picName,
-    position,
-    companyName,
-    email,
-    whatsapp,
-    companyAddress,
-    operationalArea,
-    projectName,
-    businessDescription,
-    projectGoals,
-    launchTarget,
-    targetAudience,
-    visualStyle,
-    primaryColor,
-    agreements,
-    ])
+  }, [watched, projectGoals, visualStyle, agreements])
 
-  const { getRootProps, getInputProps, isDragActive } =
-    useDropzone({
-      maxSize: 20 * 1024 * 1024,
+  function toggleArrayField(
+    value: string,
+    current: string[],
+    field:
+      | "projectGoals"
+      | "visualStyle"
+      | "agreements"
+  ) {
+    const exists = current.includes(value)
 
-      accept: {
-        "image/*": [".png", ".jpg", ".jpeg", ".svg"],
-        "application/pdf": [".pdf"],
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-          [".docx"],
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-          [".xlsx"],
-        "application/vnd.openxmlformats-officedocument.presentationml.presentation":
-          [".pptx"],
-      },
+    form.setValue(
+      field,
+      exists
+        ? current.filter((v) => v !== value)
+        : [...current, value],
+      {
+        shouldValidate: true,
+        shouldDirty: true,
+        shouldTouch: true,
+      }
+    )
 
-        maxFiles: 10,
+    form.trigger(field)
+  }
 
-            onDrop: (acceptedFiles) => {
-            setUploadedFiles((prev) => {
-                const merged = [...prev, ...acceptedFiles]
+  const {
+    getRootProps,
+    getInputProps,
+    isDragActive,
+  } = useDropzone({
+    maxSize: 20 * 1024 * 1024,
+    maxFiles: 10,
 
-                return merged.slice(0, 10)
-            })
+    accept: {
+      "image/*": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".svg",
+      ],
+      "application/pdf": [".pdf"],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+        [".docx"],
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+        [".xlsx"],
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+        [".pptx"],
+    },
 
-            toast.success(
-                `${acceptedFiles.length} file berhasil ditambahkan`
-            )
-        },
-    })
+    onDrop: (acceptedFiles) => {
+      setUploadedFiles((prev) =>
+        [...prev, ...acceptedFiles].slice(0, 10)
+      )
+
+      toast.success(
+        `${acceptedFiles.length} file berhasil ditambahkan`
+      )
+    },
+  })
 
   async function onSubmit(values: FormValues) {
-  try {
-    setSubmitting(true)
+    try {
+      setSubmitting(true)
 
-    toast.loading("Mengirim formulir...", {
-      id: "submit-project",
-    })
-
-    const formData = new FormData()
-
-    formData.append("data", JSON.stringify(values))
-
-    uploadedFiles.forEach((file) => {
-      formData.append("files", file)
-    })
-
-    console.log("SEND REQUEST")
-
-    const response = await fetch("/api/project-brief", {
-      method: "POST",
-      body: formData,
-    })
-
-    console.log("STATUS:", response.status)
-
-    if (!response.ok) {
-      let message = "Terjadi kesalahan"
-
-      try {
-        const result = await response.json()
-        message = result.message ?? message
-      } catch {
-        message = await response.text()
-      }
-
-      throw new Error(message)
-    }
-
-    localStorage.removeItem("hinai-project-brief")
-
-    form.reset(defaultFormValues)
-
-    setUploadedFiles([])
-
-    setCompleted(true)
-
-    toast.success("Form berhasil dikirim 🚀", {
-      id: "submit-project",
-    })
-  } catch (error) {
-    console.error("SUBMIT ERROR:", error)
-
-    toast.error(
-      error instanceof Error
-        ? error.message
-        : "Terjadi kesalahan saat mengirim formulir",
-      {
+      toast.loading("Mengirim formulir...", {
         id: "submit-project",
+      })
+
+      const formData = new FormData()
+
+      formData.append(
+        "data",
+        JSON.stringify(values)
+      )
+
+      uploadedFiles.forEach((file) => {
+        formData.append("files", file)
+      })
+
+      console.log("SUBMIT VALUES:", values)
+
+      const response = await fetch(
+        "/api/project-brief",
+        {
+          method: "POST",
+          body: formData,
+        }
+      )
+
+      console.log(
+        "RESPONSE STATUS:",
+        response.status
+      )
+
+      if (!response.ok) {
+        let message = "Terjadi kesalahan"
+
+        try {
+          const result = await response.json()
+
+          message =
+            result.message ?? message
+        } catch {
+          message = await response.text()
+        }
+
+        throw new Error(message)
       }
-    )
-  } finally {
-    setSubmitting(false)
+
+      localStorage.removeItem(
+        "hinai-project-brief"
+      )
+
+      form.reset(defaultFormValues)
+
+      setUploadedFiles([])
+
+      setCompleted(true)
+
+      toast.success(
+        "Form berhasil dikirim 🚀",
+        {
+          id: "submit-project",
+        }
+      )
+    } catch (error) {
+      console.error(
+        "SUBMIT ERROR:",
+        error
+      )
+
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Terjadi kesalahan saat mengirim formulir",
+        {
+          id: "submit-project",
+        }
+      )
+    } finally {
+      setSubmitting(false)
+    }
   }
-}
 
   if (completed) {
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{
+          opacity: 0,
+          scale: 0.95,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
         className="hinai-success rounded-3xl p-10 text-center"
       >
         <CheckCircle2 className="mx-auto mb-6 h-24 w-24 text-emerald-400" />
@@ -417,13 +437,15 @@ export function ProjectBriefForm() {
 
         <p className="mx-auto max-w-2xl text-slate-300">
           Tim HINAI Tech akan meninjau kebutuhan
-          proyek Anda dan segera menghubungi melalui
-          email atau WhatsApp.
+          proyek Anda dan segera menghubungi
+          melalui email atau WhatsApp.
         </p>
 
         <Button
           className="hinai-submit-btn mt-8"
-          onClick={() => window.location.reload()}
+          onClick={() =>
+            window.location.reload()
+          }
         >
           Buat Form Baru
         </Button>
@@ -449,23 +471,23 @@ export function ProjectBriefForm() {
 
       <form
         onSubmit={form.handleSubmit(
-            async (values) => {
-            console.log("SUBMIT DATA:", values)
+          onSubmit,
+          (errors) => {
+            console.error(
+              "VALIDATION ERRORS:",
+              errors
+            )
 
-            await onSubmit(values)
-            },
-            (errors) => {
-            console.error("VALIDATION ERRORS:", errors)
-
-            const firstError = Object.values(errors)[0]
+            const firstError =
+              Object.values(errors)[0]
 
             toast.error(
-                firstError?.message?.toString() ??
+              firstError?.message?.toString() ??
                 "Masih ada field yang belum valid"
             )
-            }
+          }
         )}
-        >
+      >
         <Card className="hinai-glass">
           <CardContent className="space-y-6 p-6">
             <SectionTitle>
@@ -867,46 +889,27 @@ export function ProjectBriefForm() {
         <Separator />
 
         <Button
-            type="submit"
-            disabled={submitting}
-            onClick={() => {
-                console.log("BUTTON CLICKED")
-                console.log("FORM ERRORS:", form.formState.errors)
-            }}
-            className="hinai-submit-btn h-14 w-full text-base font-semibold"
-            >
-            {submitting ? (
-                <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Mengirim Formulir...
-                </>
-            ) : (
-                <>
-                <Sparkles className="mr-2 h-5 w-5" />
-                Kirim Formulir
-                </>
-            )}
-            </Button>
+          type="submit"
+          disabled={submitting}
+          className="hinai-submit-btn h-14 w-full text-base font-semibold"
+        >
+          {submitting ? (
+            <>
+              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+              Mengirim Formulir...
+            </>
+          ) : (
+            <>
+              <Sparkles className="mr-2 h-5 w-5" />
+              Kirim Formulir
+            </>
+          )}
+        </Button>
       </form>
     </div>
   )
 
-    function toggleArrayField(
-        value: string,
-        current: string[] = [],
-        field: "projectGoals" | "visualStyle" | "agreements"
-        ) {
-        form.setValue(
-            field,
-            current.includes(value)
-            ? current.filter((v) => v !== value)
-            : [...current, value],
-            {
-            shouldValidate: true,
-            }
-        )
-    }
-}
+  }
 
 function ServiceSpecificFields({
   serviceType,
