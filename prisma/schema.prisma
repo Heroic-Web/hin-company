@@ -1,25 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
 model Reseller {
-  id        String   @id @default(cuid())
-  name      String
-  slug      String   @unique
-  phone     String
-  leads     Lead[]
-  clicks    Click[]
+  id      String  @id @default(cuid())
+  name    String
+  slug    String  @unique
+  phone   String
+
+  leads   Lead[]
+  clicks  Click[]
 }
 
 model Lead {
-  id        String   @id @default(cuid())
-  name      String?
-  service   String
-  createdAt DateTime @default(now())
-  reseller  Reseller @relation(fields: [resellerId], references: [id])
+  id         String    @id @default(cuid())
+  name       String?
+  service    String
+  createdAt  DateTime  @default(now())
+
+  reseller   Reseller  @relation(fields: [resellerId], references: [id])
   resellerId String
 }
 
 model Click {
-  id        String   @id @default(cuid())
-  service   String
-  createdAt DateTime @default(now())
-  reseller  Reseller @relation(fields: [resellerId], references: [id])
+  id         String    @id @default(cuid())
+  service    String
+  createdAt  DateTime  @default(now())
+
+  reseller   Reseller  @relation(fields: [resellerId], references: [id])
   resellerId String
+}
+
+model ProjectBrief {
+  id                  String   @id @default(cuid())
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  picName             String
+  position            String?
+  companyName         String
+  email               String
+  whatsapp            String
+
+  companyAddress      String?  @db.Text
+  operationalArea     String?
+  currentWebsite      String?
+  socialMedia         String?  @db.Text
+
+  serviceType         String
+
+  projectName         String
+  businessDescription String   @db.Text
+
+  projectGoals        Json?
+
+  launchTarget        DateTime?
+
+  targetAudience      String?  @db.Text
+  competitors         String?  @db.Text
+
+  references          String?  @db.Text
+  referenceReason     String?  @db.Text
+
+  visualStyle         Json?
+
+  primaryColor        String?
+  tagline             String?
+
+  assets              Json?
+
+  serviceDetails      Json?
+
+  additionalNotes     String?  @db.Text
+
+  agreements          Json?
+
+  status              String   @default("new")
+
+  @@map("project_briefs")
 }
