@@ -341,25 +341,38 @@ export function ProjectBriefForm() {
   try {
     setSubmitting(true)
 
-    const body = new FormData()
+    toast.loading("Mengirim formulir...", {
+      id: "submit-project",
+    })
 
-    body.append("data", JSON.stringify(values))
+    const formData = new FormData()
+
+    formData.append("data", JSON.stringify(values))
 
     uploadedFiles.forEach((file) => {
-      body.append("files", file)
+      formData.append("files", file)
     })
+
+    console.log("SEND REQUEST")
 
     const response = await fetch("/api/project-brief", {
       method: "POST",
-      body,
+      body: formData,
     })
 
+    console.log("STATUS:", response.status)
+
     if (!response.ok) {
-      const error = await response.text()
+      let message = "Terjadi kesalahan"
 
-      console.error("API Error:", error)
+      try {
+        const result = await response.json()
+        message = result.message ?? message
+      } catch {
+        message = await response.text()
+      }
 
-      throw new Error(error)
+      throw new Error(message)
     }
 
     localStorage.removeItem("hinai-project-brief")
@@ -370,14 +383,19 @@ export function ProjectBriefForm() {
 
     setCompleted(true)
 
-    toast.success("Form berhasil dikirim 🚀")
+    toast.success("Form berhasil dikirim 🚀", {
+      id: "submit-project",
+    })
   } catch (error) {
-    console.error("Submit Error:", error)
+    console.error("SUBMIT ERROR:", error)
 
     toast.error(
       error instanceof Error
         ? error.message
-        : "Terjadi kesalahan saat mengirim formulir"
+        : "Terjadi kesalahan saat mengirim formulir",
+      {
+        id: "submit-project",
+      }
     )
   } finally {
     setSubmitting(false)
@@ -431,10 +449,20 @@ export function ProjectBriefForm() {
 
       <form
         onSubmit={form.handleSubmit(
-            onSubmit,
+            async (values) => {
+            console.log("SUBMIT DATA:", values)
+
+            await onSubmit(values)
+            },
             (errors) => {
-            console.log(errors)
-            toast.error("Masih ada field yang belum valid")
+            console.error("VALIDATION ERRORS:", errors)
+
+            const firstError = Object.values(errors)[0]
+
+            toast.error(
+                firstError?.message?.toString() ??
+                "Masih ada field yang belum valid"
+            )
             }
         )}
         >
@@ -839,22 +867,26 @@ export function ProjectBriefForm() {
         <Separator />
 
         <Button
-          disabled={submitting}
-          type="submit"
-          className="hinai-submit-btn h-14 w-full text-base font-semibold"
-        >
-          {submitting ? (
-            <>
-              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-              Mengirim Formulir...
-            </>
-          ) : (
-            <>
-              <Sparkles className="mr-2 h-5 w-5" />
-              Kirim Formulir
-            </>
-          )}
-        </Button>
+            type="submit"
+            disabled={submitting}
+            onClick={() => {
+                console.log("BUTTON CLICKED")
+                console.log("FORM ERRORS:", form.formState.errors)
+            }}
+            className="hinai-submit-btn h-14 w-full text-base font-semibold"
+            >
+            {submitting ? (
+                <>
+                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                Mengirim Formulir...
+                </>
+            ) : (
+                <>
+                <Sparkles className="mr-2 h-5 w-5" />
+                Kirim Formulir
+                </>
+            )}
+            </Button>
       </form>
     </div>
   )
